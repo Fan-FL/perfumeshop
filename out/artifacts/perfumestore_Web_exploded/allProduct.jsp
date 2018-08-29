@@ -1,18 +1,13 @@
-<%@ page import="com.leoshop.beans.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <style type="text/css">
 
 </style>
-<title>LeoShop旗舰店</title>
+<title>perfume store</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -54,14 +49,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </script>
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
+<!-- include header -->
 	<jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
 	<div class="main" style="margin: 0">
 		<div class="wrap">
 			<div class="section group">
 				<div class="cont span_2_of_3" style="width: 100%" >
-					<h2 class="head">所有商品...</h2>
+					<h2 class="head">All products...</h2>
 					<c:forEach items="${pager.pageDataList}" var="out" varStatus="outvs">
 						<c:if test="${(outvs.count-1)%4==0 }">
 							<div class="top-box"> 
@@ -73,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<img src="${a.productImagePath}"/>
 											</div>
 											<div class="sale-box">
-												<span class="on_sale title_shop">新品</span>
+												<span class="on_sale title_shop">New</span>
 											</div>
 											<div class="price">
 												<div class="cart-left">
@@ -97,28 +91,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<br/><br/><br/>
 					<div id="div1">
 					<c:if test="${pager.currPage==1}">
-   						首页 &nbsp;&nbsp;上一页
+   						First &nbsp;&nbsp;Pre
    					</c:if>
 					<c:if test="${pager.currPage>1 }">
-					<a class="pageturn" href="viewallproduct?currPage=1">首页
+					<a class="pageturn" href="viewallproduct?currPage=1">First
                     </a>&nbsp;&nbsp;
 					<a class="pageturn"
-                       href="viewallproduct?currPage=${pager.currPage-1}">上一页
+                       href="viewallproduct?currPage=${pager.currPage-1}">Pre
                     </a>&nbsp;&nbsp;
 					</c:if>
 					<c:if test="${pager.currPage==pager.pageCount}">
-   					          下一页&nbsp;&nbsp;尾页
+   					          Next&nbsp;&nbsp;Last
    					</c:if>
 					<c:if test="${pager.currPage<pager.pageCount}">
 					<a class="pageturn"
-                       href="viewallproduct?currPage=${pager.currPage+1}">下一页
+                       href="viewallproduct?currPage=${pager.currPage+1}">Next
                     </a>&nbsp;&nbsp;
 					<a class="pageturn"
-                       href="viewallproduct?currPage=${pager.pageCount}">尾页
+                       href="viewallproduct?currPage=${pager.pageCount}">Last
                     </a>&nbsp;&nbsp;
 					</c:if>
-						${requestScope.pager.dataCount}条记录${requestScope.pager.currPage}/
-						${requestScope.pager.pageCount} 页 
+						${requestScope.pager.dataCount}Records ${requestScope.pager.currPage}/
+						${requestScope.pager.pageCount} pages
 					</div>
 				</div>
 				<div class="clear"></div>

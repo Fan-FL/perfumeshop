@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>LeoShop_注册</title>
+<title>PerfumeShop_register</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -17,7 +17,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script src="js/jquery.easydropdown.js"></script>
-<!-- <script type="text/javascript" src="js/verifyown.js"></script> -->
 <style type="text/css">
 	.submit {
 		padding:10px 30px;
@@ -45,29 +44,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </style>
 <script type="text/javascript" language="javascript">
 	   $(function(){
-		   var flag = false;//标记验证是否通过
+		   var flag = false;
 		   var $username = $("#username");
 		   var $password = $("#password");
 		   var $confirmpass = $("#confirmpass");
 		   var $username_msg = $("#username_msg");
 		   var $password_msg = $("#password_msg");
 		   var $confirmpass_msg = $("#confirmpass_msg");
-		   var url = "regServlet.do";
+		   var url = "userregister";
 		   
 		   $username.focus(function(){
-			   this.style.imeMode = 'disabled';// 禁用输入法,禁止输入中文字符
+			   this.style.imeMode = 'disabled';// disable input method
 			   $username_msg.html("<br/>");
 		   }).blur(function(){
 			   var username = $username.val();
 			   if(!isUsername(username)){
-				   $username_msg.text("长度8-16个字符,以字母开头,可包含数字和下划线,不能含有特殊字符.");
+				   $username_msg.text("Length must be within 4-16, initiated with character.");
 				   return;
 			   }
 			   var json = {"username":username};
 			   $.post(url,json,function(data){
 				   var regStatus = data[0].regStatus;
 				   if(regStatus=="hasThisUser"){
-					   $username_msg.text("用户名已存在！");
+					   $username_msg.text("User name already exists！");
 				   }else {
 					   $username_msg.html("<img src='images/ok.jpg'>");
 					   flag = true;
@@ -79,29 +78,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   
 		   });
 		   $password.focus(function(){
-			   this.style.imeMode = 'disabled';// 禁用输入法,禁止输入中文字符
+			   this.style.imeMode = 'disabled';
 			   $password_msg.html("<br/>");
 		   }).blur(function(){
 			   var password = $password.val();
 			   if(!isPassword(password)){
-				   $password_msg.text("密码长度6-18个字符,必须包含字母、数字、下划线等特殊字符.");
+				   $password_msg.text("Length must be within 6-18, initiated with character.");
 				   return;
 			   }
 			   flag = true;
 			   $password_msg.html("<img src='images/ok.jpg'>");
 		   });
 		   $confirmpass.focus(function(){
-			   this.style.imeMode = 'disabled';// 禁用输入法,禁止输入中文字符
+			   this.style.imeMode = 'disabled';
 			   $confirmpass_msg.html("<br/>");
 		   }).blur(function(){
 			   var confirmpass = $confirmpass.val();
 			   var password = $password.val();
 			   if(!isPassword(confirmpass)){
-				   $confirmpass_msg.text("密码长度6-18个字符,必须包含字母、数字、下划线等特殊字符.");
+				   $confirmpass_msg.text("Length must be within 6-18, initiated with character.");
 				   return;
 			   }
 			   if(!isSame(confirmpass, password)){
-				   $confirmpass_msg.text("两次输入的密码不同");
+				   $confirmpass_msg.text("Passowords do not match.");
 				   return;
 			   }
 			   flag = true;
@@ -112,19 +111,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   var password = $password.val();
 			   var confirmpass = $confirmpass.val();
 			   if($.trim(username)=="" || $.trim(confirmpass)==""){
-				   alert("用户名和密码不能为空");
+				   alert("User name and password can not be empty");
 				   return false;
 			   }
 			   if(!isUsername(username)){
-				   $username_msg.text("长度8-16个字符,以字母开头,可包含数字和下划线,不能含有特殊字符.");
+				   $username_msg.text("Length must be within 4-16, initiated with character.");
 				   return false;
 			   }
 			   if(!isPassword(password)){
-				   $password_msg.text("密码长度6-18个字符,必须包含字母、数字、下划线等特殊字符.");
+				   $password_msg.text("Length must be within 6-18, initiated with character.");
 				   return false;
 			   }
 			   if(!isSame(confirmpass, password)){
-				   $confirmpass_msg.text("两次输入的密码不同");
+				   $confirmpass_msg.text("Passowords do not match.");
 				   return false;
 			   }
 			   if(!flag){
@@ -134,15 +133,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   $.post(url,json,function(data){
 				   var regStatus = data[0].regStatus;
 				   if(regStatus=="hasThisUser"){
-					   $username_msg.text("用户名已存在！");
+					   $username_msg.text("User name already exists！");
 				   }
 				   if(regStatus=="regSuccess"){
-					   if(confirm("注册成功，点击确定进入主页")){
+					   if(confirm("Registration successful，Click to enter home page")){
 						   window.location.href = "blank.jsp";
 					   }
 				   }
 				   if(regStatus=="regFail"){
-					   alert("服务器异常，注册失败");
+					   alert("Registration failed");
 				   }
 			   },"json");
 			   return false;
@@ -154,29 +153,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   }
 	   
 	   function isUsername(username){
-		   var name = new RegExp("^[a-zA-z][a-zA-Z0-9_]{7,15}$");
+		   var name = new RegExp("^[a-zA-z][a-zA-Z0-9_]{3,15}$");
 		   return name.test(username);
 	   };
 	  
 	   function isPassword(password){
-		   var word = new RegExp("(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{6,18}");
+		   var word = new RegExp("[a-zA-Z0-9_]{6,18}");
 		   return word.test(password);
 	   }
 	   
 </script>
 </head>
 <body> 
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 	<jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
           <div class="register_account">
           	<div class="wrap">
-    	      <h4 class="title">创建一个帐户</h4>
+    	      <h4 class="title">Create an account</h4>
 	    		<div class="register_account_form">
 	    		   <form action="#" method="post">
 		    			<table id="register_account_table">
 		    				<tr>
-		    					<td width="15%">用户名</td>
+		    					<td width="15%">Username</td>
 		    					<td width="100%">
 		    					<input value="" type="text" id="username" name="username"><br/>
 		    					<span id="username_msg" style="color:red;font-size: 0.8em;line-height: 24px">
@@ -184,14 +181,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    					</td>
 		    				</tr>
 		    				<tr>
-		    					<td>密码</td>
+		    					<td>password</td>
 		    					<td>
 		    					<input value="" id="password" type="password" name="password"><br/>
 		    					<span id="password_msg" style="color:red;font-size: 0.8em;line-height: 24px"><br/></span>
 		    					</td>
 		    				</tr>
 		    				<tr>
-		    					<td>确认密码</td>
+		    					<td>Re-enter password</td>
 		    					<td align="left">
 		    					<input value="" id="confirmpass" type="password" name="confirmpass"><br/>
 		    					<span id="confirmpass_msg" style="color:red;font-size: 0.8em;line-height: 24px"><br/></span>
@@ -200,12 +197,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    			</table>
 		    			<div align="center">
 		    				<label style="color: #555">
-		    					用户名长度8-16个字符,以字母开头,可包含数字和下划线,不能含有特殊字符.<br/>
-		    					密码长度6-18个字符,必须包含字母、数字、下划线等特殊字符.
+								User length must be within 4-16, initiated with character.<br/>
+								Password length must be within 6-18.
 		    				</label>
 		    			</div>
-		    			<input type="submit" id="registerSubmit" value="注册" class="submit">
-						<p class="msg">点击同意<a target="_blank" href="delivery.jsp">《条款和条件》</a>并“创建帐户”.</p>
+		    			<input type="submit" id="registerSubmit" value="Register" class="submit">
 					</form>
 		    	 </div>
 		    <div class="clear"></div>

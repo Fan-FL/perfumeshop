@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>LeoShop_账户信息</title>
+<title>PerfumeShop_account_info</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,21 +63,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		height: 300px;
 	}
 </style>
-<!-- dropdown -->
-<script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 <jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
 	<div class="register_account">
 		<div class="wrap" align="center" id="main">
-			<h4 class="title" align="left">我的账户</h4>
+			<h4 class="title" align="left">My account</h4>
 			<div id="account_msg" align="left">
 				<ul id="account_msg_menu">
-	    			<li id="msg"><a id="default" href="viewuser" target="main">个人信息</a></li>
-	   				<li id="dir"><a href="viewalladdress" target="main">地址管理</a></li>
-	   				<li id="ord"><a href="viewmyorder" target="main">我的订单</a></li>
+	    			<li id="msg"><a id="default" href="viewuser" target="main">Details</a></li>
+	   				<li id="dir"><a href="viewalladdress" target="main">Address</a></li>
+	   				<li id="ord"><a href="viewmyorder" target="main">Orders</a></li>
 	    		</ul>
 			</div>
 			<iframe id="iframeMain" align="middle" frameborder="0" width="100%" name="main" onload="Javascript:iframeAutoFit(this)" scrolling="no"></iframe>

@@ -2,14 +2,11 @@ package script.User;
 
 import datasource.CartMapper;
 import datasource.UserMapper;
-import domain.Cart;
-import domain.Product;
 import domain.User;
 import net.sf.json.JSONArray;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,24 +14,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class SimpleServlet
- */
 @WebServlet("/login")
 public class UserLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public UserLogin() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String method = request.getParameter("method");
 	    switch (method){
@@ -47,39 +35,46 @@ public class UserLogin extends HttpServlet {
             default:
                 break;
         }
-//		response.setContentType("text/html");
-//		System.out.println("Hello from Get" + request.getParameter("userName") + request.getParameter("passWord"));
-//		PrintWriter writer = response.getWriter();
-//		writer.println("<h3> Hello in html </h3>");
-//		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
         this.doGet(request, response);
 	}
 
+    /**
+     * prepare header info
+     * 1.check whether user has logged in from session
+     * 2.load username from session and show it
+     * 3.show product count in cart
+     * @param request
+     * @param response
+     * @throws IOException
+     * @throws ServletException
+     */
     public void responseHeaderInfo(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         int userId = -1;
         try {
             userId = (Integer) request.getSession().getAttribute("userId");
         } catch (Exception e) {
-            System.out.println("用户未登录，身份：游客！！");
+            System.out.println("user hasn't logged in!");
         }
         if(userId != -1){
-            User userHeader = UserMapper.findByID(userId);
-            System.out.println("用户登录：[[ID:" + userId + ";用户名：" + userHeader.getUsername() + "]]......");
-            request.setAttribute("userHeader", userHeader);
-            Map<Cart, Product> cartProductMap = CartMapper.GetAllCartInfoByUserID(userId);
-            request.setAttribute("cartProductMap", cartProductMap);
+            int cartCount = CartMapper.getCartCount(userId);
+            request.setAttribute("cartCount", cartCount);
         }
         getServletContext().getRequestDispatcher("/header.jsp").include(request, response);
     }
 
+
+    /**
+     * receive username and password
+     * login, save userId and userName in session
+     * @param request
+     * @param response
+     * @throws IOException
+     * @throws ServletException
+     */
     public void login(HttpServletRequest request, HttpServletResponse response) throws IOException,
             ServletException {
         PrintWriter out = null;
@@ -95,6 +90,7 @@ public class UserLogin extends HttpServlet {
             }
             if(logStatus){
                 request.getSession().setAttribute("userId", user.getUserId());
+                request.getSession().setAttribute("userName", user.getUsername());
             }
             String jsonStr = "[{'logStatus':'" + logStatus + "'}]";
             JSONArray json = JSONArray.fromObject(jsonStr);

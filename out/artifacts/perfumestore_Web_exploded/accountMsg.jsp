@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    <title>个人信息管理</title>
+    <title>Personal details Management</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="text/javascript" src="js/jquery1.min.js"></script>
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						border: "1px solid red",
 						boxShadow: "0 0 2px red"
 					});
-					$("#la").html("×两次密码输入不一致×");
+					$("#la").html("×Passwords do not match!×");
 					passflag = false;
 				} else {
 					$("#password").focus().css({
@@ -96,7 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						border: "1px solid red",
 						boxShadow: "0 0 2px red"
 					});
-					$("#la").html("×两次密码输入不一致×");
+					$("#la").html("×Passwords do not match!×");
 					passflag = false;
 				} else {
 					$("#password").focus().css({
@@ -112,26 +112,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				}
 			});
 			
-			$("#phone").blur(function(){
-				var scellphone = /^1{1}[0-9]{10}$/;
-				if (!scellphone.test($("#phone").val())) {
-					$("#phone").focus().css({
-						border: "1px solid red",
-						boxShadow: "0 0 2px red"
-					});
-					$("#la").html("×手机号码格式不正确×");
-					phoneflag = false;
-				} else {
-					$("#phone").css({
-						border:"1px solid #aaa",
-						boxShadow:"0 0 2px #aaa"
-					});
-					$("#la").html("<br/>");
-					phoneflag = true;
-				}
-			});
-			
-			$("#sb").click( function () { 
+			$("#sb").click( function () {
 				if($("#password").val()!=$("#repassword").val()){
 					$("#password").focus().css({
 						border: "1px solid red",
@@ -141,7 +122,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						border: "1px solid red",
 						boxShadow: "0 0 2px red"
 					});
-					$("#la").html("×两次密码输入不一致×");
+					$("#la").html("×Passwords do not match!×");
 					passflag = false;
 				} else {
 					$("#password").focus().css({
@@ -155,24 +136,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					$("#la").html("<br/>");
 					passflag = true;
 				}
-				var scellphone = /^1{1}[0-9]{10}$/;
-				if (!scellphone.test($("#phone").val())) {
-					$("#phone").focus().css({
-						border: "1px solid red",
-						boxShadow: "0 0 2px red"
-					});
-					$("#la").html("×手机号码格式不正确×");
-					phoneflag = false;
-				} else {
-					$("#phone").css({
-						border:"1px solid #aaa",
-						boxShadow:"0 0 2px #aaa"
-					});
-					$("#la").html("<br/>");
-					phoneflag = true;
-				}
-				if(passflag&&phoneflag){
-					alert("修改成功");
+				if(passflag){
+					alert("Modify successfully");
 					$("#subform").submit();
 				}
 			});
@@ -185,27 +150,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<form id="subform" action="updateuser" method="post">
    			<table id="table">
    				<tr height="40px">
-					<td width="15%">用户名</td>
+					<td width="15%">Username</td>
 					<td width="85%">${user.username}</td>
 				</tr>
 				<tr>
-					<td>密码</td>
+					<td>Password</td>
 					<td><input type="password" id="password" value="${user.password}" name="password"></td>
 				</tr>
 				<tr>
-					<td>确认密码</td>
+					<td>Re-enter password</td>
 					<td><input type="password" id="repassword" value="${user.password}"></td>
 				</tr>
 				<tr>
-					<td>真实姓名</td>
+					<td>Real name</td>
 					<td><input type="text" name="truename" value="${user.truename}"></td>
 				</tr>
 				<tr>
-					<td>手机号码</td>
+					<td>Mobile</td>
 					<td><input type="text" name="phone" value="${user.phone}" id="phone"></td>
 				</tr>
 				<tr>
-					<td>联系地址</td>
+					<td>Contact address</td>
 					<td><input type="text" name="address" value="${user.address}"></td>
 				</tr>
 				<tr>
@@ -214,8 +179,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</tr>
    			</table>
    			<div align="center"><br/></div>
-			<input type="reset" value="重置" class="btn" id="res">
-			<input type="button" value="修改" class="btn" id="sb">
+			<input type="reset" value="Reset" class="btn" id="res">
+			<input type="button" value="Update" class="btn" id="sb">
 		</form>
 	</div>
 	<br/><br/><br/><br/><br/><br/><br/><br/>

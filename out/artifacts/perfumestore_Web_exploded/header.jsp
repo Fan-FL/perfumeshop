@@ -32,45 +32,45 @@ ul.subCartList li {
 }
 </style>
 </head>
+<script type="text/javascript">
+    $(function(){
+
+        $(".goCart").click(function(){
+            var userId = "${sessionScope.userId}";
+            if(userId > 0){
+                return true;
+            }
+            if(confirm("Please log in, click OK to the login page!")){
+                window.location.href = "${pageContext.request.contextPath}/login.jsp";
+            }
+            return false;
+        });
+        $("#logout").click(function(){
+            return confirm('Are you sure to log out？');
+        });
+        $("body").keydown(function(event) {
+            if (event.keyCode == "13") {//enter key
+                $("#serchSubmit").click();
+            }
+        });
+    });
+
+</script>
 <body>
 	 <div class="header-top">
 			<div class="wrap"> 
 			 <div class="cssmenu">
-<script type="text/javascript">
-	 $(function(){
-		
-		$(".goCart").click(function(){
-			var userId = "${sessionScope.userId}";
-			if(userId > 0){
-				return true;
-			}
-			if(confirm("请先登录，点击确定跳转到登录页面！")){
-				window.location.href = "${pageContext.request.contextPath}/login.jsp";
-			}
-			return false;
-		});
-		$("#logout").click(function(){
-			return confirm('确认退出当前账户？');
-		});
-		$("body").keydown(function(event) {
-            if (event.keyCode == "13") {//keyCode=13是回车键
-                $("#serchSubmit").click();
-            }
-        });
-	}); 
-
-</script>
 				<ul class="my_index_menu">
 					<c:if test="${sessionScope.userId eq null}">
-						<li><a href="login.jsp">登录</a></li>
-						<li><a href="register.jsp">注册</a></li>
+						<li><a href="login.jsp">Login</a></li>
+						<li><a href="register.jsp">Register</a></li>
 					</c:if>
 					<c:if test="${not(sessionScope.userId eq null)}">
 						<li><a href="account.jsp">
-						<dir id="test1">${requestScope.userHeader.username}</dir>
+						<dir id="test1">${sessionScope.userName}</dir>
 						</a></li>
-						<li><a class="goCart" href="viewcart">购物车</a></li>
-						<li><a id="logout" href="logout">退出</a></li>
+						<li><a class="goCart" href="viewcart">Cart</a></li>
+						<li><a id="logout" href="logout">Logout</a></li>
 					</c:if>
 				</ul>
 			</div>
@@ -85,10 +85,7 @@ ul.subCartList li {
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-						<li class="active grid"><a href="blank.jsp">主页</a>
-						</li>
-						<li class="active grid"><a href="viewallproduct">所有商品</a>
-						</li>
+						<li class="active grid"><a href="viewallproduct">All products</a></li>
 					</ul>
 				</div>
 			</div>
@@ -96,38 +93,20 @@ ul.subCartList li {
 				<div class="search">
 					<form id="serchSubmit" action="searchProduct.do" method="get">
 						<input type="text" id="searchProductName" 
-						name="searchProductName"  class="textbox" value="${requestScope.criteriaProductName==null?'搜索':requestScope.criteriaProductName}"
+						name="searchProductName"  class="textbox" value="${requestScope.criteriaProductName==null?'Search':requestScope.criteriaProductName}"
 							onFocus="this.value = '';"
-							onBlur="if (this.value == '') {this.value = '${requestScope.criteriaProductName==null?'搜索':requestScope.criteriaProductName}';}"> 
+							onBlur="if (this.value == '') {this.value = '${requestScope.criteriaProductName==null?'Search':requestScope.criteriaProductName}';}">
 						<input type="submit" id="submit">
 					</form>
 					<div id="response"></div>
 				</div>
 				<div class="tag-list">
 					<ul class="icon1 sub-icon1 profile_img">
-						<li><a class="active-icon c2" href="#"> </a>
-							<ul id="smallCartList" class="subCartList sub-icon1 list">
-							<c:if test="${empty requestScope.cartProductMap}">
-								<li><h3>商品列表</h3><a></a></li>
-								<li id="emptyCart" ><p>请点击<a href='blank.jsp'>这里</a>选择产品</p></li>
-							</c:if>
-							<c:if test="${not empty requestScope.cartProductMap}">
-									 <li><h3>商品列表</h3><a></a></li>
-								<c:forEach items="${requestScope.cartProductMap}" var="cartProduct">
-									 <c:if test="${cartProduct.value.productId==param.productid}">
-									 	<c:set var="hasThisProduct" scope="request" value="${true }"></c:set>
-									 </c:if>
-									 <li id="${cartProduct.key.cartId }">
-										<i><a href="getProduct.do?productid=${cartProduct.value.productId }">
-										${cartProduct.value.productName}</a></i>
-									 </li>
-								</c:forEach>
-							</c:if>
-							</ul>
+						<li><a class="active-icon c2" href="viewcart"> </a>
 						</li>
 					</ul>
 					<ul id="xiaocart" class="last">
-						<li><a class="goCart" href="viewcart">购物车(${fn:length(requestScope.cartProductMap)})</a>
+						<li><a class="goCart" href="viewcart">Cart(${requestScope.cartCount})</a>
 						</li>
 					</ul>
 				</div>

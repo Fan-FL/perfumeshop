@@ -13,7 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		top.location.href=location.href;
 	}
 </script>
-<title>LeoShop_登录</title>
+<title>PerfumeShop_Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -29,13 +29,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	$(function(){
 		var responseMsg = "${param.responseMsg}";
 		if(responseMsg == "userIsNotLogin"){
-			$("#errorMsg").text("请登录！！！"); 
+			$("#errorMsg").text("Please log in!");
 		}
 		$("#loginSubmit").click(function(){
 			var username = $.trim($("#login_username").val());
 			var password = $("#login_passwd").val();
 			if(username==""||password==""){
-				$("#errorMsg").text("请输入用户名和密码");
+				$("#errorMsg").text("Please enter username and password");
 				return false;
 			}else{
 				$("#errorMsg").text("");
@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				if(logStatus){
 					window.location.href = "blank.jsp";
 				}else {
-					$("#errorMsg").text("用户名或密码错误");
+					$("#errorMsg").text("Wrong username or password");
 				}
 			},"json");
 			return false; 
@@ -58,40 +58,41 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 	<jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
         <div class="login">
           	<div class="wrap">
 				<div class="col_1_of_login span_1_of_login">
-					<h4 class="title">新用户注册</h4>
-					<p>如果没有账号，可以免费注册！！</p>
+					<h4 class="title">New user register</h4>
+					<p>You can sign up for free if you don't have an account！</p>
 					<div class="button1">
-					   <a href="register.jsp"><input type="button" name="Submit" value="用户注册"></a>
+					   <a
+							   href="register.jsp"><input type="button" name="Submit"
+														  value="Register"></a>
 					 </div>
 					 <div class="clear"></div>
 				</div>
 				<div class="col_1_of_login span_1_of_login">
 				<div class="login-title">
-	           		<h4 class="title">用户登录</h4>
+	           		<h4 class="title">login</h4>
 					<div id="loginbox" class="loginbox">
 						<form action="login?method=login" method="post" name="login"
 							  id="login-form">
 						  <fieldset class="input">
 						    <p id="login-form-username">
-						      <label for="modlgn_username">用户名</label>
+						      <label>Username</label>
 						      <input id="login_username" type="text" name="username" class="inputbox" size="18" autocomplete="off"><input type="hidden" id="verify_result" value="false">
 						    </p>
 						    <p id="login-form-password">
-						      <label for="modlgn_passwd">登录密码</label>
+						      <label>Password</label>
 						      <input id="login_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
 						    </p>
 						    <div class="remember">
 							    <p id="login-form-remember">
-							      <label for="modlgn_remember"><font id="errorMsg" style="font-style:italic;font-size:1.5em;color: red"></font></label>
+							      <label><font id="errorMsg" style="font-style:italic;font-size:1.5em;color: red"></font></label>
 							   </p>
-							    <input id="loginSubmit" type="submit" name="Submit" class="loginbtn" value="登录">
-							 </div>
+							    <input id="loginSubmit" type="submit" name="Submit"
+                                       class="loginbtn" value="Log in">
+                            </div>
 						  </fieldset>
 						 </form>
 					</div>

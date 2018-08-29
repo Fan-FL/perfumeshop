@@ -71,4 +71,9 @@ public class UserMapper {
         DBHelper.update(sql, userupdate.getPassword(), userupdate.getTruename(),
                 userupdate.getPhone(), userupdate.getAddress(), userupdate.getUserId());
     }
+
+    public static int createUser(User user) {
+        String sql = "insert into user (username,password) values (?,?);";
+        return DBHelper.updateGetGeneratedKeys(sql, user.getUsername(), user.getPassword());
+    }
 }
