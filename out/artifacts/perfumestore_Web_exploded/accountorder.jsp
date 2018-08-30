@@ -6,7 +6,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>LeoShop_我的订单</title>
+<title>PerfumeStore_MyOrder</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -86,13 +86,13 @@
 					<table cellspacing="1.5">
 						<thead>
 							<tr>
-								<th width="100px">订单编号</th>
-								<th width="400px">商品名称</th>
-								<th width="125px">商品单价</th> 
-								<th width="125px">数量</th>
-								<th width="125px">订单合计</th>
-								<th width="150px">备注</th>
-								<th width="175px">操作</th>
+								<th width="100px">OrderNo.</th>
+								<th width="400px">Product Name</th>
+								<th width="125px">Price</th>
+								<th width="125px">Quantity</th>
+								<th width="125px">Total price</th>
+								<th width="150px">Note</th>
+								<th width="175px">Operation</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -110,28 +110,35 @@
 												<div class="pname"><a target="_blank" href="viewproductdetail?productid=${product.productId }">${product.productName}</a></div>
 											</td>
 											<td align="center">
-												￥<fmt:formatNumber value="${product.productPrice}" maxFractionDigits="2"></fmt:formatNumber>
+												$<fmt:formatNumber
+													value="${product.productPrice}" maxFractionDigits="2"></fmt:formatNumber>
 											</td>
 											<td align="center">
 												${product.saleCount}
 											</td>
 											<td align="center">
-												￥<fmt:formatNumber value="${product.productPrice*product.saleCount}" maxFractionDigits="2"></fmt:formatNumber>
+												$<fmt:formatNumber
+													value="${product.productPrice*product.saleCount}" maxFractionDigits="2"></fmt:formatNumber>
 											</td>
 										</c:forEach>
 										<td align="center">
 											<c:if test="${!(empty order.note)}">${order.note}</c:if>
-											<c:if test="${empty order.note}">无</c:if>
+											<c:if test="${empty order.note}">None</c:if>
 										</td>
-										<td align="center"><a href="deleteorder?orderNum=${order.orderNum}" onclick="return confirm('您确定删除吗？');">删除订单</a><br/>
+										<td align="center"><a
+												href="deleteorder?orderNum=${order.orderNum}"
+												onclick="return confirm('Are you sure to delte?');">
+											Delete</a><br/>
 											<c:if test="${order.orderStatus==0}"><a
 													target="_blank"
 													href="payorder?orderNum=${order.orderNum}"><font
-													color="red">去付款</font></a></c:if>
-											<c:if test="${order.orderStatus==1}">待发货</c:if>
-											<c:if test="${order.orderStatus==2}"><a href="receiveproduct?orderNum=${order.orderNum}"><font color="red">确认收货</font></a></c:if>
+													color="red">Pay</font></a></c:if>
+											<c:if test="${order.orderStatus==1}">Wait for
+												delivery</c:if>
+											<c:if test="${order.orderStatus==2}"><a
+													href="receiveproduct?orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
 											<c:if test="${order.orderStatus==3}">
-												已完成<br/>
+												Done<br/>
 											</c:if>
 										</td>
 									</tr>
@@ -148,26 +155,28 @@
 												<div class="pname"><a target="_blank" href="viewproductdetail?productid=${product.productId }">${product.productName}</a></div>
 											</td>
 											<td align="center">
-												￥<fmt:formatNumber value="${product.productPrice}" maxFractionDigits="2"></fmt:formatNumber>
+												$<fmt:formatNumber
+													value="${product.productPrice}" maxFractionDigits="2"></fmt:formatNumber>
 											</td>
 											<td align="center">
 												${product.saleCount}
 											</td>
 											<td align="center">
-												￥<fmt:formatNumber value="${product.productPrice*product.saleCount}" maxFractionDigits="2"></fmt:formatNumber>
+												$<fmt:formatNumber
+													value="${product.productPrice*product.saleCount}" maxFractionDigits="2"></fmt:formatNumber>
 											</td>
 											<td align="center" rowspan="${fn:length(order.product)}">
 												<c:if test="${!(empty order.note)}">${order.note}</c:if>
-												<c:if test="${empty order.note}">无</c:if>
+												<c:if test="${empty order.note}">None</c:if>
 											</td>
-											<td align="center" rowspan="${fn:length(order.product)}"><a href="deleteorder?orderNum=${order.orderNum}" onclick="return confirm('您确定删除吗？');">删除订单</a><br/>
+											<td align="center" rowspan="${fn:length(order.product)}"><a href="deleteorder?orderNum=${order.orderNum}" onclick="return confirm('Are you sure to delete?');">Delete</a><br/>
 												<c:if test="${order.orderStatus==0}"><a
 														target="_blank"
-														href="payorder?orderNum=${order.orderNum}"><font color="red">去付款</font></a></c:if>
-												<c:if test="${order.orderStatus==1}">待发货</c:if>
-												<c:if test="${order.orderStatus==2}"><a href="receiveproduct?orderNum=${order.orderNum}"><font color="red">确认收货</font></a></c:if>
+														href="payorder?orderNum=${order.orderNum}"><font color="red">Pay</font></a></c:if>
+												<c:if test="${order.orderStatus==1}">Wait for delivery</c:if>
+												<c:if test="${order.orderStatus==2}"><a href="receiveproduct?orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
 												<c:if test="${order.orderStatus==3}">
-													已完成<br/>
+													Done<br/>
 												</c:if>
 											</td>
 										</c:forEach>
@@ -180,13 +189,15 @@
 												<div class="pname"><a target="_blank" href="viewproductdetail?productid=${product.productId }">${product.productName}</a></div>
 											</td>
 											<td align="center">
-												￥<fmt:formatNumber value="${product.productPrice}" maxFractionDigits="2"></fmt:formatNumber>
+												$<fmt:formatNumber
+													value="${product.productPrice}" maxFractionDigits="2"></fmt:formatNumber>
 											</td>
 											<td align="center">
 												${product.saleCount}
 											</td>
 											<td align="center">
-												￥<fmt:formatNumber value="${product.productPrice*product.saleCount}" maxFractionDigits="2"></fmt:formatNumber>
+												$<fmt:formatNumber
+													value="${product.productPrice*product.saleCount}" maxFractionDigits="2"></fmt:formatNumber>
 											</td>
 										</tr>
 									</c:forEach>
@@ -198,7 +209,9 @@
 			</c:when>
 			<c:otherwise>
 				<div class="order-blank">
-					您还没有订单信息，赶快<a onclick="window.parent.location.href='AboutBlank.jsp'"><font color="#555">去挑选心爱的商品</font></a>吧！
+					You don't have order yet, <a
+						onclick="window.parent.location.href='AboutBlank.jsp'"><font
+						color="#555">please go for shopping</font></a>吧！
 				</div>
 			</c:otherwise>
 		</c:choose>

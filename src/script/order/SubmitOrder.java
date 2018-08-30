@@ -88,7 +88,7 @@ public class SubmitOrder extends HttpServlet {
 				int storeNum = product.getStoreNum();
 				int productStatus = product.getProductStatus();
 				if(productStatus==0){
-					response.sendRedirect("productSoldOut.jsp");
+					response.sendRedirect("productOffShelf.jsp");
 					return;
 				}
 				if(saleCount > storeNum){

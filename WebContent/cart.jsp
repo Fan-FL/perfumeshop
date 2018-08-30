@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>LeoShop_购物车</title>
+<title>PerfumeShop_cart</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -28,17 +28,15 @@
 <script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 <jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
 	<div class="clear"></div>
 	<div class="mycar-index">
-		<h1>购物车</h1>
+		<h1>Cart</h1>
 		<div
 			style="width: 1200px; height: 1px; overflow: hidden; clear: both;"></div>
 		<div id="blackcart">
 			<div class="cart-blank">
-				您的购物车中暂无商品，赶快<a href="blank.jsp">挑选心爱的商品</a>吧！
+				Your cart is empty. please go <a href="blank.jsp">shopping</a>！
 			</div>
 		</div>
 
@@ -46,7 +44,7 @@
 		<div id="cart-wrapper">
 			<c:if test="${empty requestScope.cartProductMap }">
 				<div class="cart-blank">
-					您的购物车中暂无商品，赶快<a href="blank.jsp">挑选心爱的商品</a>吧！
+					Your cart is empty. please go <a href="blank.jsp">shopping</a>！
 				</div>
 			</c:if>
 			<c:if test="${not (empty requestScope.cartProductMap)}">
@@ -55,12 +53,11 @@
 						<thead>
 							<tr>
 								<th></th>
-								<th style="width: 600px;">商品名称</th>
-								<!-- <th>商品积分</th> -->
-								<th>商品单价</th>
-								<th>数量</th>
-								<th style="width: 100px;">小计</th>
-								<th class="cart_last" style="width: 100px;">删除</th>
+								<th style="width: 600px;">Name</th>
+								<th>price</th>
+								<th>Quantity</th>
+								<th style="width: 100px;">Subtotal</th>
+								<th class="cart_last" style="width: 100px;">Delete</th>
 							</tr>
 						</thead>
 						<tbody id="cartbody">
@@ -78,7 +75,6 @@
 											<a target="_blank"
 												href="viewproductdetail?productid=${cartProduct.value.productId }">${cartProduct.value.productName }</a>
 										</p></td>
-									<!-- <td style="font-weight:bold; font-size:14px;">0</td> -->
 									<td class="mktprice1" style="font-weight: bold; font-size: 14px;">
 										<b>${cartProduct.value.productPrice }</b>
 									</td>
@@ -95,7 +91,7 @@
 											<span class="numadjust increase">+</span>
 										</c:if>
 										<c:if test="${cartProduct.value.productStatus==0}">
-											<font class="productSaleOut" color="red">已下架</font>
+											<font class="productSaleOut" color="red">off the shelf</font>
 										</c:if>
 										</div>
 									</td>
@@ -115,27 +111,30 @@
 							</c:forEach>
 						</tbody>
 					</table>
-					<!-- 总价 -->
+
+					<!-- total price -->
 					<div class="cart-wrapper">
 						<div class="yes_bonded">
-							<p align="left">&nbsp;&nbsp;<input checked="checked" id="checkAll" type="checkbox">全选
-							&nbsp;&nbsp;<a id="deleteChecked" href="#">删除</a> </p>
-							<span class="c08"> 商品总价: <span class="color03" id="total">
+							<p align="left">&nbsp;&nbsp;<input checked="checked" id="checkAll" type="checkbox">Select all
+							&nbsp;&nbsp;<a id="deleteChecked" href="#">Delete</a> </p>
+							<span class="c08"> Total price <span class="color03" id="total">
 							<fmt:formatNumber value="1" type="currency"></fmt:formatNumber>
 							</span>
 							</span>
 						</div>
 						<div class="cart_tools">
 							<div class="btn">
-								<input class="clean_btn white-btn" value="清空购物车" type="button">
+								<input class="clean_btn white-btn" value="Clear" type="button">
 							</div>
 							<div class="btn">
-								<input class="returnbuy_btn yellow-btn" value="继续购物"
+								<input class="returnbuy_btn yellow-btn" value="Continue shopping"
 									type="button">
 							</div>
 
 							<div class="btn">
-								<input id="goToBuy" class="checkout-btn green-btn" value="去结算" type="button">
+								<input id="goToBuy" class="checkout-btn green-btn"
+									   value="Check out"
+									   type="button">
 							</div>
 						</div>
 					</div>

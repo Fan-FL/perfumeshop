@@ -6,7 +6,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>库存不足</title>
+<title>Out of stock</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -40,15 +40,14 @@ a {
 <script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 <jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
 	<br /><br /><br />
 	<div class="encircle">
 		<img src="images/jstjsb.jpg">
 		<div class="checkout_order_right">
 			<h1>
-				很抱歉，您提交的订单中有库存不足的商品，请重新下单或返回<a href="viewcart">购物车</a>修改商品数量^^
+				Sorry, the product is out of stock, please go to <a href="viewcart">cart</a> to
+				modify quantity.
 			</h1>
 			</div>
 	</div>

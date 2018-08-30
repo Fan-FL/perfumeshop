@@ -1,27 +1,27 @@
 $(function(){
 
-	toggleBlankCart();// 查看购物车是否为空 为空显示空的div
-	setTotalPrice();// 计算总价
-	// 为 + 添加事件
+	toggleBlankCart();// check if cart is empty, if empty show empty div
+	setTotalPrice();// calculate total price
+	// '+' event
 	$(".increase").click(
 			function() {
-				// 获取该商品的库存
+				// get stock
 				var storeNum = $(this).parent(".Numinput").parent(
 						".cart-quantity").siblings(".storeNum").children(
 						":hidden").val();
-				// 获取购买数量
+				// get sale count
 				var $saleCount = $(this).prev("input");
-				// 购买数量+1
+				// sale count + 1
 				var num = parseInt($saleCount.val()) + 1;
-				// 库存不足时 给用户响应库存不足
+				// show understock when not enough product
 				if (num > storeNum) {
-					confirm("很抱歉，仓库中没有足够数量的商品，我们会尽快添加(⊙o⊙)哦！");
+					confirm("Sorry, the product is understock");
 					//$(this).prev("input").addClass("outOfStoreNum");
 					return;
 				}
-				// 为购买数量的文本输入框重新赋值
+				// reset sale count input box
 				$saleCount.val(num);
-				// 数量修改时 同步刷新数据库中的购买数量
+				// modify stock when changing sale number
 				var cartId = $(this).parent(".Numinput").parent(
 						".cart-quantity").siblings(".cartId").children(
 						":hidden").val();
@@ -30,17 +30,17 @@ $(function(){
 					"saleCount" : num
 				};
 				updateCartCount(json);
-				// 获取单价
+				// get price
 				var price = parseFloat($(this).parent(".Numinput").parent(
 						".cart-quantity").siblings(".mktprice1").text());
 				var $subPrice = $(this).parent(".Numinput").parent(
 						".cart-quantity").siblings(".itemTotal");
-				// 设置小计
+				// get subtotal
 				$subPrice.html("<b>" + formatCurrency(num * price) + "</b>");
-				// 设置总价
+				// get total price
 				setTotalPrice();
 			});
-	// 为 - 添加事件
+	// '-' action
 	$(".decrease").click(
 			function() {
 				var $saleCount = $(this).next("input");
@@ -48,16 +48,16 @@ $(function(){
 				var cartId = $(this).parent(".Numinput").parent(
 						".cart-quantity").siblings(".cartId").children(
 						":hidden").val();
-				//获取商品库存
+				//get stock
 				var storeNum = $(this).parent(".Numinput").parent(
 				".cart-quantity").siblings(".storeNum").children(
 				":hidden").val();
 				if(num <= storeNum){
 					$(this).next("input").removeClass("outOfStoreNum");
 				}
-				//当减到1时给用户响应 是否删除该件商品
+				//show whether delete when decrease to 1
 				if (num == 0) {
-					if (!confirm("确认删除该商品？")) {
+					if (!confirm("Are you sure to delete?")) {
 						return;
 					}
 					deleteCartTr(cartId, this);
@@ -69,20 +69,20 @@ $(function(){
 					"saleCount" : num
 				};
 				updateCartCount(json);
-				// 获取单价
+				// get price
 				var price = parseFloat($(this).parent(".Numinput").parent(
 						".cart-quantity").siblings(".mktprice1").text());
 				var $subPrice = $(this).parent(".Numinput").parent(
 						".cart-quantity").siblings(".itemTotal");
-				// 设置小计
+				// get subtotal
 				$subPrice.html("<b>" + formatCurrency(num * price) + "</b>");
-				// 设置总价
+				// get total price
 				setTotalPrice();
 			});
-	// 为所有的 删除 链接添加事件
+	// delete action
 	$(".delete").click(
 		function() {
-			if (!confirm("确认删除该商品吗？")) {
+			if (!confirm("Are you sure to delete?")) {
 				return false;
 			}
 			var cartId = $(this).parent(".cart_last").siblings(".cartId")
@@ -94,14 +94,14 @@ $(function(){
 	 * 为删除选中的购物车商品添加事件
 	 * ①当点击删除时，提示用户 是否确认删除选中的商品
 	 * ②当删除了某条数据时，同步更新 购物车下拉菜单中相应的li节点，并更改购物车显示的数量
-	 * ③当全选被选中时，点击该删除链接，执行清空购物车方法即可
+	 * ③当Select all被选中时，点击该删除链接，执行清空购物车方法即可
 	 */
 	$("#deleteChecked").click(function(){
 		if($(":checked").length == 0){
-			alert("请选择要操作的商品！");
+			alert("Please select product！");
 			return false;
 		}
-		if (!confirm("确认删除选中的商品吗？")) {
+		if (!confirm("Are you sure to delete?")) {
 			return false;
 		}
 		if($("#checkAll").attr("checked")){
@@ -118,12 +118,12 @@ $(function(){
 	});
 	// 为 清空购物车 按钮添加事件
 	$(".clean_btn").click(function() {
-		if (!confirm("确认清空购物车吗？")) {
+		if (!confirm("Are you sure to clear cart?")) {
 			return;
 		}
 		cleanCart();
 	});
-	// 为继续购物添加事件
+	// 为Continue shopping添加事件
 	$(".returnbuy_btn").click(
 		function() {
 			window.location.href = "blank.jsp";// 重定向到主页
@@ -131,18 +131,19 @@ $(function(){
 	// 为结算添加事件
 	$("#goToBuy").click(function() {
 		if(validateStoreNum()){
-			alert("您的购物车中有商品库存不足，请修改后提交^^");
+			alert("Some products are understock, please modify before" +
+				" submission");
 			return false;
 		}
 		if(validateSaleOut()){
-			alert("您的购物车中有下架商品，请修改后提交");
+			alert("Some products are off the shelf, please modify before submission");
 			return false;
 		}
 		if($(":checked").length == 0){
-			alert("请选择要购买的商品再结算");
+			alert("Please select products before checking out");
 			return false;
 		}
-		if(confirm("确认购买这些商品！！")){
+		if(confirm("Are you sure to buy these products?")){
 			$("#cartFormSubmit").submit();
 		}
 	});
@@ -171,7 +172,7 @@ $(function(){
 							":hidden").val();
 					var num = parseInt(numObj.val());
 					if (num > storeNum) {
-						confirm("很抱歉，仓库中没有足够数量的商品，我们会尽快添加(⊙o⊙)哦！");
+						confirm("Sorry, Some products are understock.");
 						numObj.addClass("outOfStoreNum");
 						return;
 					}
@@ -189,7 +190,7 @@ $(function(){
 							".cart-quantity").siblings(".mktprice1").text());
 					var $subPrice = $(this).parent(".Numinput").parent(
 							".cart-quantity").siblings(".itemTotal");
-					// 设置小计(num * price).toFixed(2)
+					// 设置Subtotal(num * price).toFixed(2)
 					$subPrice.html("<b>" + formatCurrency(num * price) + "</b>");
 					// 设置总价
 					setTotalPrice();
@@ -246,7 +247,7 @@ function deleteCartTr(cartId, obj) {
 	$tr.remove();
 	$("div.tag-list ul li ul.subCartList li[id=" + cartId + "]").remove();
 	var cartCount = $("#cartbody tr").length;
-	$("#xiaocart li a").text("购物车(" + cartCount + ")");
+	$("#xiaocart li a").text("Cart(" + cartCount + ")");
 	if ($("#cartbody:has(tr)").length == 0) {
 		toggleBlankCart();
 	}
@@ -261,7 +262,7 @@ function toggleBlankCart() {
 		$("div#blackcart").show();
 		$("div.tag-list ul li ul.subCartList").empty().append(
 				"<li><p>请点击<a href='blank.jsp'>这里</a>选择产品</p></li>");
-		$(".last li a").text("购物车(0)");
+		$(".last li a").text("Cart(0)");
 	}
 }
 

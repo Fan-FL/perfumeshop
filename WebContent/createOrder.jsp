@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>buyleo</title>
+<title>PerfumeStore</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -56,29 +56,26 @@ color: #333;
 		 $("#createBtn").click(function(){
 			var radioLength = $("[name='addressId']:checked").length;
 			if(radioLength < 1){
-				alert("请添加或选择收货信息！");
+				alert("Please add shipping information！");
 				return;
 			}
 			if($(".itemTotal").length == 0){
-				alert("请挑选要购买的商品再提交订单！");
+				alert("Please select prodcuts before submitting！");
 				return;
 			}
 			$("#multiFormSubmit").submit();
 		 });
-		// $("#createAddress").click(function(){
-		 //	openDialogByIframe("600", "350", "新增地址", "createAddress.jsp");
-		 //});
 	});
-	//设置总计价格
+	//Total price
 	function setTotalPrice(){
 		var total = 0;
 		$(".itemTotal").each(function() {
 			total += parseFloat($(this).text());
 		});
-		var mark = $(".total ul li p").text().trim().substring(0,1);//获取格式化的金额符号
+		var mark = $(".total ul li p").text().trim().substring(0,1);//format price
 		$(".total ul li p").html(mark + formatCurrency(total));
 	}
-	//格式化金额
+    //format price
 	function formatCurrency(num) {    
 	    num = num.toString().replace(/\$|\,/g,'');    
 	    if(isNaN(num))    
@@ -95,16 +92,14 @@ color: #333;
 	    return (((sign)?'':'-') + num + '.' + cents);    
 	}
 	/** 
- * iframe弹出层 例子：openDialogByIframe(550,450,'新建单位','add.do'); 
+ * iframe pop up. Example：openDialogByIframe(550,450,'new','add.do');
  *  
  * @param width 
- *            宽 
- * @param height 
- *            高 
- * @param tit 
- *            标题 
+ * @param height
+ * @param tit
+ *            title
  * @param url 
- *            iframe的URL地址 
+ *            iframe URL
  */  
 	function openDialogByIframe(width, height, tit, url) {  
     var winWinth = $(window).width(), winHeight = $(document).height(); 
@@ -126,9 +121,7 @@ color: #333;
     $(".yz_popIframeDiv").fadeTo(0, 0.5);  
     var yz_popTanChuLeft = $(window).width() / 2 - width / 2;
     var yz_popTanChuTop = "300px";
-   /*  var yz_popTanChuTop = $(window).height() / 2 - height / 2  
-            + $(window).scrollTop();  */
-    $(".yz_popTanChu").css({  
+    $(".yz_popTanChu").css({
         width : width,  
         height : height,  
         border : "3px #ccc solid",  
@@ -174,19 +167,19 @@ color: #333;
     });  
 } 
 </script>
-<%--layer弹层--%>
+<%--layer--%>
 <script type="text/javascript" src="js/layer/layer.js"></script>
 <script>
 ;!function(){
 	
-	//放入ready是为了layer所需配件（css、扩展模块）加载完毕
+	//load css, module completely
 	layer.ready(function(){ 
 		$('#createAddress').on('click', function(){
 			layer.open({
 		        type: 2,
 		        offset: '180px',
 		        //skin: 'layui-layer-lan',
-		        title: '新增地址',
+		        title: 'Add address',
 		        fix: true,
 		        shadeClose: false,
 		        maxmin: false,
@@ -200,9 +193,7 @@ color: #333;
 </script>
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 <jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
 	<div class="clear"></div>
 	<div class="register_account">
 		<form action="submitorder" method="post" id="multiFormSubmit">
@@ -210,7 +201,7 @@ color: #333;
 			<c:set scope="session" var="token" value="${pageScope.tokenValue }"></c:set>
 			<input type="hidden" name="token" value="${pageScope.tokenValue }">
 			<div class="wrap">
-				<h4 class="title">确认收货地址</h4>
+				<h4 class="title">Confirm shipping address</h4>
 				<c:forEach items="${requestScope.addresses }" var="address">
 					<input name="addressId" type="radio" value="${address.addressId }">
 					<label> ${address.sendPlace }&nbsp;(${address.sendMan
@@ -218,7 +209,8 @@ color: #333;
 				</c:forEach>
 				<div id="createAddressDiv" class="button-wrapper">
 					<span class="btn">
-						<button id="createAddress" type="button" class="grey"><font size="2px">新增收货地址</font></button>
+						<button id="createAddress" type="button" class="grey"><font
+								size="2px">Add shipping address</font></button>
 					</span>
 				</div>
 				<br/>
@@ -229,19 +221,19 @@ color: #333;
 			</div>
 			<br/>
 			<div class="wrap">
-				<h4 class="title">商品清单<a href="viewcart">[返回购物车修改]</a></h4>
+				<h4 class="title">Product list<a href="viewcart">[Return to cart]</a></h4>
 			</div>
 			<div class="mycar-index">
-			<!-- 商品信息 -->
+			<!-- Product info -->
 			<div class="goods_wrapper">
 				<table cellspacing="0" cellpadding="3" width="100%">
 					<thead>
 						<tr>
-							<th style="width:100px;">图片</th>
-							<th style="width:500px;">商品名称</th>
-							<th style="width:120px;">商品单价</th> 
-							<th style="width:100px;">数量</th>
-							<th style="width:120px;">小计</th>
+							<th style="width:100px;">Picture</th>
+							<th style="width:500px;">Name</th>
+							<th style="width:120px;">Price</th>
+							<th style="width:100px;">Quantity</th>
+							<th style="width:120px;">Subtotal</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -277,27 +269,23 @@ color: #333;
 				</table>
 			</div>
 			<div class="total_box">
-				<!-- 备注 -->
 				<div class="remark">
-					备注:
+					Note:
 					<input type="text" class="remark_intro" name="ordernote" maxlength="30">
 				</div>
-				<!-- 使用余额支付 -->
-				<!-- 价格 -->
 				<div class="total">
 				<ul>
 					<li>
 						<p><fmt:formatNumber value="1" type="currency"></fmt:formatNumber></p>
-						<h2>订单总价：</h2>
+						<h2>Total price:</h2>
 					</li>
 				</ul></div>
 			</div>
 			<div class="order_total btn">
-				<input type="button" id="createBtn" class="enable green-btn" value="提交订单">
+				<input type="button" id="createBtn" class="enable green-btn" value="Submit">
 			</div>
 </div>
-<!-- 确认订单 -->
-			
+
 		</form>
 	</div>
 	

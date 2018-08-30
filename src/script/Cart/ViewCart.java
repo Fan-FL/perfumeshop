@@ -1,11 +1,16 @@
 package script.Cart;
 
+import datasource.CartMapper;
+import domain.Cart;
+import domain.Product;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 
 @WebServlet("/viewcart")
@@ -27,10 +32,11 @@ public class ViewCart extends HttpServlet {
         if(userId == -1){
             response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
         }else {
-            response.sendRedirect("cart.jsp");
+            Map<Cart, Product> cartProductMap = CartMapper.GetAllCartInfoByUserID(userId);
+            request.setAttribute("cartProductMap", cartProductMap);
+            request.getRequestDispatcher("cart.jsp").forward(request, response);
         }
-
-	}
+    }
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

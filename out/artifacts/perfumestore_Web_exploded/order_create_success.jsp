@@ -6,7 +6,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>成功提交订单</title>
+<title>Create order successfully</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,37 +29,35 @@
 <script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 <jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
 	<div class="encircle">
-		<img src="images/jstj.jpg" alt="结算提交凭证正确对号图片">
+		<img src="images/jstj.jpg" alt="success pic">
 		<div class="checkout_order_right">
 			<h1>
-				恭喜，订单提交成功，就差去付款了！<span>应付金额：<i><fmt:formatNumber value="${sessionScope.totalPrice}" type="currency"></fmt:formatNumber></i></span>
+				Create order successfully. Please pay the order.<span>Amount:<i><fmt:formatNumber
+					value="${sessionScope.totalPrice}" type="currency"></fmt:formatNumber></i></span>
 			</h1>
 			<div class="checkout_order_summary">
 			</div>
 			<div class="checkout_order_intro">
 				<div class="checkout_order_same">
-					<p>订单编号：</p>
+					<p>Order No.:</p>
 					<span>${sessionScope.orderNum }</span>
 				</div>
 				<div class="checkout_order_same">
-					<p>收货信息：</p>
+					<p>Shipping address:</p>
 					<i>${sessionScope.address.sendMan }</i> <i>${sessionScope.address.sendPhone }</i> <i>${sessionScope.address.sendPlace }</i>
 				</div>
 				
 				<div class="checkout_order_tools ">
 					<a class="go_pay" href="payorder?orderNum=${sessionScope.orderNum}" target="_self">
-						去付款</a>
-					<a href="blank.jsp" class="go_continue">继续购物</a>
+						Pay</a>
+					<a href="blank.jsp" class="go_continue">Continue shopping</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!--正文结束-->
 	<br /><br /><br /><br /><br /><br />
 </body>
 </html>

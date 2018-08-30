@@ -11,7 +11,7 @@
 <html>
 <head>
 <base href="<%=basePath%>">
-<title>收货地址表格</title>
+<title>Shipping address</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -84,7 +84,7 @@ i {
             var sendplace = $("#sendplace").val();
             var sendman = $("#sendman").val();
             if($.trim(sendplace) == "" || $.trim(sendman) == ""){
-                alert("请完善地址信息！");
+                alert("Please fill up the form.");
                 return;
             }
 			var json = {"sendphone":phone,"sendplace":sendplace,"sendman":sendman};
@@ -93,13 +93,11 @@ i {
 					//parent.window.location.reload();
 					$("#createAddressDiv",window.parent.document).before("<input name='addressId' "
 						+"checked='checked' type='radio' value='"+data[0].addressId+"'>"
-						+"<label>"+json.sendplace+"&nbsp;("+json.sendman+"&nbsp;收)"
+						+"<label>"+json.sendplace+"&nbsp;("+json.sendman+"&nbsp;collect)"
 						+"&nbsp;"+json.sendphone+"</label><br/>");
-					alert("添加成功");
-					var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
-					parent.layer.close(index); //再执行关闭
-					//$(".yz_popIframeDiv",window.parent.document).remove();
-					//$(".yz_popTanChu",window.parent.document).remove();
+					alert("Added successfully!");
+					var index = parent.layer.getFrameIndex(window.name); //get iframe index
+					parent.layer.close(index); //close
 				}
 			},"json" );
         });
@@ -112,17 +110,17 @@ i {
 		<form id="addform" action="addaddress" method="post">
 			<table class="table">
 				<tr>
-					<td class="textTd">收货地址</td>
+					<td class="textTd">Shipping address</td>
 					<td class="inputTd"><input type="text" name="sendplace" id="sendplace">
 					</td>
 				</tr>
 				<tr>
-					<td>收货人</td>
+					<td>Consignee</td>
 					<td><input type="text" name="sendman" id="sendman">
 					</td>
 				</tr>
 				<tr>
-					<td>手机号码</td>
+					<td>Mobile</td>
 					<td><input type="text" name="sendphone" id="phone">
 					</td>
 				</tr>
@@ -134,8 +132,8 @@ i {
 			<div align="center">
 				<br />
 			</div>
-			<input type="reset" value="重置" class="btn"> <input
-				type="button" value="确定" class="btn" id="asb">
+			<input type="reset" value="Reset" class="btn"> <input
+				type="button" value="Confirm" class="btn" id="asb">
 		</form>
 	</div>
 </body>

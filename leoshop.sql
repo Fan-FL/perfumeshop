@@ -177,7 +177,7 @@ CREATE TABLE `orders` (
   `ORDER_ID` int(11) NOT NULL AUTO_INCREMENT,
   `ORDER_NUM` varchar(255) NOT NULL DEFAULT '',
   `ORDER_TIME` datetime NOT NULL,
-  `ORDER_STATUS` int(1) NOT NULL DEFAULT '0' COMMENT '0-->已下单//1-->已付款//2-->已发货//3-->已完成',
+  `ORDER_STATUS` int(1) NOT NULL DEFAULT '0' COMMENT '0-->已下单//1-->已付款//2-->已发货//3-->Done',
   `NOTE` varchar(100) DEFAULT '',
   `USER_ID` int(11) NOT NULL DEFAULT '0',
   `SEND_PLACE` varchar(255) NOT NULL DEFAULT '',

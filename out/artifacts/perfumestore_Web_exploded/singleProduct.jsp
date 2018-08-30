@@ -174,24 +174,21 @@ $(function(){
 
 </head>
 <body>
-<!-- 每个页面均以这样的方式包含 header 提交到servlet的地址（即request.getServletPath()获得到的地址） 是以.jsp结尾的 -->
 	<jsp:include page='login?method=header' flush="true"></jsp:include>
-<!-- 在baseServlet中加判断当请求的地址是以.jsp结尾时 调用方法 responseHeaderInfo;目前没有找到更好的解决方法-->
 
 <script type="text/javascript">
 	$(function(){
-		//当前页面的商品是否在购物车中
+		//Whther this product is in cart
 		var hasThisProduct = ("${requestScope.hasThisProduct}"=="true");
 		var userId = "${sessionScope.userId}";
-		//商品库存
+		//Stock
 		var storeNum = "${requestScope.product.storeNum}";
 		var productName = "${requestScope.product.productName}";
 		//alert(storeNum);
-		//购物数量手工输入
+		//purchase quantity
         $(".Numinput input").keydown(function(event){
         	var kCode = $.browser.msie ? event.keyCode : event.which;
-        	//判断键值  
-            if (((kCode > 47) && (kCode < 58)) 
+            if (((kCode > 47) && (kCode < 58))
                 || ((kCode > 95) && (kCode < 106)) 
                 || (kCode == 8) || (kCode == 39) 
                 || (kCode == 37)) { 
@@ -200,41 +197,40 @@ $(function(){
                 return false;  
             };
         }).focus(function() {
-            this.style.imeMode='disabled';// 禁用输入法,禁止输入中文字符
+            this.style.imeMode='disabled';// disable input method
         }).keyup(function(){
-        	var pBuy = $(this).parent();// 获取父节点
-			var numObj = pBuy.find("input[name='number']");// 获取当前商品数量
+        	var pBuy = $(this).parent();// Get parent node
+			var numObj = pBuy.find("input[name='number']");// Get input number
 			var num = parseInt(numObj.val());
 			if (!isNaN(num)) {
 				if (num > storeNum) {
-					confirm("很抱歉，仓库中没有足够数量的商品，我们会尽快添加(⊙o⊙)哦！");
+					confirm("Sorry, the product is understock.");
 					return;
 				};
         	};
 		});
 		$("#buyNow").click(function(){
 			if(userId <= 0){
-				if(confirm("请先登录，点击确定跳转到登录页面！")){
+				if(confirm("Please login, click Confirm to jump to login page.")){
 					window.location.href = "${pageContext.request.contextPath}/login.jsp";
 				}
 				return false;
 			}
 			var saleCount = $("#text1").val();
 			if(parseInt(saleCount) > storeNum){
-				alert("很抱歉！库存不足,请返回修改订购数量");
+				alert("Sorry, the product is understock, please modify number.");
 				return false;
 			};
 		});
 		$("#addToCart").click(function(){
 			if(userId<=0){
-				if(confirm("请先登录，点击确定跳转到登录页面！")){
+				if(confirm("Please login, click Confirm to jump to login page.")){
 					window.location.href = "${pageContext.request.contextPath}/login.jsp";
 				}
 				return false;
 			}
 			if(hasThisProduct){
-				if(confirm("该商品已在购物车中,点击确定去购物车查看")){
-					//window.location.href = "leoCart.do";
+				if(confirm("This product has already been in the cart, click Confirm to the cart")){
 					window.open("${pageContext.request.contextPath}/viewcart");
 				}
 				return;
@@ -243,16 +239,15 @@ $(function(){
 			var productId = $("#productId").val();
 			var saleCount = $("#text1").val();
 			if(parseInt(saleCount) > storeNum){
-				alert("很抱歉！库存不足,请返回修改订购数量");
+				alert("Sorry, the product is understock, please modify number");
 				return;
 			}
 			var sendData={"productId":productId,"saleCount":saleCount};
 			$.getJSON(url,sendData,function(backData){
 				if(backData[0].cartId > 0){
-					//var oldCartCount = parseInt($("#xiaocart li a").text().replace("购物车(","").replace(")",""));
 					hasThisProduct = true;
-					alert("添加成功^.^");
-					$("#xiaocart li a").text("购物车(" + (backData[0].cartCount) + ")");
+					alert("Added successfully!^.^");
+					$("#xiaocart li a").text("Cart(" + (backData[0].cartCount) + ")");
 					$("#emptyCart").remove();
 					$("#smallCartList").append("<li id='"+backData[0].cartId+"'><i><a href='viewproductdetail?productid="+productId+"'>"+productName+"</a></i></li>");
 				};
@@ -263,7 +258,7 @@ $(function(){
 		var b=Number(nu1);
 			b++;
 			if (b > storeNum) {
-				confirm("很抱歉，仓库中没有足够数量的商品，我们会尽快添加(⊙o⊙)哦！");
+				confirm("Sorry, the product is understock.");
 				return;
 			};
 			$("#text1").val(b);
@@ -283,7 +278,8 @@ $(function(){
 <div class="mens">    
   <div class="main">
      <div class="wrap">
-     	<ul class="breadcrumb breadcrumb__t"><a class="home" href="blank.jsp">主页</a> / ${requestScope.product.productName}</ul>
+     	<ul class="breadcrumb breadcrumb__t"><a class="home" href="blank.jsp">Home</a> /
+			${requestScope.product.productName}</ul>
 		<div class="cont span_2_of_3">
 		  		<div class="grid images_3_of_2">
 						<div id="container">
@@ -298,13 +294,13 @@ $(function(){
 	            </div>
 		         <div class="desc1 span_3_of_2">
 		         	<h3 class="m_3">${requestScope.product.productName}</h3>
-		             <p class="m_5">￥${requestScope.product.productPrice} </p>
+		             <p class="m_5">$${requestScope.product.productPrice} </p>
 		         	 <div class="btn_form">
-		         	 <em><font color="#878787">库存${requestScope.product.storeNum}件</font></em><br/><br/>
+		         	 <em><font color="#878787">${requestScope.product.storeNum} in stock</font></em><br/><br/>
 						<form method="get" action="buyNow.do">
 							<input id="productId" type="hidden" name="productId" value="${requestScope.product.productId}">
 							<div style="margin-top:5px;margin-bottom:0" class="rer-quantity">
-							<label>订购数量：</label>
+							<label>Quantity ordered:</label>
 								<div class="Numinput">
 									<span class="numadjust decrease" id="b3">-</span>
 									<input id="text1" type="text" autocomplete="off" name="number" size="5" oldvalue="3" value="1">
@@ -313,8 +309,8 @@ $(function(){
 							</div>
 								
 							<br/><br/>
-							<input type="submit" value="立即购买" id="buyNow" >&nbsp;&nbsp;
-							<input type="button" value="添加到购物车" id="addToCart" class="button">
+							<input type="submit" value="Buy it now" id="buyNow" >&nbsp;&nbsp;
+							<input type="button" value="Add to cart" id="addToCart" class="button">
 						</form>
 					 </div>
 			     </div>

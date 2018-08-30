@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    <title>收货地址表格</title>
+    <title>Shipping address</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="text/javascript" src="js/jquery1.min.js"></script>
@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 $("#updateform").submit();
 			});
 			$("#asb").click( function () {
-                alert("添加成功");
+                alert("Added successfully!");
                 $("#addform").submit();
 			});
 		});
@@ -77,15 +77,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<form id="addform" action="addaddress" method="post">
 		   			<table class="table">
 						<tr>
-							<td width="15%">收货地址</td>
+							<td width="15%">Shipping address</td>
 							<td width="85%"><input type="text" name="sendplace"></td>
 						</tr>
 						<tr>
-							<td>收货人</td>
+							<td>Consignee</td>
 							<td><input type="text" name="sendman"></td>
 						</tr>
 						<tr>
-							<td>手机号码</td>
+							<td>Mobile</td>
 							<td><input type="text" name="sendphone" id="sendphone"></td>
 						</tr>
 						<tr>
@@ -94,8 +94,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</tr>
 		   			</table>
 		   			<div align="center"><br/></div>
-					<input type="reset" value="重置" class="btn">
-					<input type="button" value="确定" class="btn" id="asb">
+					<input type="reset" value="Reset" class="btn">
+					<input type="button" value="Confirm" class="btn" id="asb">
 				</form>
 			</div>
   		</c:when>
@@ -104,15 +104,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<form id="updateform" action="updateaddress?addId=${address.addressId}" method="post">
 		   			<table class="table">
 		   				<tr>
-							<td width="15%">收货地址</td>
+							<td width="15%">Shipping address</td>
 							<td width="85%"><input type="text" name="sendplace" value="${address.sendPlace}"></td>
 						</tr>
 						<tr>
-							<td>收货人</td>
+							<td>Consignee</td>
 							<td><input type="text" name="sendman" value="${address.sendMan}"></td>
 						</tr>
 						<tr>
-							<td>手机号码</td>
+							<td>Mobile</td>
 							<td><input type="text" name="sendphone" value="${address.sendPhone}" id="sendphone"></td>
 						</tr>
 						<tr>
@@ -121,8 +121,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</tr>
 		   			</table>
 		   			<div align="center"><br/></div>
-					<input type="reset" value="重置" class="btn">
-					<input type="button" value="修改" class="btn" id="usb">
+					<input type="reset" value="Reset" class="btn">
+					<input type="button" value="Modify" class="btn" id="usb">
 				</form>
 			</div>
   		</c:otherwise>
