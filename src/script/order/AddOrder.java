@@ -27,6 +27,13 @@ public class AddOrder extends HttpServlet {
     }
 
 
+	/**
+	 * Get cart info and prepare data for createOrder page
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int userId = -1;
 		try {
@@ -36,7 +43,7 @@ public class AddOrder extends HttpServlet {
 			response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
 			return;
 		}
-		List<Address> addresses = AddressMapper.getAddressWithUserId(userId);
+		List<Address> addresses = AddressMapper.getAddressByUserId(userId);
 		request.setAttribute("addresses", addresses);
 		String[] cartIds = request.getParameterValues("cartId");
 		if(cartIds.length ==0){

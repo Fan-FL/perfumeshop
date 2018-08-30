@@ -9,6 +9,11 @@ import java.util.*;
 
 
 public class OrderMapper {
+    /**
+     * insert order
+     * @param order
+     * @return
+     */
     public static int addOrders(Order order) {
         String sql = "INSERT INTO orders (ORDER_NUM,ORDER_TIME,ORDER_STATUS,NOTE,USER_ID,SEND_PLACE,"
                 + "SEND_MAN,SEND_PHONE,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,SALE_COUNT)"
@@ -24,8 +29,12 @@ public class OrderMapper {
         return Integer.parseInt(DBHelper.getValue(sql, orderNum).toString());
     }
 
-    public static void submitPayment(String orderNum, int i) {
-        changeOrderStatus(orderNum,i);
+    /**
+     * //modify order status to 1 which means already paid
+     * @param orderNum
+     */
+    public static void submitPayment(String orderNum) {
+        changeOrderStatus(orderNum,1);
     }
 
     public static void changeOrderStatus(String orderNum, int status) {
@@ -34,18 +43,28 @@ public class OrderMapper {
     }
 
     public static List<OrderMsg> getOrderMsgs(int userId) {
-        Set<String> orderNums = getOrderNum(userId);//根据用户ID获取所有未删除（可见的）订单编号（按时间先后排列，最近在前）
+        // get all undeleted order number
+        Set<String> orderNums = getOrderNum(userId);
         Iterator<String> it = orderNums.iterator();
         List<OrderMsg> ordermsg = new ArrayList<OrderMsg>();
         while(it.hasNext()){
             String orderNum = it.next();
-            List<OrderProduct> product = getOrderProducts(orderNum);//根据订单编号获取其所有的商品集合
-            OrderMsg order = getOrderMsg(orderNum,product);//根据订单编号及其所有的商品集合获取该订单信息
+            //get all OrderProducts by orderNum
+            List<OrderProduct> product = getOrderProducts(orderNum);
+            //get order message
+            OrderMsg order = getOrderMsg(orderNum,product);
             ordermsg.add(order);
         }
         return ordermsg;
     }
 
+    /**
+     * get all undeleted order number by userID in order of date (The most recent one appears on
+     * the top)
+     *
+     * @param userId
+     * @return
+     */
     public static Set<String> getOrderNum(int userId) {
         Connection conn = null;
         PreparedStatement ps = null;
@@ -73,12 +92,23 @@ public class OrderMapper {
         return null;
     }
 
+    /**
+     * get all OrderProducts by orderNum
+     * @param orderNum
+     * @return
+     */
     public static List<OrderProduct> getOrderProducts(String orderNum) {
         String sql = "SELECT orders.PRODUCT_ID productId,orders.PRODUCT_NAME productName,orders.PRODUCT_PRICE productPrice,orders.SALE_COUNT saleCount,product.PRODUCT_IMAGE_PATH productImagePath FROM orders,product WHERE orders.PRODUCT_ID=product.PRODUCT_ID AND ORDER_NUM=?;";
         List<OrderProduct> product = DBHelper.getObjectForList(OrderProduct.class, sql, orderNum);
         return product;
     }
 
+    /**
+     * get order message by order num and OrderProducts
+     * @param orderNum
+     * @param product
+     * @return
+     */
     public static OrderMsg getOrderMsg(String orderNum, List<OrderProduct> product) {
         String sql = "SELECT ORDER_ID orderId, ORDER_NUM orderNum,ORDER_TIME " +
                 "orderTime,ORDER_STATUS orderStatus,NOTE note,USER_ID userId, " +

@@ -25,6 +25,13 @@ public class ViewAllProduct extends HttpServlet {
     }
 
 
+    /**
+     * view all products by paging
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int currPage = 1;
         try {
@@ -35,7 +42,6 @@ public class ViewAllProduct extends HttpServlet {
         int productPageSize = ConfigProperties.allProductPageSize;
         Pager<Product> pager = this.productMapper.getProductPager(currPage, productPageSize,
                 product);
-        System.out.println(pager);
         request.setAttribute("pager", pager);
         request.getRequestDispatcher("allProduct.jsp").forward(request, response);
 	}

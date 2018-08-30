@@ -49,7 +49,7 @@ public class DBConnection {
 	}
 
 	/**
-	 * 关闭数据库资源，关闭Statement和Connection、RestltSet
+	 * Close database resources，Close Statement, Connectio and RestltSet
 	 */
 	public static void release(Statement statement, Connection con, ResultSet rs) {
 		if (rs != null) {
@@ -68,7 +68,6 @@ public class DBConnection {
 		}
 		if (con != null) {
 			try {
-				// 数据库连接池的Connection对象进行close时，并不是真的进行关闭，而是把该数据库连接归还到数据库连接池中。
 				con.close();
 			} catch (Exception e) {
 				e.printStackTrace();

@@ -1,10 +1,8 @@
 package script.Address;
 
 import datasource.AddressMapper;
-import datasource.UserMapper;
 import domain.Address;
 import domain.Pager;
-import domain.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

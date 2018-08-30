@@ -10,13 +10,14 @@ import java.util.Map;
 
 public class DBHelper {
     /**
-     * 从数据库中查询具有 键-值 关系的数据时，返回Map集合
-     * @param keySql 查询key的sql语句
-     * @param keyClazz key的Class对象
-     * @param valueSql 查询value的sql语句
-     * @param valueClazz value的Class对象
-     * @param columnName 映射键值关系的列名
-     * @param args 填充SQL语句的可变参数，实际是填充keySql的可变参数  ，而valueSql的查询条件是   keySql查询到的列名为columnName的对应的  值
+     * Return map when selecting key-foreign key data
+     * @param keySql sql query for key
+     * @param keyClazz Class object of key
+     * @param valueSql sql query for value
+     * @param valueClazz Class object of value
+     * @param columnName column alias of key-foreign key map
+     * @param args  keySql args，valueSql query condition is the value of columnName of key keySql
+     *              query
      * @return
      */
     public static <K, V> Map<K, V> getMapHandler(String keySql, Class<K> keyClazz, String valueSql,
@@ -29,25 +30,27 @@ public class DBHelper {
         V vEntity = null;
         Map<K, V> map = null;
         try {
-            //con = JDBCTools.getConnection();
             con = DBConnection.getDBConnection();
             ps = con.prepareStatement(keySql);
             prepareStateSetArgs(ps, args);
             map = new HashMap<K, V>();
             resultSet = ps.executeQuery();
-            // 通过该对象调用getColumnCount()获取列总数；getColumnLabel()获取列别名
+            // Use this object to get column count by getColumnCount()
+            // get column name by getColumnLabel()
             ResultSetMetaData rsmd = resultSet.getMetaData();
             while (resultSet.next()) {
                 Map<String, Object> beanValues = new HashMap<String, Object>();
                 for (int i = 0; i < rsmd.getColumnCount(); i++) {
-                    // 获取列对应的列的别名
+                    // get column alias
                     String columnLabel = rsmd.getColumnLabel(i + 1);
-                    // 根据列的别名从ResultSet结果集中获得对应的值
+                    // get column value by column alias
                     Object columnValue = resultSet.getObject(columnLabel);
                     beanValues.put(columnLabel, columnValue);
-                    //获取列名
+                    //get column name
                     String columnNameInRS = rsmd.getColumnName(i + 1);
-                    //如果得到的列名 与传入的进行键值关联的列名相同 则通过此键 从数据库获取  valueSql查询中对应的数据 构建为 valueClazz对应的V的对象
+                    //if column name is the same as input key-foreign key column name, use this
+                    // as key to query from DB. The results of valueSql query is the value of
+                    // in type of valueClazz
                     if(columnNameInRS.equals(columnName)){
                         Object columnNameValue = resultSet.getObject(i + 1);
                         vEntity = getObject(valueClazz, valueSql, columnNameValue);
@@ -55,15 +58,15 @@ public class DBHelper {
                         continue;
                     }
                 }
-                //beanValues不为空，则将该Map构建为 keyClazz 对应的 K 的对象
+                //if beanValues is not empty, make this Map as the key in type of keyClazz
                 if (!beanValues.isEmpty()) {
                     kEntity = transferMapToBean(keyClazz,beanValues);
                 }
-                //kEntity 和 vEntity都不为null 时，将他们已键值对的形式放入Map集合中
+                //if kEntity and vEntity are not null, put into map，
                 if(kEntity != null && vEntity != null){
                     map.put(kEntity, vEntity);
                 }else {
-                    System.out.println("-----Map对象组合失败,进入下一次循环------");
+                    System.out.println("-----Map association failed. Move to next round------");
                     continue;
                 }
             }
@@ -76,7 +79,7 @@ public class DBHelper {
     }
 
     /**
-     * 为预编译的 sql 语句填充占位符
+     * padding for sql query
      * @param ps
      * @param args
      * @throws SQLException
@@ -89,12 +92,12 @@ public class DBHelper {
     }
 
     /**
-     * 通用的查询方法，可以根据传入的SQL、Class 对象返回SQL对应的记录的对象
+     * General query method, return object according to SQL, Class
      *
      * @param sql
-     *            :查询语句，可能带占位符
+     *            :sql sentence, can contain placeholders
      * @param args
-     *            :填充占位符的参数
+     *            :args for placeholders
      * @return
      */
     public static <T> T getObject(Class<T> clazz,String sql, Object... args) {
@@ -106,7 +109,7 @@ public class DBHelper {
     }
 
     /**
-     *  将一个Map转换为clazz对应的Bean对象
+     *  transform a map into Bean according to clazz
      * @param clazz
      * @param values
      * @return
@@ -120,22 +123,9 @@ public class DBHelper {
         for (Map.Entry<String, Object> entry : values.entrySet()) {
             String fieldName = entry.getKey();
             Object value = entry.getValue();
-			/*if(value !=null){
-				System.out.println(value.getClass());
-			}*/
-			/*if(value instanceof BigDecimal){
-				Field field = ReflectionUtils.getDeclaredField(entity, fieldName);
-				//System.out.println(field.getType());
-				value = ReflectionUtils.invokeMethod(((BigDecimal) value), field.getType().toString()+"Value",new Class[0]);
-			}*/
-            // 调用ReflectionUtil.setFieldValue()为result对象的每个属性赋值
-            // ReflectionUtils.setFieldValue(entity, fieldName, value);
-            // 通过调用setter方法对属性进行赋值
             try {
-                //System.out.println(entry);
                 ReflectionUtils.setterValue(entity, fieldName, value);
             } catch (IllegalArgumentException e) {
-                //System.out.println("IllegalArgumentException异常,赋值失败");
             }
         }
         return entity;
@@ -143,7 +133,7 @@ public class DBHelper {
 
     /**
      *
-     * @param clazz T 的Class对象
+     * @param clazz  Class object of T
      * @param sql
      * @param args
      * @return
@@ -155,13 +145,11 @@ public class DBHelper {
         ResultSet resultSet = null;
         T entity = null;
         try {
-            // con = JDBCTools.getConnection();
             con = DBConnection.getDBConnection();
             ps = con.prepareStatement(sql);
             prepareStateSetArgs(ps, args);
             list = new ArrayList<T>();
             resultSet = ps.executeQuery();
-            // 通过该对象调用getColumnCount()获取列总数；getColumnLabel()获取列别名
             ResultSetMetaData rsmd = resultSet.getMetaData();
 
             while (resultSet.next()) {
@@ -180,7 +168,7 @@ public class DBHelper {
     }
 
     /**
-     * 将结果集中的一条记录以 key-value 的形式放入Map中
+     * put one record from result set into map in key-value form
      *
      * @param resultSet
      * @param rsmd
@@ -190,17 +178,17 @@ public class DBHelper {
     private static Map<String, Object> putOneResultSetToMap(ResultSet resultSet,
                                                             ResultSetMetaData rsmd) throws SQLException {
         Map<String, Object> values = new HashMap<String, Object>();
-        // 循环，获取列及对应的列名
+        // iteratively get column name and value
         for (int i = 0; i < rsmd.getColumnCount(); i++) {
             String columnLabel = rsmd.getColumnLabel(i + 1);
-            Object columnValue = resultSet.getObject(columnLabel);// 根据列名从ResultSet结果集中获得对应的值
+            Object columnValue = resultSet.getObject(columnLabel);// get value by column name
             values.put(columnLabel, columnValue);
         }
         return values;
     }
 
     /**
-     * 获取返回结果中 第一行第一列的值，可通过此方法获取满足条件的共有多少条数据
+     * get value of first column in first row, can use this method to get record count
      *
      * @param sql
      * @param args
@@ -212,14 +200,12 @@ public class DBHelper {
         PreparedStatement ps = null;
         ResultSet resultSet = null;
         try {
-            // con = JDBCTools.getConnection();
             con = DBConnection.getDBConnection();
             ps = con.prepareStatement(sql);
             prepareStateSetArgs(ps, args);
             resultSet = ps.executeQuery();
             if (resultSet.next()) {
                 value = resultSet.getObject(1);
-                //System.out.println("getValue:" + value);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -230,7 +216,7 @@ public class DBHelper {
     }
 
     /**
-     * 通用的更新方法：insert、delete、update
+     * generate method for  insert、delete、update
      *
      * @throws Exception
      */
@@ -238,7 +224,6 @@ public class DBHelper {
         Connection con = null;
         PreparedStatement ps = null;
         try {
-            // con = JDBCTools.getConnection();
             con = DBConnection.getDBConnection();
             ps = con.prepareStatement(sql);
             prepareStateSetArgs(ps, args);
@@ -251,7 +236,8 @@ public class DBHelper {
     }
 
     /**
-     * 插入一条数据 同时返回自增的 id 值 返回-1表明获取失败
+     * insert one row and return id
+     * return -1 if failed to insert
      *
      * @param sql
      * @param args

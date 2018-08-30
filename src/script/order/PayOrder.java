@@ -28,16 +28,22 @@ public class PayOrder extends HttpServlet {
     }
 
 
+	/**
+	 * pay order
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String orderNum = request.getParameter("orderNum");
 		int orderStatus = OrderMapper.getOrderStatus(orderNum);
 		System.out.println(orderNum);
-		//System.out.println("orderStatus::" + orderStatus);
 		if (orderStatus != 0) {
 			response.sendRedirect("blank.jsp");
 			return;
 		}
-		OrderMapper.submitPayment(orderNum,1);//将订单状态修改为1 表示已付款
+		OrderMapper.submitPayment(orderNum);
 		request.getSession().removeAttribute("totalPrice");
 		request.getSession().removeAttribute("cartProductMap");
 		request.getSession().removeAttribute("address");

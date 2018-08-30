@@ -28,6 +28,13 @@ public class DeleteOrder extends HttpServlet {
     }
 
 
+	/**
+	 * delete order from order history
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String orderNum = request.getParameter("orderNum").toString();
 		OrderMapper.changeOrderVisible(orderNum, 0);

@@ -1,8 +1,6 @@
 package script.Product;
 
 import datasource.ProductMapper;
-import domain.ConfigProperties;
-import domain.Pager;
 import domain.Product;
 
 import javax.servlet.ServletException;
@@ -24,14 +22,21 @@ public class ViewProductDetail extends HttpServlet {
     }
 
 
+    /**
+     * get a product's detail
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int productId = 0;
         try {
             productId = Integer.parseInt(request.getParameter("productid"));
         } catch (Exception e) {
-            System.out.println("商品id获取失败");
+            System.out.println("failed to get product ID");
         }
-        Product productInfo = ProductMapper.getSingleProductInfo(productId);
+        Product productInfo = ProductMapper.getProduct(productId);
         request.setAttribute("product", productInfo);
         request.getRequestDispatcher("singleProduct.jsp").forward(request, response);
 	}

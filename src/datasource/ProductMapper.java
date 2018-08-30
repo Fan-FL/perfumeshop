@@ -11,15 +11,30 @@ import java.util.List;
 import java.util.Map;
 
 public class ProductMapper {
+    private static Map<Integer, Product> productMap = new HashMap<>();
 
-    public static Product getSingleProductInfo(int productId) {
+    public void put(int id, Product product){
+        productMap.put(id, product);
+    }
+
+    public Product get(int id){
+        return productMap.get(id);
+    }
+
+    public static Product getProduct(int productId) {
+        Product product = productMap.get(productId);
+        if (product != null){
+            System.out.println("Load from map.");
+            return product;
+        }
+
         String sql = "SELECT PRODUCT_ID ,PRODUCT_NAME ,PRODUCT_PRICE ,STORE_NUM ,PRODUCT_IMAGE_PATH," +
                 " PRODUCT_DESC ,PRODUCT_STATUS " +
                 "FROM product " +
                 "WHERE PRODUCT_ID=?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
-        Product product = null;
+
         try {
             ps = DBConnection.prepare(sql);
             ps.setInt(1, productId);
@@ -33,6 +48,7 @@ public class ProductMapper {
                 int productStatus = rs.getInt(7);
                 product = new Product(productId, productName, productPrice, productDesc,
                         productImagePath, storeNum, productStatus);
+                productMap.put(productId, product);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -73,12 +89,11 @@ public class ProductMapper {
         Object storeNum = DBHelper.getValue(selectSql, saleCount,productId);
         String sql = "UPDATE product SET STORE_NUM=? WHERE PRODUCT_ID=?";
         DBHelper.update(sql, storeNum,productId);
-    }
 
-    public static Product getProduct(int productId) {
-        String sql = "SELECT PRODUCT_STATUS productStatus,PRODUCT_DESC productDesc,PRODUCT_ID productId,PRODUCT_NAME productName,PRODUCT_PRICE productPrice,"
-                + "STORE_NUM storeNum,PRODUCT_IMAGE_PATH productImagePath" + " FROM product WHERE PRODUCT_ID = ? ";
-        return DBHelper.getObject(Product.class, sql, productId);
+        Product product = productMap.get(productId);
+        if (product != null){
+            product.setStoreNum((Integer)storeNum);
+        }
     }
 
 }

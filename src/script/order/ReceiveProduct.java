@@ -28,6 +28,13 @@ public class ReceiveProduct extends HttpServlet {
     }
 
 
+	/**
+	 * receive product (product delivered)
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String orderNum = request.getParameter("orderNum").toString();
 		OrderMapper.changeOrderStatus(orderNum,3);

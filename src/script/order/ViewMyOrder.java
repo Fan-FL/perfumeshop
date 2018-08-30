@@ -23,6 +23,13 @@ public class ViewMyOrder extends HttpServlet {
     }
 
 
+	/**
+	 * view my order history
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int userId = -1;
 		try {

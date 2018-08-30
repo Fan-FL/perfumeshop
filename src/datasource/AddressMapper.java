@@ -7,11 +7,29 @@ import java.util.List;
 
 
 public class AddressMapper {
+    /**
+     * get addresses of certain user by paging
+     * @param currPage
+     * @param pageSize
+     * @param userId
+     * @return
+     */
     public Pager<Address> getAddressPager(int currPage, int pageSize, int userId) {
         String datesql = "SELECT ADDRESS_ID addressId,SEND_PLACE sendPlace,SEND_MAN sendMan,SEND_PHONE sendPhone,USER_ID userId FROM address WHERE USER_ID=?";
         String datecountsql = "SELECT COUNT(*) FROM address WHERE USER_ID=?";
         return new PagerHandler().getPager(Address.class, datecountsql, datesql, currPage, pageSize,
                 userId);
+    }
+
+    /**
+     * get all addresses of certain user
+     * @param userId
+     * @return
+     */
+    public static List<Address> getAddressByUserId(int userId) {
+        String sql = "SELECT ADDRESS_ID addressId,SEND_PLACE sendPlace,SEND_MAN sendMan,"
+                + "SEND_PHONE sendPhone FROM ADDRESS WHERE USER_ID = ?";
+        return DBHelper.getObjectForList(Address.class, sql, userId);
     }
 
     public static void deleteAddressById(int addressId) {
@@ -24,7 +42,7 @@ public class AddressMapper {
         return DBHelper.getObject(Address.class, sql, addressId);
     }
 
-    public static void updateAddressById(Address address) {
+    public static void updateAddress(Address address) {
         String sql = "UPDATE address SET SEND_PLACE=?,SEND_MAN=?,SEND_PHONE=? WHERE ADDRESS_ID=?";
         DBHelper.update(sql, address.getSendPlace(), address.getSendMan(), address.getSendPhone(), address.getAddressId());
     }
@@ -34,11 +52,5 @@ public class AddressMapper {
         return DBHelper.updateGetGeneratedKeys(sql, address.getSendMan(), address.getSendPlace(),
                 address.getSendPhone(),
                 address.getUserId());
-    }
-
-    public static List<Address> getAddressWithUserId(int userId) {
-        String sql = "SELECT ADDRESS_ID addressId,SEND_PLACE sendPlace,SEND_MAN sendMan,"
-                + "SEND_PHONE sendPhone FROM ADDRESS WHERE USER_ID = ?";
-        return DBHelper.getObjectForList(Address.class, sql, userId);
     }
 }

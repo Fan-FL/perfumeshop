@@ -1,8 +1,5 @@
 package script.Cart;
 
-import datasource.ProductMapper;
-import domain.Product;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

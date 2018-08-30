@@ -35,6 +35,11 @@ public class CartMapper {
         return generatedKey;
     }
 
+    /**
+     * Get a user's all cart info
+     * @param userId
+     * @return
+     */
     public static Map<Cart, Product> GetAllCartInfoByUserID(int userId) {
         String sql = "select count(*)from cart where user_id=" + userId;
 
@@ -70,6 +75,12 @@ public class CartMapper {
         DBHelper.update(sql, cart.getUserId(), cart.getProductId(), cart.getSaleCount(), cart.getCartId());
     }
 
+    /**
+     * get cart info of certain user and carDis
+     * @param userId
+     * @param cartIds
+     * @return
+     */
     public static Map<Cart, Product> getCartProductMap(int userId, String[] cartIds) {
         String strCartIds = "";
         for (int i = 0; i < cartIds.length - 1; i++) {
@@ -88,7 +99,7 @@ public class CartMapper {
         return DBHelper.getMapHandler(sqlCart, Cart.class, sqlProduct, Product.class, "PRODUCT_ID", sqlArray);
     }
 
-    public static void deleteCartByUserCart(int userId, String[] cartIds) {
+    public static void deleteCartByUserAndCartIds(int userId, String[] cartIds) {
         String strCartIds = "";
         for (int i = 0; i < cartIds.length - 1; i++) {
             strCartIds += "?,";

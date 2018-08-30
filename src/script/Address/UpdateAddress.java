@@ -37,7 +37,7 @@ public class UpdateAddress extends HttpServlet {
 			String sendman = request.getParameter("sendman");
 			String sendphone = request.getParameter("sendphone");
 			Address address = new Address(addId, sendplace, sendman, sendphone, userId);
-			AddressMapper.updateAddressById(address);
+			AddressMapper.updateAddress(address);
 			request.getRequestDispatcher("viewalladdress").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();

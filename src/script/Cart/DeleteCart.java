@@ -1,8 +1,6 @@
 package script.Cart;
 
 import datasource.CartMapper;
-import domain.Cart;
-import net.sf.json.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 
 @WebServlet("/deletecart")
@@ -26,17 +23,16 @@ public class DeleteCart extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] cartIds = request.getParameterValues("cartId");
-        System.out.println("1111111111");
         for(int i = 0;i < cartIds.length;i++){
             int cartId = -1;
             try {
                 cartId = Integer.parseInt(cartIds[i]);
             } catch (NumberFormatException e) {
-                throw new RuntimeException("cartId类型转换异常");
+                throw new RuntimeException("Exception of cartId casting");
             }
             if (cartId == -1) {
-                System.out.println("未获得页面传过来的cartId");
-            } else if (cartId == 0) {// cartId == 0 标记为清空购物车
+                System.out.println("Failed to get cartId");
+            } else if (cartId == 0) {// cartId == 0 means empty cart
                 int userId = -1;
                 try {
                     userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
@@ -46,7 +42,7 @@ public class DeleteCart extends HttpServlet {
                     return;
                 }
                 CartMapper.deleteCartByUser(userId);
-            } else {// 不为0 也不是 -1 即 删除购物车中的一条数据
+            } else {// delete a record in cart if not 0 and -1
                 CartMapper.deleteCartById(cartId);
             }
         }

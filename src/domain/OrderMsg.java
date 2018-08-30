@@ -75,8 +75,8 @@ public class OrderMsg {
 		this.product = product;
 	}
 	public OrderMsg(int orderId, String orderNum, Date orderTime,
-                    int orderStatus, String note, int userId, String sendPlace,
-                    String sendMan, String sendPhone, List<OrderProduct> product
+					int orderStatus, String note, int userId, String sendPlace,
+					String sendMan, String sendPhone, List<OrderProduct> product
                     ) {
 		super();
 		this.orderId = orderId;
@@ -91,8 +91,8 @@ public class OrderMsg {
 		this.product = product;
 	}
 	public OrderMsg(int orderId, String orderNum, Date orderTime,
-                    int orderStatus, String note, int userId, String sendPlace,
-                    String sendMan, String sendPhone) {
+					int orderStatus, String note, int userId, String sendPlace,
+					String sendMan, String sendPhone) {
 		super();
 		this.orderId = orderId;
 		this.orderNum = orderNum;

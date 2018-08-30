@@ -2,7 +2,6 @@ package script.Cart;
 
 import datasource.CartMapper;
 import domain.Cart;
-import net.sf.json.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 
 @WebServlet("/updatecartcount")
@@ -28,7 +26,8 @@ public class UpdateCartCount extends HttpServlet {
         int cartId = Integer.parseInt(request.getParameter("cartId"));
         int saleCount = Integer.parseInt(request.getParameter("saleCount"));
         Cart cart = CartMapper.getCart(cartId);
-        cart.setSaleCount(saleCount);// 修改saleCount数量
+        // change sale count
+        cart.setSaleCount(saleCount);
         CartMapper.updateCart(cart);
 	}
 

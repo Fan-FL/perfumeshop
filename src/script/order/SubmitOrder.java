@@ -34,6 +34,13 @@ public class SubmitOrder extends HttpServlet {
     }
 
 
+	/**
+	 * submit order, insert orders, modify product store number
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		int userId = -1;
@@ -44,7 +51,7 @@ public class SubmitOrder extends HttpServlet {
 			response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
 			return;
 		}
-		//处理表单的重复提交start
+		//deal with resubmit
 		String tokenValue = request.getParameter("token");
 		String token = (String) session.getAttribute("token");
 		if(token != null && token.equals(tokenValue)){
@@ -53,29 +60,29 @@ public class SubmitOrder extends HttpServlet {
 			response.sendRedirect("repeatCreateOrder.jsp");
 			return;
 		}
-		//处理表单的重复提交end
+
 		Map<Cart,Product> cartProductMap = (Map<Cart, Product>)session.getAttribute("cartProductMap");
 		String[] cartIds = (String[]) request.getSession().getAttribute("cartIds");
 		int orderId = -1;
 		String orderNum = null;
 
-
 		try {
 			int addressId = Integer.parseInt(request.getParameter("addressId"));
 			Address address = AddressMapper.getAddressById(addressId);
 			String note = request.getParameter("ordernote");
-			// 生成订单 创建orders 表
 			Timestamp orderTime = new Timestamp(System.currentTimeMillis());
 			Random random = new Random();
 			String ran = random.nextInt(10)*1000+random.nextInt(10)*100+random.nextInt(10)*10+random.nextInt(10) + "";
 			System.out.println(ran);
 			orderNum = System.currentTimeMillis() + ran + userId;
 			System.out.println(orderNum);
-			double totalPrice = 0;//遍历cartProductMap 进行orders表的创建 同时生成订单总价
-			int orderStatus = 0;//表示已下单
+			// total price of order
+			double totalPrice = 0;
+			// 0 represent order created
+			int orderStatus = 0;
 			List<Order> orders = new ArrayList<Order>();
 			for(Map.Entry<Cart, Product> cartProduct :cartProductMap.entrySet()){
-				//根据Id获取商品，用于验证库存和商品状态
+				// Get product by product id for checking inventory and product status
 				Product product = ProductMapper.getProduct(cartProduct.getValue().getProductId());
 				int saleCount = cartProduct.getKey().getSaleCount();
 				int storeNum = product.getStoreNum();
@@ -95,27 +102,27 @@ public class SubmitOrder extends HttpServlet {
 				orders.add(order);
 				totalPrice += cartProduct.getValue().getProductPrice()*cartProduct.getKey().getSaleCount();
 			}
-			//库存验证通过再进行Orders表的添加
+			//Inventory checking passed, create orders at this time
 			for(Order order:orders){
 				orderId = OrderMapper.addOrders(order);
 			}
 			if(orderId == -1){
-				throw new RuntimeException("订单生成失败");
+				throw new RuntimeException("Failed to create order");
 			}
 			session.setAttribute("totalPrice", totalPrice);
 			session.setAttribute("orderNum", orderNum);
 			session.setAttribute("address", address);
 		} catch (Exception e) {
-			throw new RuntimeException("订单生成时发生异常");
+			throw new RuntimeException("Error in order creation");
 		}
 		if(orderId != -1 && orderNum != null){
-			// 订单生成过程未发生异常 则 删除购物车中已经下单的商品
-			CartMapper.deleteCartByUserCart(userId,cartIds);
+			// delete products in cart
+			CartMapper.deleteCartByUserAndCartIds(userId,cartIds);
 			request.getSession().removeAttribute("buyNowCart");
-			//同时减商品库存
-			//1)通过订单编号获取购买的商品ID和购买的数量
+			// decrease store number
+			// get product ID and purchased quantity by order number
 			List<Cart> boughtProducts = CartMapper.getCartsByOrderNum(orderNum);
-			//2)根据购买的信息，修改数据库商品数量
+			// modify sotre number
 			for(Cart bought:boughtProducts){
 				int productId = bought.getProductId();
 				int saleCount = bought.getSaleCount();
