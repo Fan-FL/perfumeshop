@@ -1,6 +1,6 @@
 package script.User;
 
-import datasource.UserMapper;
+import service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,9 +13,11 @@ import java.io.IOException;
 public class UpdateUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+    UserService userService = null;
+
     public UpdateUser() {
         super();
-        // TODO Auto-generated constructor stub
+        userService = UserService.getInstance();
     }
 
     /**
@@ -41,7 +43,7 @@ public class UpdateUser extends HttpServlet {
             System.out.println(password);
             String phone = request.getParameter("phone");
             String address = request.getParameter("address");
-            UserMapper.updateUser(userId, password, truename, phone, address);
+            userService.updateUser(userId, password, truename, phone, address);
             request.getRequestDispatcher("viewuser").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();

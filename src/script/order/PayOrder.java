@@ -1,11 +1,6 @@
 package script.order;
 
-import datasource.AddressMapper;
-import datasource.CartMapper;
-import datasource.OrderMapper;
-import domain.Address;
-import domain.Cart;
-import domain.Product;
+import service.OrderService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,18 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 
 @WebServlet("/payorder")
 public class PayOrder extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	OrderService orderService = null;
 
     public PayOrder() {
         super();
-        // TODO Auto-generated constructor stub
+		orderService = OrderService.getInstance();
     }
 
 
@@ -37,13 +30,13 @@ public class PayOrder extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String orderNum = request.getParameter("orderNum");
-		int orderStatus = OrderMapper.getOrderStatus(orderNum);
+		int orderStatus = orderService.getOrderStatus(orderNum);
 		System.out.println(orderNum);
 		if (orderStatus != 0) {
 			response.sendRedirect("blank.jsp");
 			return;
 		}
-		OrderMapper.submitPayment(orderNum);
+		orderService.submitPayment(orderNum);
 		request.getSession().removeAttribute("totalPrice");
 		request.getSession().removeAttribute("cartProductMap");
 		request.getSession().removeAttribute("address");

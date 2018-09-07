@@ -1,13 +1,26 @@
 package domain;
 
-public class Cart {
-	private int cartId;
+import datasource.ProductMapper;
+
+public class Cart extends DomainObject{
+	private int id;
 	private int productId;
 	private int saleCount;
 	private int userId;
+	private Product product;
+
+	public Product getProduct() {
+		this.product = ProductMapper.findById(this.productId);
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
 	@Override
 	public String toString() {
-		return "Cart [cardId=" + cartId + ", productId=" + productId
+		return "Cart [cardId=" + id + ", productId=" + productId
 				+ ", saleCount=" + saleCount + ", userId=" + userId + "]";
 	}
 	public Cart(int productId, int saleCount, int userId) {
@@ -19,11 +32,13 @@ public class Cart {
 	public Cart() {
 		super();
 	}
-	public int getCartId() {
-		return cartId;
+	@Override
+	public int getId() {
+		return id;
 	}
-	public void setCartId(int cardId) {
-		this.cartId = cardId;
+	@Override
+	public void setId(int cardId) {
+		this.id = cardId;
 	}
 	public int getProductId() {
 		return productId;

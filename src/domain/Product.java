@@ -1,21 +1,23 @@
 package domain;
 
-public class Product {
-	private int productId;
+public class Product extends DomainObject{
+	private int id;
 	private String productName;
 	private double productPrice;
 	private String productDesc;
 	private String productImagePath;
 	private int storeNum;
 	private int productStatus;
-	public int getProductId() {
-		return productId;
+	@Override
+	public int getId() {
+		return id;
 	}
-	public void setProductId(int productId) {
-		this.productId = productId;
+	@Override
+	public void setId(int productId) {
+		this.id = productId;
 	}
 	public String getProductName() {
-		return productName == null? "%%":"%"+productName+"%";
+		return productName == null? "":productName;
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
@@ -52,14 +54,14 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + ", productName=" + productName + ", productPrice=" + productPrice
+		return "Product [productId=" + id + ", productName=" + productName + ", productPrice=" + productPrice
 				+ ", productDesc=" + productDesc + ", productImagePath=" + productImagePath + ", storeNum=" + storeNum
 				+ ", productStatus=" + productStatus + "]";
 	}
 	public Product(int productId, String productName, double productPrice, String productDesc, String productImagePath,
 				   int storeNum, int productStatus) {
 		super();
-		this.productId = productId;
+		this.id = productId;
 		this.productName = productName;
 		this.productPrice = productPrice;
 		this.productDesc = productDesc;

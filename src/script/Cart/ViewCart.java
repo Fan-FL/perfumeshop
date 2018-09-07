@@ -1,8 +1,8 @@
 package script.Cart;
 
-import datasource.CartMapper;
 import domain.Cart;
 import domain.Product;
+import service.CartService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,11 +16,11 @@ import java.util.Map;
 @WebServlet("/viewcart")
 public class ViewCart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+    private CartService cartService = null;
 
     public ViewCart() {
         super();
-        // TODO Auto-generated constructor stub
+        cartService = CartService.getInstance();
     }
 
 
@@ -32,7 +32,7 @@ public class ViewCart extends HttpServlet {
         if(userId == -1){
             response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
         }else {
-            Map<Cart, Product> cartProductMap = CartMapper.GetAllCartInfoByUserID(userId);
+            Map<Cart, Product> cartProductMap = cartService.GetAllCartInfoByUserID(userId);
             request.setAttribute("cartProductMap", cartProductMap);
             request.getRequestDispatcher("cart.jsp").forward(request, response);
         }

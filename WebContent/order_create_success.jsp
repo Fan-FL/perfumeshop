@@ -48,7 +48,7 @@
 					<p>Shipping address:</p>
 					<i>${sessionScope.address.sendMan }</i> <i>${sessionScope.address.sendPhone }</i> <i>${sessionScope.address.sendPlace }</i>
 				</div>
-				
+
 				<div class="checkout_order_tools ">
 					<a class="go_pay" href="payorder?orderNum=${sessionScope.orderNum}" target="_self">
 						Pay</a>

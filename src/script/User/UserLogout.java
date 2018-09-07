@@ -1,7 +1,6 @@
 package script.User;
 
-import datasource.UserMapper;
-import domain.User;
+import service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,9 +14,11 @@ import java.io.IOException;
 public class UserLogout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+    UserService userService = null;
+
     public UserLogout() {
         super();
-        // TODO Auto-generated constructor stub
+        userService = UserService.getInstance();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,17 +41,7 @@ public class UserLogout extends HttpServlet {
      * @throws ServletException
      */
     public void responseHeaderInfo(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int userId = -1;
-        try {
-            userId = (Integer) request.getSession().getAttribute("userId");
-        } catch (Exception e) {
-            System.out.println("user hasn't logged in!");
-        }
-        if(userId != -1){
-            User userHeader = UserMapper.findByID(userId);
-            System.out.println("login：[[ID:" + userId + ";User name:" + userHeader.getUsername() + "]]......");
-            request.setAttribute("userHeader", userHeader);
-        }
-        getServletContext().getRequestDispatcher("/header.jsp").include(request, response);
+        userService.userLogout(request, response);
+        request.getServletContext().getRequestDispatcher("/header.jsp").include(request, response);
     }
 }

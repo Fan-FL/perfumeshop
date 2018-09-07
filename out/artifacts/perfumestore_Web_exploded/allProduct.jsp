@@ -61,7 +61,7 @@
 							<div class="top-box"> 
 							<c:forEach items="${pager.pageDataList}" var="a" varStatus="vs" begin="${outvs.count - 1}" end="${outvs.count + 2}" >
 							<div class="col_1_of_3 span_1_of_3" style="width: 23%">
-									<a href="viewproductdetail?productid=${a.productId}" >
+									<a href="viewproductdetail?productid=${a.id}" >
 										<div class="inner_content clearfix">
 											<div class="product_image">
 												<img src="${a.productImagePath}"/>

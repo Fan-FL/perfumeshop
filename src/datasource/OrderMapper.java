@@ -8,21 +8,7 @@ import java.sql.ResultSet;
 import java.util.*;
 
 
-public class OrderMapper {
-    /**
-     * insert order
-     * @param order
-     * @return
-     */
-    public static int addOrders(Order order) {
-        String sql = "INSERT INTO orders (ORDER_NUM,ORDER_TIME,ORDER_STATUS,NOTE,USER_ID,SEND_PLACE,"
-                + "SEND_MAN,SEND_PHONE,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,SALE_COUNT)"
-                + "values(?,?,?,?,?,?,?,?,?,?,?,?)";
-        return DBHelper.updateGetGeneratedKeys(sql, order.getOrderNum(), order.getOrderTime(), order
-                        .getOrderStatus(),
-                order.getNote(), order.getUserId(), order.getSendPlace(), order.getSendMan(), order.getSendPhone(),
-                order.getProductId(), order.getProductName(), order.getProductPrice(), order.getSaleCount());
-    }
+public class OrderMapper implements IMapper{
 
     public static int getOrderStatus(String orderNum) {
         String sql = "SELECT DISTINCT ORDER_STATUS FROM orders WHERE ORDER_NUM=?";
@@ -110,7 +96,7 @@ public class OrderMapper {
      * @return
      */
     public static OrderMsg getOrderMsg(String orderNum, List<OrderProduct> product) {
-        String sql = "SELECT ORDER_ID orderId, ORDER_NUM orderNum,ORDER_TIME " +
+        String sql = "SELECT ORDER_ID id, ORDER_NUM orderNum,ORDER_TIME " +
                 "orderTime,ORDER_STATUS orderStatus,NOTE note,USER_ID userId, " +
                 "SEND_PLACE sendPlace,SEND_MAN sendMan,SEND_PHONE sendPhone FROM orders WHERE ORDER_NUM=?";
         OrderMsg ordermsg = DBHelper.getObject(OrderMsg.class, sql, orderNum);
@@ -121,5 +107,27 @@ public class OrderMapper {
     public static void changeOrderVisible(String orderNum, int status) {
         String sql = "UPDATE orders SET VISIBLE=? WHERE ORDER_NUM=?";
         DBHelper.update(sql, status, orderNum);
+    }
+
+    @Override
+    public int insert(DomainObject obj) {
+        Order order = (Order)obj;
+        String sql = "INSERT INTO orders (ORDER_NUM,ORDER_TIME,ORDER_STATUS,NOTE,USER_ID,SEND_PLACE,"
+                + "SEND_MAN,SEND_PHONE,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,SALE_COUNT)"
+                + "values(?,?,?,?,?,?,?,?,?,?,?,?)";
+        return DBHelper.updateGetGeneratedKeys(sql, order.getOrderNum(), order.getOrderTime(), order
+                        .getOrderStatus(),
+                order.getNote(), order.getUserId(), order.getSendPlace(), order.getSendMan(), order.getSendPhone(),
+                order.getProductId(), order.getProductName(), order.getProductPrice(), order.getSaleCount());
+    }
+
+    @Override
+    public void update(DomainObject obj) {
+
+    }
+
+    @Override
+    public void delete(DomainObject obj) {
+
     }
 }

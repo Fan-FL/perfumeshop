@@ -108,7 +108,8 @@ color: #333;
             .append(  
                     "<div class='yz_popTanChu'><div class='yz_popTanChutit'><span class='yz_popTanChuTxt'>"  
                             + tit  
-                            + "</span><span class='yz_popTanChuClose'>关闭</span></div><iframe class='winIframe' scrolling='no' frameborder='0' hspace='0' src="  
+                            +
+				"</span><span class='yz_popTanChuClose'>close</span></div><iframe class='winIframe' scrolling='no' frameborder='0' hspace='0' src="
                             + url + "></iframe></div>");  
     $(".yz_popIframeDiv").css({  
         width : winWinth,  
@@ -203,9 +204,9 @@ color: #333;
 			<div class="wrap">
 				<h4 class="title">Confirm shipping address</h4>
 				<c:forEach items="${requestScope.addresses }" var="address">
-					<input name="addressId" type="radio" value="${address.addressId }">
-					<label> ${address.sendPlace }&nbsp;(${address.sendMan
-						}&nbsp;收)&nbsp;${address.sendPhone }</label><br/>
+					<input name="addressId" type="radio" value="${address.id }">
+					<label> ${address.sendPlace }&nbsp;(to ${address.sendMan
+						}&nbsp;)&nbsp;${address.sendPhone }</label><br/>
 				</c:forEach>
 				<div id="createAddressDiv" class="button-wrapper">
 					<span class="btn">
@@ -240,7 +241,8 @@ color: #333;
 						<c:forEach items="${sessionScope.cartProductMap}" var="cartProduct">
 						<tr>
 							<td style="width:100px;">
-								<a target="_blank" href="viewproductdetail?productid=${cartProduct.value.productId }">
+								<a target="_blank"
+								   href="viewproductdetail?productid=${cartProduct.value.id }">
 									<span class="cart-product-img">
 										<img src="${cartProduct.value.productImagePath }" height="50" style="cursor: pointer;">
 									</span>
@@ -248,7 +250,8 @@ color: #333;
 							</td>
 							<td >
 								<div class="cart_name" ><p>
-								<i><a target="_blank" href="viewproductdetail?productid=${cartProduct.value.productId }">
+								<i><a target="_blank"
+									  href="viewproductdetail?productid=${cartProduct.value.id }">
 								${cartProduct.value.productName }</a></i></p></div>							
 							</td>
 							<!-- <td>0</td> -->

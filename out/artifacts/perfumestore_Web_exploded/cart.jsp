@@ -31,14 +31,9 @@
 <jsp:include page='login?method=header' flush="true"></jsp:include>
 	<div class="clear"></div>
 	<div class="mycar-index">
-		<h1>购物车</h1>
+		<h1>Cart</h1>
 		<div
 			style="width: 1200px; height: 1px; overflow: hidden; clear: both;"></div>
-		<div id="blackcart">
-			<div class="cart-blank">
-				Your cart is empty. please go <a href="blank.jsp">shopping</a>！
-			</div>
-		</div>
 
 
 		<div id="cart-wrapper">
@@ -64,16 +59,16 @@
 							<c:forEach items="${requestScope.cartProductMap}" var="cartProduct">
 								<tr>
 									<td class="checkboxtd">
-											<input checked="checked" name="cartId" value="${cartProduct.key.cartId}" class="checkbox" type="checkbox" >
+											<input checked="checked" name="cartId" value="${cartProduct.key.id}" class="checkbox" type="checkbox" >
 									</td>
 									<td style="width: 600px;"><a target="_blank"
-										href="viewproductdetail?productid=${cartProduct.value.productId }"
+										href="viewproductdetail?productid=${cartProduct.value.id }"
 										class="cart_list_img"><img
 											src="${cartProduct.value.productImagePath }"
 											style="cursor: pointer;" height="50" width="36"></a>
 										<p>
 											<a target="_blank"
-												href="viewproductdetail?productid=${cartProduct.value.productId }">${cartProduct.value.productName }</a>
+												href="viewproductdetail?productid=${cartProduct.value.id }">${cartProduct.value.productName }</a>
 										</p></td>
 									<td class="mktprice1" style="font-weight: bold; font-size: 14px;">
 										<b>${cartProduct.value.productPrice }</b>
@@ -104,7 +99,7 @@
 									<td class="cart_last" style="width: 100px;"><a href="#"
 										class="delete"></a></td>
 									<td class="cartId"><input type="hidden"
-										value="${cartProduct.key.cartId }"></td>
+										value="${cartProduct.key.id }"></td>
 									<td class="storeNum"><input type="hidden"
 										value="${cartProduct.value.storeNum }"></td>
 								</tr>

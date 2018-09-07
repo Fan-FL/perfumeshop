@@ -1,12 +1,9 @@
 package script.User;
 
-import datasource.CartMapper;
-import datasource.UserMapper;
-import domain.User;
-import net.sf.json.JSONArray;
+import service.CartService;
+import service.UserService;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,10 +14,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/login")
 public class UserLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
+    UserService userService = null;
+
     public UserLogin() {
         super();
-        // TODO Auto-generated constructor stub
+        userService = UserService.getInstance();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -60,7 +59,7 @@ public class UserLogin extends HttpServlet {
             System.out.println("user hasn't logged in!");
         }
         if(userId != -1){
-            int cartCount = CartMapper.getCartCount(userId);
+            int cartCount = CartService.getInstance().getCartCount(userId);
             request.setAttribute("cartCount", cartCount);
         }
         getServletContext().getRequestDispatcher("/header.jsp").include(request, response);
@@ -77,31 +76,6 @@ public class UserLogin extends HttpServlet {
      */
     public void login(HttpServletRequest request, HttpServletResponse response) throws IOException,
             ServletException {
-        PrintWriter out = null;
-        try {
-            response.setContentType("text/html;charset=UTF-8");
-            out = response.getWriter();
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            User user = UserMapper.findByName(username);
-            boolean logStatus = false;
-            if(user != null){
-                logStatus = password.equals(user.getPassword());
-            }
-            if(logStatus){
-                request.getSession().setAttribute("userId", user.getUserId());
-                request.getSession().setAttribute("userName", user.getUsername());
-            }
-            String jsonStr = "[{'logStatus':'" + logStatus + "'}]";
-            JSONArray json = JSONArray.fromObject(jsonStr);
-            out.write(json.toString());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally{
-            if(out != null){
-                out.flush();
-                out.close();
-            }
-        }
+        userService.userLogin(request, response);
     }
 }

@@ -1,7 +1,6 @@
 package script.Address;
 
-import datasource.AddressMapper;
-import domain.Address;
+import service.AddressService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,10 +13,11 @@ import java.io.IOException;
 @WebServlet("/addaddress")
 public class AddAddress extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private AddressService addressService = null;
 
     public AddAddress() {
         super();
+		addressService = AddressService.getInstance();
         // TODO Auto-generated constructor stub
     }
 
@@ -35,8 +35,7 @@ public class AddAddress extends HttpServlet {
 			String sendplace = request.getParameter("sendplace");
 			String sendman = request.getParameter("sendman");
 			String sendphone = request.getParameter("sendphone");
-			Address address = new Address(sendplace, sendman, sendphone, userId);
-			AddressMapper.addAddress(address);
+			addressService.addAddress(sendplace, sendman, sendphone, userId);
 			request.getRequestDispatcher("viewalladdress").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();

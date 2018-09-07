@@ -1,9 +1,8 @@
 package script.Product;
 
-import datasource.ProductMapper;
-import domain.ConfigProperties;
 import domain.Pager;
 import domain.Product;
+import service.ProductService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,14 +15,13 @@ import java.io.IOException;
 @WebServlet("/viewallproduct")
 public class ViewAllProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private ProductMapper productMapper = new ProductMapper();
 
+    ProductService productService = null;
 
     public ViewAllProduct() {
         super();
-        // TODO Auto-generated constructor stub
+        productService = ProductService.getInstance();
     }
-
 
     /**
      * view all products by paging
@@ -36,12 +34,8 @@ public class ViewAllProduct extends HttpServlet {
         int currPage = 1;
         try {
             currPage = Integer.parseInt(request.getParameter("currPage"));
-            System.out.println(currPage);
         } catch (Exception e) {}
-        Product product = new Product(null, 0, null, null, 0, 0);
-        int productPageSize = ConfigProperties.allProductPageSize;
-        Pager<Product> pager = this.productMapper.getProductPager(currPage, productPageSize,
-                product);
+        Pager<Product> pager = this.productService.viewAllProduct(currPage);
         request.setAttribute("pager", pager);
         request.getRequestDispatcher("allProduct.jsp").forward(request, response);
 	}

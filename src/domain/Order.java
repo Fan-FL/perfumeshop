@@ -2,7 +2,7 @@ package domain;
 
 import java.util.Date;
 
-public class Order {
+public class Order extends DomainObject{
 	private String orderNum;
 	private Date orderTime;
 	private int orderStatus;
@@ -12,16 +12,18 @@ public class Order {
 	private String sendMan;
 	private String sendPhone;
 	private int visible;
-	private int orderId;
+	private int id;
 	private int productId;
 	private String productName;
 	private double productPrice;
 	private int saleCount;
-	public int getOrderId() {
-		return orderId;
+	@Override
+	public int getId() {
+		return id;
 	}
-	public void setOrderId(int orderId) {
-		this.orderId = orderId;
+	@Override
+	public void setId(int orderId) {
+		this.id = orderId;
 	}
 	public String getOrderNum() {
 		return orderNum;
@@ -103,7 +105,7 @@ public class Order {
 	}
 	@Override
 	public String toString() {
-		return "Orders [orderId=" + orderId + ", orderNum=" + orderNum + ", orderTime=" + orderTime + ", orderStatus="
+		return "Orders [orderId=" + id + ", orderNum=" + orderNum + ", orderTime=" + orderTime + ", orderStatus="
 				+ orderStatus + ", note=" + note + ", userId=" + userId + ", sendPlace=" + sendPlace + ", sendMan="
 				+ sendMan + ", sendPhone=" + sendPhone + ", productId=" + productId + ", productName=" + productName
 				+ ", productPrice=" + productPrice + ", saleCount=" + saleCount + ", visible=" + visible + "]";
@@ -112,7 +114,7 @@ public class Order {
                  String sendPlace, String sendMan, String sendPhone, int productId, String productName, double productPrice,
                  int saleCount, int visible) {
 		super();
-		this.orderId = orderId;
+		this.id = orderId;
 		this.orderNum = orderNum;
 		this.orderTime = orderTime;
 		this.orderStatus = orderStatus;

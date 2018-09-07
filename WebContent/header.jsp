@@ -48,11 +48,6 @@ ul.subCartList li {
         $("#logout").click(function(){
             return confirm('Are you sure to log out？');
         });
-        $("body").keydown(function(event) {
-            if (event.keyCode == "13") {//enter key
-                $("#serchSubmit").click();
-            }
-        });
     });
 
 </script>
@@ -90,16 +85,6 @@ ul.subCartList li {
 				</div>
 			</div>
 	 		<div class="header-bottom-right">
-				<div class="search">
-					<form id="serchSubmit" action="searchProduct.do" method="get">
-						<input type="text" id="searchProductName" 
-						name="searchProductName"  class="textbox" value="${requestScope.criteriaProductName==null?'Search':requestScope.criteriaProductName}"
-							onFocus="this.value = '';"
-							onBlur="if (this.value == '') {this.value = '${requestScope.criteriaProductName==null?'Search':requestScope.criteriaProductName}';}">
-						<input type="submit" id="submit">
-					</form>
-					<div id="response"></div>
-				</div>
 				<div class="tag-list">
 					<ul class="icon1 sub-icon1 profile_img">
 						<li><a class="active-icon c2" href="viewcart"> </a>

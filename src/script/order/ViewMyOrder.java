@@ -1,7 +1,7 @@
 package script.order;
 
-import datasource.OrderMapper;
 import domain.OrderMsg;
+import service.OrderService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +15,11 @@ import java.util.List;
 @WebServlet("/viewmyorder")
 public class ViewMyOrder extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	OrderService orderService = null;
 
     public ViewMyOrder() {
         super();
-        // TODO Auto-generated constructor stub
+		orderService = OrderService.getInstance();
     }
 
 
@@ -39,7 +39,7 @@ public class ViewMyOrder extends HttpServlet {
 			response.sendRedirect("blank.jsp");
 			return;
 		}
-		List<OrderMsg> ordermsg = OrderMapper.getOrderMsgs(userId);
+		List<OrderMsg> ordermsg = orderService.viewMyOrder(userId);
 		request.setAttribute("ordermsg", ordermsg);
 		request.getRequestDispatcher("accountorder.jsp").forward(request, response);
 	}

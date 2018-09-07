@@ -1,11 +1,6 @@
 package script.order;
 
-import datasource.AddressMapper;
-import datasource.CartMapper;
-import datasource.OrderMapper;
-import domain.Address;
-import domain.Cart;
-import domain.Product;
+import service.OrderService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,18 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 
 @WebServlet("/receiveproduct")
 public class ReceiveProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	OrderService orderService = null;
 
     public ReceiveProduct() {
         super();
-        // TODO Auto-generated constructor stub
+		orderService = OrderService.getInstance();
     }
 
 
@@ -37,7 +30,7 @@ public class ReceiveProduct extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String orderNum = request.getParameter("orderNum").toString();
-		OrderMapper.changeOrderStatus(orderNum,3);
+		orderService.receiveProduct(orderNum);
 		request.getRequestDispatcher("viewmyorder").forward(request, response);
 	}
 

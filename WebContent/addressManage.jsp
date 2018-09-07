@@ -95,10 +95,10 @@
 										<td align="center">${statu.count+(pager.currPage-1)*pager.pageSize}</td>
 										<td>${add.sendPlace}&nbsp;&nbsp;(&nbsp;${add.sendMan}&nbsp;&nbsp;&nbsp;collect&nbsp;)&nbsp;&nbsp;${add.sendPhone}</td>
 										<td align="center"><a
-												href="deleteaddress?addId=${add.addressId}"
+												href="deleteaddress?addId=${add.id}"
 												onclick="return confirm('Are you sure to delete?');">Delete</a>
 											&nbsp;&nbsp;&nbsp;&nbsp;<a
-													href="viewsingleaddress?addId=${add.addressId}">
+													href="viewsingleaddress?addId=${add.id}">
 												Modify</a></td>
 									</tr>
 								</c:forEach>

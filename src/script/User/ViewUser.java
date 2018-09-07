@@ -1,7 +1,6 @@
 package script.User;
 
-import datasource.UserMapper;
-import domain.User;
+import service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,9 +13,11 @@ import java.io.IOException;
 public class ViewUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+    UserService userService = null;
+
     public ViewUser() {
         super();
-        // TODO Auto-generated constructor stub
+        userService = UserService.getInstance();
     }
 
     /**
@@ -27,17 +28,7 @@ public class ViewUser extends HttpServlet {
      * @throws IOException
      */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
-            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
-        }
-        User user = UserMapper.findByID(userId);
-        request.setAttribute("user", user);
-        request.getRequestDispatcher("accountMsg.jsp").forward(request, response);
+        userService.viewUser(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

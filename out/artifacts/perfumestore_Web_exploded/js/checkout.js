@@ -90,12 +90,7 @@ $(function(){
 			deleteCartTr(cartId, this);
 			return false;
 		});
-	/**
-	 * 为删除选中的购物车商品添加事件
-	 * ①当点击删除时，提示用户 是否确认删除选中的商品
-	 * ②当删除了某条数据时，同步更新 购物车下拉菜单中相应的li节点，并更改购物车显示的数量
-	 * ③当Select all被选中时，点击该删除链接，执行清空购物车方法即可
-	 */
+
 	$("#deleteChecked").click(function(){
 		if($(":checked").length == 0){
 			alert("Please select product！");
@@ -116,19 +111,17 @@ $(function(){
 		});
 		return false;
 	});
-	// 为 清空购物车 按钮添加事件
+
 	$(".clean_btn").click(function() {
 		if (!confirm("Are you sure to clear cart?")) {
 			return;
 		}
 		cleanCart();
 	});
-	// 为Continue shopping添加事件
 	$(".returnbuy_btn").click(
 		function() {
-			window.location.href = "blank.jsp";// 重定向到主页
+			window.location.href = "blank.jsp";
 		});
-	// 为结算添加事件
 	$("#goToBuy").click(function() {
 		if(validateStoreNum()){
 			alert("Some products are understock, please modify before" +
@@ -147,11 +140,9 @@ $(function(){
 			$("#cartFormSubmit").submit();
 		}
 	});
-	// 手动输入商品数量
 	$(".Numinput input").keydown(
 			function(event) {
 				var kCode = $.browser.msie ? event.keyCode : event.which;
-				// 判断键值
 				if (((kCode > 47) && (kCode < 58))
 						|| ((kCode > 95) && (kCode < 106)) || (kCode == 8)
 						|| (kCode == 39) || (kCode == 37)) {
@@ -160,11 +151,11 @@ $(function(){
 					return false;
 				}
 			}).focus(function() {
-		this.style.imeMode = 'disabled';// 禁用输入法,禁止输入中文字符
+		this.style.imeMode = 'disabled';
 	}).keyup(
 			function() {
-				var pBuy = $(this).parent();// 获取父节点
-				var numObj = pBuy.find("input[name='num']");// 获取当前商品数量
+				var pBuy = $(this).parent();
+				var numObj = pBuy.find("input[name='num']");
 				var num = parseInt(numObj.val());
 				if (!isNaN(num)) {
 					var storeNum = $(this).parent(".Numinput").parent(
@@ -185,20 +176,16 @@ $(function(){
 						"saleCount" : num
 					};
 					updateCartCount(json);
-					// 获取单价
 					var price = parseFloat($(this).parent(".Numinput").parent(
 							".cart-quantity").siblings(".mktprice1").text());
 					var $subPrice = $(this).parent(".Numinput").parent(
 							".cart-quantity").siblings(".itemTotal");
-					// 设置Subtotal(num * price).toFixed(2)
 					$subPrice.html("<b>" + formatCurrency(num * price) + "</b>");
-					// 设置总价
 					setTotalPrice();
 				}
 			});
-	//为checkbox添加事件
 	$(".checkbox").click(function(){
-		var cbl = $(".checkbox").length;//.checkbox的长度
+		var cbl = $(".checkbox").length;
 		$("#checkAll").attr("checked",$(".checkbox:checked").length==cbl);
 		setTotalPrice();
 	});
@@ -207,9 +194,7 @@ $(function(){
 		setTotalPrice();
 	});
 });
-//清空购物车
 function cleanCart(){
-	//用cartId = 0 标记 清空购物车
 	var json = {
 		"cartId" : 0
 	};
@@ -217,11 +202,9 @@ function cleanCart(){
 	$("div#cart-wrapper").remove();
 	toggleBlankCart();
 }
-// 更新购买数量
 function updateCartCount(json) {
 	$.post("updatecartcount", json);
 };
-// 设置总计价格
 function setTotalPrice() {
 	var total = 0;
 	$(".itemTotal").each(function() {
@@ -233,11 +216,9 @@ function setTotalPrice() {
 	var mark = $("#total").text().trim().substring(0,1);//获取格式化的金额符号
 	$("#total").html(mark + formatCurrency(total));
 }
-// 删除购物车中的一条数据 或 清空购物车 json{"cartId" : cartId} cartId 为 0 是清空购物车 其它时候 删除一条数据
 function deleteCart(json) {
 	$.post("deletecart", json);
 }
-// 删除某条购物车数据后 删除该条数据所在的 tr节点 同时删除购物车下拉菜单的某一条数据
 function deleteCartTr(cartId, obj) {
 	var json = {
 		"cartId" : cartId
@@ -253,7 +234,6 @@ function deleteCartTr(cartId, obj) {
 	}
 	setTotalPrice();
 }
-// 购物车清空时显示此DIV 同时将购物车 下拉菜单恢复
 function toggleBlankCart() {
 	if ($("div#cart-wrapper div.cart-blank").length > 0 || $("div#cart-wrapper #cartbody:has(tr)").length > 0) {
 		$("div#blackcart").hide();
@@ -277,7 +257,6 @@ function validateSaleOut(){
 	return flag;
 }
 
-//查看当前页面商品库存
 function validateStoreNum(){
 	var flag = false;
 	$("input").each(function(){
@@ -287,16 +266,10 @@ function validateStoreNum(){
 	})
 	return flag;
 }
-// 刷新页面
 function refresh() {
-	window.location.reload();// 刷新当前页面.
+	window.location.reload();
 
-	// 或者下方刷新方法
-	// parent.location.reload()刷新父亲对象（用于框架）--需在iframe框架内使用
-	// opener.location.reload()刷新父窗口对象（用于单开窗口
-	// top.location.reload()刷新最顶端对象（用于多开窗口）
 }
-// 格式化金额
 function formatCurrency(num) {
 	num = num.toString().replace(/\$|\,/g, '');
 	if (isNaN(num))

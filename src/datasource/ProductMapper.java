@@ -1,28 +1,17 @@
 package datasource;
 
+import domain.DomainObject;
 import domain.Pager;
 import domain.Product;
-import domain.User;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class ProductMapper {
-    private static Map<Integer, Product> productMap = new HashMap<>();
+public class ProductMapper implements IMapper{
 
-    public void put(int id, Product product){
-        productMap.put(id, product);
-    }
-
-    public Product get(int id){
-        return productMap.get(id);
-    }
-
-    public static Product getProduct(int productId) {
-        Product product = productMap.get(productId);
+    public static Product findById(int productId) {
+        Product product = IdentityMap.productMap.get(productId);
         if (product != null){
             System.out.println("Load from map.");
             return product;
@@ -48,52 +37,64 @@ public class ProductMapper {
                 int productStatus = rs.getInt(7);
                 product = new Product(productId, productName, productPrice, productDesc,
                         productImagePath, storeNum, productStatus);
-                productMap.put(productId, product);
+                IdentityMap.productMap.put(productId, product);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             DBConnection.release(ps, null, rs);
         }
-        return product;
-    }
-
-    public Pager<Product> getProductPager(int currPage, int pageSize, Product product) {
-        String sqlForDataCount = null;
-        String sqlForData = null;
-        String searchKey = product.getProductName();
-
-        boolean flag = false;
-        if(searchKey.equals("%%") || searchKey == null){
-            sqlForDataCount = "SELECT COUNT(*) FROM product WHERE PRODUCT_STATUS=1";
-            sqlForData = "SELECT PRODUCT_ID productId,PRODUCT_NAME productName,"
-                    + "PRODUCT_PRICE productPrice,PRODUCT_IMAGE_PATH productImagePath,PRODUCT_STATUS productStatus "
-                    + "FROM product WHERE PRODUCT_STATUS=1";
-            flag = true;
+        if(product != null){
+            return product;
         }else {
-            sqlForDataCount = "SELECT COUNT(*) FROM product WHERE PRODUCT_STATUS=1 AND PRODUCT_NAME LIKE ?";
-            sqlForData = "SELECT PRODUCT_ID productId,PRODUCT_NAME productName,"
+            return null;
+        }
+    }
+
+    public static Pager<Product> getProductPager(int currPage, int pageSize) {
+        if(IdentityMap.productMap.isEmpty()){
+            String sql = "SELECT PRODUCT_ID id,PRODUCT_NAME productName, STORE_NUM storeNum, "
                     + "PRODUCT_PRICE productPrice,PRODUCT_IMAGE_PATH productImagePath,PRODUCT_STATUS productStatus "
-                    + "FROM product WHERE PRODUCT_STATUS=1 AND PRODUCT_NAME LIKE ?";
+                    + "FROM product";
+            List<Product> products = DBHelper.getObjectForList(Product.class, sql);
+            for(Product product: products){
+                IdentityMap.productMap.put(product.getId(), product);
+            }
         }
-        if(flag){
-            return new PagerHandler().getPager(Product.class, sqlForDataCount, sqlForData, currPage,
-                    pageSize);
+
+        PagerHandler pagerHandler = new PagerHandler();
+        int dataCount = IdentityMap.productMap.size();
+        int pageCount = (dataCount % pageSize == 0) ? (dataCount / pageSize) : (dataCount / pageSize + 1);
+        int dataIndex = (currPage - 1) * pageSize;
+        List<Product> pageDataList = new ArrayList<>();
+        List<Product> allProducts = new ArrayList<>(IdentityMap.productMap.values());
+        for (int i = 0; i<pageSize && i< dataCount; i++) {
+            Product product = allProducts.get(dataIndex + i);
+            pageDataList.add(product);
         }
-        return new PagerHandler().getPager(Product.class, sqlForDataCount, sqlForData, currPage, pageSize,
-                searchKey);
+        Pager<Product> pager = new domain.Pager<Product>(currPage, pageSize, pageCount, dataCount,
+                pageDataList);
+        return pager;
     }
 
-    public static void changeProductStock(int productId, int saleCount) {
-        String selectSql = "SELECT (STORE_NUM-?) FROM product WHERE PRODUCT_ID=?";
-        Object storeNum = DBHelper.getValue(selectSql, saleCount,productId);
-        String sql = "UPDATE product SET STORE_NUM=? WHERE PRODUCT_ID=?";
-        DBHelper.update(sql, storeNum,productId);
-
-        Product product = productMap.get(productId);
-        if (product != null){
-            product.setStoreNum((Integer)storeNum);
-        }
+    @Override
+    public int insert(DomainObject obj) {
+        return 0;
     }
 
+    @Override
+    public void update(DomainObject obj) {
+        Product product = (Product)obj;
+        String sql = "UPDATE product SET PRODUCT_NAME=?,PRODUCT_PRICE=?,PRODUCT_DESC=?,"
+                + "PRODUCT_IMAGE_PATH=?,STORE_NUM=?,PRODUCT_STATUS=? WHERE PRODUCT_ID=?";
+        DBHelper.update(sql,product.getProductName(),product.getProductPrice(),product.getProductDesc(),
+                product.getProductImagePath(),product.getStoreNum(),product.getProductStatus(),
+                product.getId());
+        IdentityMap.productMap.put(product.getId(), product);
+    }
+
+    @Override
+    public void delete(DomainObject obj) {
+
+    }
 }

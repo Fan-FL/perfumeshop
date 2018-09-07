@@ -27,17 +27,6 @@ public class ReflectionUtils {
     }
 
     /**
-     * make private field accessible
-     *
-     * @param field
-     */
-    public static void makeAccessible(Field field) {
-        if (!Modifier.isPublic(field.getModifiers())) {
-            field.setAccessible(true);
-        }
-    }
-
-    /**
      * assign value to the field of fieldName in obj
      *
      * @param obj

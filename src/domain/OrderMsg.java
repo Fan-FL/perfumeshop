@@ -14,6 +14,16 @@ public class OrderMsg {
 	private String sendMan;
 	private String sendPhone;
 	private List<OrderProduct> product;
+	private double totalPrice;
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
 	public int getOrderId() {
 		return orderId;
 	}
@@ -114,5 +124,23 @@ public class OrderMsg {
 				+ ", note=" + note + ", userId=" + userId + ", sendPlace="
 				+ sendPlace + ", sendMan=" + sendMan + ", sendPhone="
 				+ sendPhone + ", product=" + product + "]";
+	}
+
+	public boolean equals(Object obj){
+		if(obj == null){
+			return false;
+		}else {
+			if(this.getClass() == obj.getClass()){
+				OrderMsg o = (OrderMsg) obj;
+				if(this.getOrderNum().equals(o.getOrderNum())){
+					return true;
+				}else{
+					return false;
+				}
+
+			}else{
+				return false;
+			}
+		}
 	}
 }

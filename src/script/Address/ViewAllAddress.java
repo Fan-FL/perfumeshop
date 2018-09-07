@@ -1,8 +1,8 @@
 package script.Address;
 
-import datasource.AddressMapper;
 import domain.Address;
 import domain.Pager;
+import service.AddressService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,10 +15,11 @@ import java.io.IOException;
 @WebServlet("/viewalladdress")
 public class ViewAllAddress extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+    private AddressService addressService = null;
 
     public ViewAllAddress() {
         super();
+        addressService = AddressService.getInstance();
         // TODO Auto-generated constructor stub
     }
 
@@ -36,8 +37,7 @@ public class ViewAllAddress extends HttpServlet {
         if (currPage == null) {
             currPage = "1";
         }
-        Pager<Address> pager = new AddressMapper().getAddressPager(Integer.parseInt(currPage), 4,
-                userId);
+        Pager<Address> pager = addressService.viewAllAddress(Integer.parseInt(currPage), userId);
         request.setAttribute("pager", pager);
         request.getRequestDispatcher("addressManage.jsp").forward(request, response);
 	}

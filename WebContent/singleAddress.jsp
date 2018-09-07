@@ -59,7 +59,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript">
 		$(function(){
 			$("#usb").click( function () {
-                alert("修改成功");
+                alert("modify successfully!");
                 $("#updateform").submit();
 			});
 			$("#asb").click( function () {
@@ -101,7 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		</c:when>
   		<c:otherwise>
 	  		<div class="form">
-				<form id="updateform" action="updateaddress?addId=${address.addressId}" method="post">
+				<form id="updateform" action="updateaddress?addId=${address.id}" method="post">
 		   			<table class="table">
 		   				<tr>
 							<td width="15%">Shipping address</td>

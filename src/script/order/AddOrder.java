@@ -1,10 +1,14 @@
 package script.order;
 
-import datasource.AddressMapper;
 import datasource.CartMapper;
+import datasource.UserMapper;
 import domain.Address;
 import domain.Cart;
 import domain.Product;
+import domain.User;
+import service.AddressService;
+import service.CartService;
+import service.OrderService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,11 +24,11 @@ import java.util.Map;
 @WebServlet("/addorder")
 public class AddOrder extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	OrderService orderService = null;
 
     public AddOrder() {
         super();
-        // TODO Auto-generated constructor stub
+		orderService = OrderService.getInstance();
     }
 
 
@@ -43,17 +48,7 @@ public class AddOrder extends HttpServlet {
 			response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
 			return;
 		}
-		List<Address> addresses = AddressMapper.getAddressByUserId(userId);
-		request.setAttribute("addresses", addresses);
-		String[] cartIds = request.getParameterValues("cartId");
-		if(cartIds.length ==0){
-			request.getRequestDispatcher("viewcart").forward(request, response);
-			return;
-		}
-		Map<Cart, Product> cartProductMap = CartMapper.getCartProductMap(userId,cartIds);
-		request.getSession().setAttribute("cartProductMap", cartProductMap);
-		request.getSession().setAttribute("cartIds", cartIds);
-		request.getRequestDispatcher("createOrder.jsp").forward(request, response);
+		orderService.addOrder(userId, request, response);
 	}
 
 

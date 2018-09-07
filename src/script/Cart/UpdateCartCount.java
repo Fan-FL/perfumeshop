@@ -1,7 +1,6 @@
 package script.Cart;
 
-import datasource.CartMapper;
-import domain.Cart;
+import service.CartService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,21 +13,26 @@ import java.io.IOException;
 @WebServlet("/updatecartcount")
 public class UpdateCartCount extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+    private CartService cartService = null;
 
     public UpdateCartCount() {
         super();
-        // TODO Auto-generated constructor stub
+        cartService = CartService.getInstance();
     }
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int userId = -1;
+        try {
+            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
+        } catch (Exception e) {}
+        if(userId == -1){
+            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
+            return;
+        }
         int cartId = Integer.parseInt(request.getParameter("cartId"));
         int saleCount = Integer.parseInt(request.getParameter("saleCount"));
-        Cart cart = CartMapper.getCart(cartId);
-        // change sale count
-        cart.setSaleCount(saleCount);
-        CartMapper.updateCart(cart);
+        cartService.updateCartCount(userId, cartId, saleCount);
 	}
 
 

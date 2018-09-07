@@ -2,6 +2,7 @@ package script.Product;
 
 import datasource.ProductMapper;
 import domain.Product;
+import service.ProductService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,11 +17,12 @@ public class ViewProductDetail extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
+    ProductService productService = null;
+
     public ViewProductDetail() {
         super();
-        // TODO Auto-generated constructor stub
+        productService = ProductService.getInstance();
     }
-
 
     /**
      * get a product's detail
@@ -36,7 +38,7 @@ public class ViewProductDetail extends HttpServlet {
         } catch (Exception e) {
             System.out.println("failed to get product ID");
         }
-        Product productInfo = ProductMapper.getProduct(productId);
+        Product productInfo = productService.viewProductDetail(productId);
         request.setAttribute("product", productInfo);
         request.getRequestDispatcher("singleProduct.jsp").forward(request, response);
 	}

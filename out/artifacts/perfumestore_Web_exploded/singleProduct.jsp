@@ -209,19 +209,6 @@ $(function(){
 				};
         	};
 		});
-		$("#buyNow").click(function(){
-			if(userId <= 0){
-				if(confirm("Please login, click Confirm to jump to login page.")){
-					window.location.href = "${pageContext.request.contextPath}/login.jsp";
-				}
-				return false;
-			}
-			var saleCount = $("#text1").val();
-			if(parseInt(saleCount) > storeNum){
-				alert("Sorry, the product is understock, please modify number.");
-				return false;
-			};
-		});
 		$("#addToCart").click(function(){
 			if(userId<=0){
 				if(confirm("Please login, click Confirm to jump to login page.")){
@@ -297,8 +284,9 @@ $(function(){
 		             <p class="m_5">$${requestScope.product.productPrice} </p>
 		         	 <div class="btn_form">
 		         	 <em><font color="#878787">${requestScope.product.storeNum} in stock</font></em><br/><br/>
-						<form method="get" action="buyNow.do">
-							<input id="productId" type="hidden" name="productId" value="${requestScope.product.productId}">
+						<form method="get">
+							<input id="productId" type="hidden" name="productId"
+								   value="${requestScope.product.id}">
 							<div style="margin-top:5px;margin-bottom:0" class="rer-quantity">
 							<label>Quantity ordered:</label>
 								<div class="Numinput">
@@ -309,7 +297,6 @@ $(function(){
 							</div>
 								
 							<br/><br/>
-							<input type="submit" value="Buy it now" id="buyNow" >&nbsp;&nbsp;
 							<input type="button" value="Add to cart" id="addToCart" class="button">
 						</form>
 					 </div>

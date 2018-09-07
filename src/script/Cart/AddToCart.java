@@ -1,8 +1,7 @@
 package script.Cart;
 
-import datasource.CartMapper;
-import domain.Cart;
 import net.sf.json.JSONArray;
+import service.CartService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,11 +15,11 @@ import java.io.PrintWriter;
 @WebServlet("/addtocart")
 public class AddToCart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+    private CartService cartService = null;
 
     public AddToCart() {
         super();
-        // TODO Auto-generated constructor stub
+        cartService = CartService.getInstance();
     }
 
 
@@ -39,12 +38,9 @@ public class AddToCart extends HttpServlet {
             out = response.getWriter();
             String productId = request.getParameter("productId");
             String saleCount = request.getParameter("saleCount");
-            Cart cart = new Cart();
-            cart.setProductId(Integer.parseInt(productId));
-            cart.setUserId(userId);
-            cart.setSaleCount(Integer.parseInt(saleCount));
-            int cartId = CartMapper.insert(cart);
-            int cartCount= CartMapper.getCartCount(userId);
+            int cartId = cartService.addToCart(Integer.parseInt(productId), userId, Integer
+                    .parseInt(saleCount));
+            int cartCount= cartService.getCartCount(userId);
             String jsonStr = "[{'cartId':'" + cartId + "','cartCount':'"+cartCount +"'}]";
             JSONArray json = JSONArray.fromObject(jsonStr);
             out.write(json.toString());

@@ -1,15 +1,15 @@
 package domain;
 
-public class Address {
-	private int addressId;
+public class Address extends DomainObject{
+	private int id;
 	private String sendPlace;
 	private String sendMan;
 	private String sendPhone;
 	private int userId;
-	public Address(int addressId, String sendPlace, String sendMan,
+	public Address(int id, String sendPlace, String sendMan,
                    String sendPhone, int userId) {
 		super();
-		this.addressId = addressId;
+		this.id = id;
 		this.sendPlace = sendPlace;
 		this.sendMan = sendMan;
 		this.sendPhone = sendPhone;
@@ -26,11 +26,13 @@ public class Address {
 	public Address() {
 		super();
 	}
-	public int getAddressId() {
-		return addressId;
+	@Override
+	public int getId() {
+		return id;
 	}
-	public void setAddressId(int addressId) {
-		this.addressId = addressId;
+	@Override
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getSendPlace() {
 		return sendPlace;
@@ -58,7 +60,7 @@ public class Address {
 	}
 	@Override
 	public String toString() {
-		return "Address [addressId=" + addressId + ", sendPlace=" + sendPlace
+		return "Address [addressId=" + id + ", sendPlace=" + sendPlace
 				+ ", sendMan=" + sendMan + ", sendPhone=" + sendPhone
 				+ ", userId=" + userId + "]";
 	}

@@ -1,12 +1,14 @@
 package datasource;
 
+import domain.DomainObject;
 import domain.User;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserMapper {
+public class UserMapper implements IMapper{
+
     public static User findByName(String name) {
         String sql = "select USER_ID, USERNAME, PASSWORD, USER_STATUS, TRUENAME, PHONE, ADDRESS " +
                 " from user " +
@@ -32,16 +34,30 @@ public class UserMapper {
         } finally {
             DBConnection.release(ps, null, rs);
         }
-        return user;
+        if (user == null){
+            return null;
+        }else{
+            User userInMap = IdentityMap.userMap.get(user.getId());
+            if ( userInMap == null){
+                IdentityMap.userMap.put(user.getId(), user);
+            }else {
+                return userInMap;
+            }
+            return user;
+        }
     }
 
     public static User findByID(int id) {
+        User user = IdentityMap.userMap.get(id);
+        if (user != null){
+            return user;
+        }
+
         String sql = "select USER_ID, USERNAME, PASSWORD, USER_STATUS, TRUENAME, PHONE, ADDRESS " +
                 " from user " +
                 " WHERE USER_ID = ?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
-        User user = null;
         try {
             ps = DBConnection.prepare(sql);
             ps.setInt(1, id);
@@ -54,6 +70,7 @@ public class UserMapper {
                 String phone = rs.getString(6);
                 String address = rs.getString(7);
                 user =  new User(id, username, pwd, trueName, phone, address, status);
+                IdentityMap.userMap.put(id, user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -63,17 +80,26 @@ public class UserMapper {
         return user;
     }
 
-    public static void updateUser(int userId, String password, String truename,
-                               String phone, String address) {
-        User user = UserMapper.findByID(userId);
-        User userupdate = new User(userId, user.getUsername(), password, truename, phone, address);
-        String sql = "UPDATE user SET password=?,truename=?,phone=?,address=? WHERE USER_ID=?";
-        DBHelper.update(sql, userupdate.getPassword(), userupdate.getTruename(),
-                userupdate.getPhone(), userupdate.getAddress(), userupdate.getUserId());
+    @Override
+    public int insert(DomainObject obj) {
+        User user = (User)obj;
+        String sql = "insert into user (username,password) values (?,?);";
+        int userId = DBHelper.updateGetGeneratedKeys(sql, user.getUsername(), user.getPassword());
+        user.setId(userId);
+        IdentityMap.userMap.put(userId, user);
+        return userId;
     }
 
-    public static int createUser(User user) {
-        String sql = "insert into user (username,password) values (?,?);";
-        return DBHelper.updateGetGeneratedKeys(sql, user.getUsername(), user.getPassword());
+    @Override
+    public void update(DomainObject obj) {
+        User user = (User)obj;
+        String sql = "UPDATE user SET password=?,truename=?,phone=?,address=? WHERE USER_ID=?";
+        DBHelper.update(sql, user.getPassword(), user.getTruename(),
+                user.getPhone(), user.getAddress(), user.getId());
+    }
+
+    @Override
+    public void delete(DomainObject obj) {
+
     }
 }
