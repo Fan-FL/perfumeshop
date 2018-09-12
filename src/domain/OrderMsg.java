@@ -14,11 +14,11 @@ public class OrderMsg {
 	private String sendMan;
 	private String sendPhone;
 	private List<OrderProduct> product;
-	private double totalPrice;
-
 	public double getTotalPrice() {
 		return totalPrice;
 	}
+
+	private double totalPrice;
 
 	public void setTotalPrice(double totalPrice) {
 		this.totalPrice = totalPrice;
@@ -84,14 +84,13 @@ public class OrderMsg {
 	public void setProduct(List<OrderProduct> product) {
 		this.product = product;
 	}
-	public OrderMsg(int orderId, String orderNum, Date orderTime,
+	public OrderMsg(int orderId, String orderNum,
 					int orderStatus, String note, int userId, String sendPlace,
 					String sendMan, String sendPhone, List<OrderProduct> product
                     ) {
 		super();
 		this.orderId = orderId;
 		this.orderNum = orderNum;
-		this.orderTime = orderTime;
 		this.orderStatus = orderStatus;
 		this.note = note;
 		this.userId = userId;
@@ -100,13 +99,12 @@ public class OrderMsg {
 		this.sendPhone = sendPhone;
 		this.product = product;
 	}
-	public OrderMsg(int orderId, String orderNum, Date orderTime,
+	public OrderMsg(int orderId, String orderNum,
 					int orderStatus, String note, int userId, String sendPlace,
 					String sendMan, String sendPhone) {
 		super();
 		this.orderId = orderId;
 		this.orderNum = orderNum;
-		this.orderTime = orderTime;
 		this.orderStatus = orderStatus;
 		this.note = note;
 		this.userId = userId;

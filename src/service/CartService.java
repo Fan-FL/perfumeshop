@@ -64,8 +64,4 @@ public class CartService {
         }
         return map;
     }
-
-    public Map<Cart, Product> getCartProductMap(int userId, String[] cartIds){
-        return CartMapper.getCartProductMap(userId,cartIds);
-    }
 }

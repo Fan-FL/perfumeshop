@@ -5,14 +5,30 @@ import domain.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.*;
 
 
 public class OrderMapper implements IMapper{
 
     public static int getOrderStatus(String orderNum) {
-        String sql = "SELECT DISTINCT ORDER_STATUS FROM orders WHERE ORDER_NUM=?";
-        return Integer.parseInt(DBHelper.getValue(sql, orderNum).toString());
+        int orderStatus = -1;
+        String sql = "SELECT DISTINCT ORDER_STATUS FROM perfume.orders WHERE ORDER_NUM=?";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setString(1, orderNum);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                orderStatus = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return orderStatus;
     }
 
     /**
@@ -24,7 +40,7 @@ public class OrderMapper implements IMapper{
     }
 
     public static void changeOrderStatus(String orderNum, int status) {
-        String sql = "UPDATE orders SET ORDER_STATUS=? WHERE ORDER_NUM=?";
+        String sql = "UPDATE perfume.orders SET ORDER_STATUS=? WHERE ORDER_NUM=?";
         DBHelper.update(sql, status, orderNum);
     }
 
@@ -32,16 +48,16 @@ public class OrderMapper implements IMapper{
         // get all undeleted order number
         Set<String> orderNums = getOrderNum(userId);
         Iterator<String> it = orderNums.iterator();
-        List<OrderMsg> ordermsg = new ArrayList<OrderMsg>();
+        List<OrderMsg> ordermsgs = new ArrayList<OrderMsg>();
         while(it.hasNext()){
             String orderNum = it.next();
             //get all OrderProducts by orderNum
             List<OrderProduct> product = getOrderProducts(orderNum);
             //get order message
             OrderMsg order = getOrderMsg(orderNum,product);
-            ordermsg.add(order);
+            ordermsgs.add(order);
         }
-        return ordermsg;
+        return ordermsgs;
     }
 
     /**
@@ -62,7 +78,7 @@ public class OrderMapper implements IMapper{
                 }
             });
             conn = DBConnection.getDBConnection();
-            String sql = "SELECT ORDER_NUM FROM orders WHERE VISIBLE=1 AND USER_ID=?";
+            String sql = "SELECT ORDER_NUM FROM perfume.orders WHERE VISIBLE=1 AND USER_ID=?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1,userId);
             rs = ps.executeQuery();
@@ -84,9 +100,31 @@ public class OrderMapper implements IMapper{
      * @return
      */
     public static List<OrderProduct> getOrderProducts(String orderNum) {
-        String sql = "SELECT orders.PRODUCT_ID productId,orders.PRODUCT_NAME productName,orders.PRODUCT_PRICE productPrice,orders.SALE_COUNT saleCount,product.PRODUCT_IMAGE_PATH productImagePath FROM orders,product WHERE orders.PRODUCT_ID=product.PRODUCT_ID AND ORDER_NUM=?;";
-        List<OrderProduct> product = DBHelper.getObjectForList(OrderProduct.class, sql, orderNum);
-        return product;
+        String sql = "SELECT orders.PRODUCT_ID ,orders.PRODUCT_NAME ,orders.PRODUCT_PRICE ,orders.SALE_COUNT ," +
+                "product.PRODUCT_IMAGE_PATH  FROM perfume.orders,perfume.product WHERE orders.PRODUCT_ID=product.PRODUCT_ID AND ORDER_NUM=?;";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        List<OrderProduct> orderProducts = new ArrayList<>();
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setString(1, orderNum);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                int id = rs.getInt(1);
+                String productName = rs.getString(2);
+                double productPrice = rs.getDouble(3);
+                int saleCount = rs.getInt(4);
+                String productImagePath = rs.getString(5);
+                OrderProduct orderProduct = new OrderProduct(id, productName, productPrice,
+                    productImagePath, saleCount);
+                orderProducts.add(orderProduct);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return orderProducts;
     }
 
     /**
@@ -96,27 +134,49 @@ public class OrderMapper implements IMapper{
      * @return
      */
     public static OrderMsg getOrderMsg(String orderNum, List<OrderProduct> product) {
-        String sql = "SELECT ORDER_ID id, ORDER_NUM orderNum,ORDER_TIME " +
-                "orderTime,ORDER_STATUS orderStatus,NOTE note,USER_ID userId, " +
-                "SEND_PLACE sendPlace,SEND_MAN sendMan,SEND_PHONE sendPhone FROM orders WHERE ORDER_NUM=?";
-        OrderMsg ordermsg = DBHelper.getObject(OrderMsg.class, sql, orderNum);
-        ordermsg.setProduct(product);
-        return ordermsg;
+        OrderMsg orderMsg = null;
+        String sql = "SELECT ORDER_ID , ORDER_NUM, " +
+                " ORDER_STATUS ,NOTE ,USER_ID , " +
+                "SEND_PLACE ,SEND_MAN ,SEND_PHONE  FROM perfume.orders WHERE ORDER_NUM=?";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setString(1, orderNum);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                int orderId = rs.getInt(1);
+                orderNum = rs.getString(2);
+                int orderStatus = rs.getInt(3);
+                String note = rs.getString(4);
+                int userId = rs.getInt(5);
+                String sendPlace = rs.getString(6);
+                String sendMan = rs.getString(7);
+                String sendPhone = rs.getString(8);
+                orderMsg = new OrderMsg(orderId, orderNum, orderStatus, note,
+                        userId, sendPlace, sendMan, sendPhone);
+                orderMsg.setProduct(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return orderMsg;
     }
 
     public static void changeOrderVisible(String orderNum, int status) {
-        String sql = "UPDATE orders SET VISIBLE=? WHERE ORDER_NUM=?";
+        String sql = "UPDATE perfume.orders SET VISIBLE=? WHERE ORDER_NUM=?";
         DBHelper.update(sql, status, orderNum);
     }
 
     @Override
     public int insert(DomainObject obj) {
         Order order = (Order)obj;
-        String sql = "INSERT INTO orders (ORDER_NUM,ORDER_TIME,ORDER_STATUS,NOTE,USER_ID,SEND_PLACE,"
+        String sql = "INSERT INTO perfume.orders (ORDER_NUM,ORDER_STATUS,NOTE,USER_ID,SEND_PLACE,"
                 + "SEND_MAN,SEND_PHONE,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,SALE_COUNT)"
-                + "values(?,?,?,?,?,?,?,?,?,?,?,?)";
-        return DBHelper.updateGetGeneratedKeys(sql, order.getOrderNum(), order.getOrderTime(), order
-                        .getOrderStatus(),
+                + "values(?,?,?,?,?,?,?,?,?,?,?)";
+        return DBHelper.updateGetGeneratedKeys(sql, order.getOrderNum(),  order.getOrderStatus(),
                 order.getNote(), order.getUserId(), order.getSendPlace(), order.getSendMan(), order.getSendPhone(),
                 order.getProductId(), order.getProductName(), order.getProductPrice(), order.getSaleCount());
     }

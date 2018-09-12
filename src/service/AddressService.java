@@ -50,12 +50,10 @@ public class AddressService {
         user.updateDeliveryAddress(address);
     }
 
-    public Pager<Address> viewAllAddress(int currPage, int userId){
+    public List<Address> viewAllAddress(int userId){
         User user = UserMapper.findByID(userId);
-        user.getDeliveryAddresses();
-        Pager<Address> pager = AddressMapper.getAddressPager(currPage, 4,
-                user);
-        return pager;
+        List<Address> addresses = user.getDeliveryAddresses();
+        return addresses;
     }
 
     public Address viewSingleAddress(int userId, int addressId){

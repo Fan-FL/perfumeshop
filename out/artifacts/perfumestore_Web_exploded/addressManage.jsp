@@ -34,10 +34,6 @@
 		height: 70px;
 		font-size: 14px;
 	}
-	#page{
-		color: #333;
-		font-size: 14px;
-	}
 	.btn {
 		padding:10px 30px;
 		color: #FFF;
@@ -78,21 +74,19 @@
 <body>
 	<div class="mycar-index">
 		<c:choose>
-			<c:when test="${!(empty pager.pageDataList)}">
+			<c:when test="${!(empty addresses)}">
 				<div id="cart-wrapper">
 					<form action="singleAddress.jsp">
 						<table cellspacing="1.5">
 							<thead>
 								<tr>
-									<th width="100px">No.</th>
 									<th width="550px">Shipping address</th>
 									<th width="150px">Operation</th>
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${pager.pageDataList}" var="add" varStatus="statu">
+								<c:forEach items="${addresses}" var="add" varStatus="statu">
 									<tr>
-										<td align="center">${statu.count+(pager.currPage-1)*pager.pageSize}</td>
 										<td>${add.sendPlace}&nbsp;&nbsp;(&nbsp;${add.sendMan}&nbsp;&nbsp;&nbsp;collect&nbsp;)&nbsp;&nbsp;${add.sendPhone}</td>
 										<td align="center"><a
 												href="deleteaddress?addId=${add.id}"
@@ -105,31 +99,10 @@
 							</tbody>
 						</table>
 						<div><br/></div>
-						<c:if test="${pager.currPage==pager.pageCount}">
-							<input type="submit" class="btn" value="Add Shipping address">
-						</c:if>
+						<input type="submit" class="btn" value="Add Shipping address">
 					</form>
 				</div>
 				<div><br/><br/><br/></div>
-				<div align="center" id="page">
-					<c:if test="${pager.currPage==1}">
-						First&nbsp;&nbsp;&nbsp;
-						Previous&nbsp;&nbsp;&nbsp;
-					</c:if>
-					<c:if test="${pager.currPage>1}">
-						<a href="viewalladdress?currPage=1">First</a>&nbsp;&nbsp;&nbsp;
-						<a href="viewalladdress?currPage=${pager.currPage-1}">Previous</a>&nbsp;&nbsp;&nbsp;
-					</c:if>
-					<c:if test="${pager.currPage==pager.pageCount}">
-						Next&nbsp;&nbsp;&nbsp;
-						Last&nbsp;&nbsp;&nbsp;
-					</c:if>
-					<c:if test="${pager.currPage<pager.pageCount}">
-						<a href="viewalladdress?currPage=${pager.currPage+1}">Next</a>&nbsp;&nbsp;&nbsp;
-						<a href="viewalladdress?currPage=${pager.pageCount}">Last</a>&nbsp;&nbsp;&nbsp;
-					</c:if>
-					${pager.currPage}/${pager.pageCount}&nbsp;&nbsp; ${pager.dataCount} records
-				</div>
 			</c:when>
 			<c:otherwise>
 				<div class="order-blank">

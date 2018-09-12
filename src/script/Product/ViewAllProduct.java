@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 
 @WebServlet("/viewallproduct")
@@ -31,12 +32,8 @@ public class ViewAllProduct extends HttpServlet {
      * @throws IOException
      */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int currPage = 1;
-        try {
-            currPage = Integer.parseInt(request.getParameter("currPage"));
-        } catch (Exception e) {}
-        Pager<Product> pager = this.productService.viewAllProduct(currPage);
-        request.setAttribute("pager", pager);
+        List<Product> products = this.productService.viewAllProduct();
+        request.setAttribute("products", products);
         request.getRequestDispatcher("allProduct.jsp").forward(request, response);
 	}
 

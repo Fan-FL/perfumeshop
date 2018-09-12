@@ -1,9 +1,9 @@
 package service;
 
 import datasource.ProductMapper;
-import domain.ConfigProperties;
-import domain.Pager;
 import domain.Product;
+
+import java.util.List;
 
 public class ProductService {
     private static ProductService instance;
@@ -16,9 +16,8 @@ public class ProductService {
 
     private ProductService(){}
 
-    public Pager<Product> viewAllProduct(int currPage){
-        int productPageSize = ConfigProperties.allProductPageSize;
-        return ProductMapper.getProductPager(currPage, productPageSize);
+    public List<Product> viewAllProduct(){
+        return ProductMapper.getAllProducts();
     }
 
     public Product viewProductDetail(int productId){

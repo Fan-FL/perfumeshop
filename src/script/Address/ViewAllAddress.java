@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 
 @WebServlet("/viewalladdress")
@@ -33,12 +34,8 @@ public class ViewAllAddress extends HttpServlet {
             response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
             return;
         }
-        String currPage = request.getParameter("currPage");
-        if (currPage == null) {
-            currPage = "1";
-        }
-        Pager<Address> pager = addressService.viewAllAddress(Integer.parseInt(currPage), userId);
-        request.setAttribute("pager", pager);
+        List<Address> addresses = addressService.viewAllAddress(userId);
+        request.setAttribute("addresses", addresses);
         request.getRequestDispatcher("addressManage.jsp").forward(request, response);
 	}
 

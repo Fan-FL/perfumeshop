@@ -7,11 +7,9 @@ import datasource.UserMapper;
 
 import java.util.List;
 
-public class User extends DomainObject{
+public class User extends Account {
 
-	private int userId;
-	private String username;
-	private String password;
+	private int id;
 	private String truename;
 	private String phone;
 	private String address;
@@ -21,7 +19,7 @@ public class User extends DomainObject{
 	private List<Cart> cartItems;
 
 	public List<OrderMsg> getOrderMsgs() {
-		this.orderMsgs = OrderMapper.getOrderMsgs(this.userId);
+		this.orderMsgs = OrderMapper.getOrderMsgs(this.id);
 		return this.orderMsgs;
 	}
 
@@ -31,7 +29,7 @@ public class User extends DomainObject{
 
 	public List<Address> getDeliveryAddresses() {
 		if(this.deliveryAddresses == null){
-			this.deliveryAddresses = AddressMapper.getAddressByUserId(this.userId);
+			this.deliveryAddresses = AddressMapper.getAddressByUserId(this.id);
 		}
 		return this.deliveryAddresses;
 	}
@@ -42,7 +40,7 @@ public class User extends DomainObject{
 
 	public void deleteDeliveryAddress(Address deliveryAddress){
 		if(this.deliveryAddresses == null){
-			this.deliveryAddresses = AddressMapper.getAddressByUserId(this.userId);
+			this.deliveryAddresses = AddressMapper.getAddressByUserId(this.id);
 			this.deliveryAddresses.remove(deliveryAddress);
 		}else {
 			this.deliveryAddresses.remove(deliveryAddress);
@@ -57,58 +55,67 @@ public class User extends DomainObject{
 		return cartItems;
 	}
 
-	public void setCartItems(List<Cart> cartItems) {
-		this.cartItems = cartItems;
-	}
-
 	public User(int userId, String username, String password, String truename,
-                String phone, String address, int userStatus) {
+				String phone, String address, int userStatus) {
 		super();
-		this.userId = userId;
+		this.id = userId;
 		this.username = username;
 		this.password = password;
 		this.truename = truename;
 		this.phone = phone;
 		this.address = address;
 		this.userStatus = userStatus;
+		this.type = "user";
 	}
 
 	public User() {
 		super();
+		this.type = "user";
 	}
 
 	public User(int userId, String username, String password) {
 		super();
-		this.userId = userId;
+		this.id = userId;
 		this.username = username;
 		this.password = password;
+		this.type = "user";
 	}
+
+	public void setCartItems(List<Cart> cartItems) {
+		this.cartItems = cartItems;
+	}
+
 
 	@Override
 	public void setId(int userId) {
-		this.userId = userId;
+		this.id = userId;
 	}
 
 	@Override
 	public int getId() {
-		return userId;
+		return id;
 	}
 
+	@Override
 	public String getUsername() {
 		if (this.username == null){
 			load();
 		}
 		return username;
 	}
+
+	@Override
 	public void setUsername(String username) {
 		this.username = username;
 	}
+	@Override
 	public String getPassword() {
 		if (this.password == null){
 			load();
 		}
 		return password;
 	}
+	@Override
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -153,29 +160,22 @@ public class User extends DomainObject{
 	
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", truename=" + truename
+		return "User [userId=" + id + ", username=" + username + ", password=" + password + ", truename=" + truename
 				+ ", phone=" + phone + ", address=" + address + ", userStatus=" + userStatus + "]";
 	}
 
 	public void load(){
-		User user = UserMapper.findByID(this.userId);
 		if(this.username == null){
-			this.username = user.username;
+			this.username = UserMapper.getUserName(this.id);
 		}
 		if(this.address == null){
-			this.address = user.address;
-		}
-		if(this.password == null){
-			this.password = user.password;
+			this.username = UserMapper.getUserName(this.id);
 		}
 		if(this.phone == null){
-			this.phone = user.phone;
+			this.username = UserMapper.getPhone(this.id);
 		}
 		if(this.truename == null){
-			this.truename = user.truename;
-		}
-		if(this.userStatus == -1){
-			this.userStatus = user.userStatus;
+			this.username = UserMapper.getTrueName(this.id);
 		}
 	}
 

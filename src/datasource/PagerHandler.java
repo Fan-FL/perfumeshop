@@ -13,7 +13,7 @@ public class PagerHandler {
     public <T> Pager<T> getPager(Class<T> clazz, String sqlForDataCount, String
             sqlForData, int
             currPage, int pageSize, Object... args) {
-        domain.Pager<T> pager = null;
+        Pager<T> pager = null;
         sqlForData = sqlForData + " limit ?,?";
         int dataIndex = (currPage - 1) * pageSize;
 
@@ -33,7 +33,7 @@ public class PagerHandler {
             throw new RuntimeException("Failed to get (dataCount)！");
         }
         int pageCount = (dataCount % pageSize == 0) ? (dataCount / pageSize) : (dataCount / pageSize + 1);
-        pager = new domain.Pager<T>(currPage, pageSize, pageCount, dataCount, pageDataList);
+        pager = new Pager<T>(currPage, pageSize, pageCount, dataCount, pageDataList);
         return pager;
     }
 

@@ -1,7 +1,6 @@
 package datasource;
 
 import domain.DomainObject;
-import domain.Pager;
 import domain.Product;
 
 import java.sql.*;
@@ -19,7 +18,7 @@ public class ProductMapper implements IMapper{
 
         String sql = "SELECT PRODUCT_ID ,PRODUCT_NAME ,PRODUCT_PRICE ,STORE_NUM ,PRODUCT_IMAGE_PATH," +
                 " PRODUCT_DESC ,PRODUCT_STATUS " +
-                "FROM product " +
+                "FROM perfume.product " +
                 "WHERE PRODUCT_ID=?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
@@ -51,30 +50,42 @@ public class ProductMapper implements IMapper{
         }
     }
 
-    public static Pager<Product> getProductPager(int currPage, int pageSize) {
-        if(IdentityMap.productMap.isEmpty()){
-            String sql = "SELECT PRODUCT_ID id,PRODUCT_NAME productName, STORE_NUM storeNum, "
-                    + "PRODUCT_PRICE productPrice,PRODUCT_IMAGE_PATH productImagePath,PRODUCT_STATUS productStatus "
-                    + "FROM product";
-            List<Product> products = DBHelper.getObjectForList(Product.class, sql);
-            for(Product product: products){
-                IdentityMap.productMap.put(product.getId(), product);
+    public static List<Product> getAllProducts() {
+        String sql = "SELECT PRODUCT_ID, PRODUCT_NAME, STORE_NUM, "
+                + "PRODUCT_PRICE, PRODUCT_IMAGE_PATH, " +
+                "PRODUCT_DESC, " +
+                "PRODUCT_STATUS "
+                + "FROM perfume.product";
+
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        List<Product> products = new ArrayList<>();
+        try {
+            ps = DBConnection.prepare(sql);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                int productId = rs.getInt(1);
+                String productName = rs.getString(2);
+                int storeNum = rs.getInt(3);
+                double productPrice = rs.getDouble(4);
+                String productImagePath = rs.getString(5);
+                String productDesc = rs.getString(6);
+                int productStatus = rs.getInt(7);
+                Product product = IdentityMap.productMap.get(productId);
+                if(product == null){
+                    product = new Product(productId, productName, productPrice, productDesc,
+                            productImagePath, storeNum, productStatus);
+                    IdentityMap.productMap.put(productId, product);
+                }
+                products.add(product);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
         }
 
-        PagerHandler pagerHandler = new PagerHandler();
-        int dataCount = IdentityMap.productMap.size();
-        int pageCount = (dataCount % pageSize == 0) ? (dataCount / pageSize) : (dataCount / pageSize + 1);
-        int dataIndex = (currPage - 1) * pageSize;
-        List<Product> pageDataList = new ArrayList<>();
-        List<Product> allProducts = new ArrayList<>(IdentityMap.productMap.values());
-        for (int i = 0; i<pageSize && i< dataCount; i++) {
-            Product product = allProducts.get(dataIndex + i);
-            pageDataList.add(product);
-        }
-        Pager<Product> pager = new domain.Pager<Product>(currPage, pageSize, pageCount, dataCount,
-                pageDataList);
-        return pager;
+        return products;
     }
 
     @Override
@@ -85,12 +96,18 @@ public class ProductMapper implements IMapper{
     @Override
     public void update(DomainObject obj) {
         Product product = (Product)obj;
-        String sql = "UPDATE product SET PRODUCT_NAME=?,PRODUCT_PRICE=?,PRODUCT_DESC=?,"
+        String sql = "UPDATE perfume.product SET PRODUCT_NAME=?,PRODUCT_PRICE=?,PRODUCT_DESC=?,"
                 + "PRODUCT_IMAGE_PATH=?,STORE_NUM=?,PRODUCT_STATUS=? WHERE PRODUCT_ID=?";
         DBHelper.update(sql,product.getProductName(),product.getProductPrice(),product.getProductDesc(),
                 product.getProductImagePath(),product.getStoreNum(),product.getProductStatus(),
                 product.getId());
-        IdentityMap.productMap.put(product.getId(), product);
+        Product inMap = IdentityMap.productMap.get(product.getId());
+        inMap.setStoreNum(product.getStoreNum());
+        inMap.setProductDesc(product.getProductDesc());
+        inMap.setProductImagePath(product.getProductImagePath());
+        inMap.setProductName(product.getProductName());
+        inMap.setProductPrice(product.getProductPrice());
+        inMap.setProductStatus(product.getProductStatus());
     }
 
     @Override

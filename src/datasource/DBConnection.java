@@ -4,8 +4,8 @@ import java.sql.*;
 
 public class DBConnection {
 
-	private static final String DB_CONNECTION = "jdbc:mysql://localhost/perfume";
-	private static final String DB_USER = "root";
+	private static final String DB_CONNECTION = "jdbc:postgresql://localhost:5432/perfume";
+	private static final String DB_USER = "postgres";
 	private static final String DB_PASSWORD = "root";
 	
 	
@@ -37,7 +37,7 @@ public class DBConnection {
 
 	public static Connection getDBConnection() {
 		try {
-		    Class.forName("com.mysql.jdbc.Driver");
+		    Class.forName("org.postgresql.Driver");
 			Connection dbConnection = DriverManager.getConnection(
                             DB_CONNECTION, DB_USER,DB_PASSWORD);
 			return dbConnection;

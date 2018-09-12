@@ -11,7 +11,7 @@ public class UserMapper implements IMapper{
 
     public static User findByName(String name) {
         String sql = "select USER_ID, USERNAME, PASSWORD, USER_STATUS, TRUENAME, PHONE, ADDRESS " +
-                " from user " +
+                " from perfume.user " +
                 " WHERE USERNAME = ?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
@@ -54,7 +54,7 @@ public class UserMapper implements IMapper{
         }
 
         String sql = "select USER_ID, USERNAME, PASSWORD, USER_STATUS, TRUENAME, PHONE, ADDRESS " +
-                " from user " +
+                " from perfume.user " +
                 " WHERE USER_ID = ?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
@@ -83,7 +83,7 @@ public class UserMapper implements IMapper{
     @Override
     public int insert(DomainObject obj) {
         User user = (User)obj;
-        String sql = "insert into user (username,password) values (?,?);";
+        String sql = "insert into perfume.user (username,password) values (?,?);";
         int userId = DBHelper.updateGetGeneratedKeys(sql, user.getUsername(), user.getPassword());
         user.setId(userId);
         IdentityMap.userMap.put(userId, user);
@@ -93,7 +93,7 @@ public class UserMapper implements IMapper{
     @Override
     public void update(DomainObject obj) {
         User user = (User)obj;
-        String sql = "UPDATE user SET password=?,truename=?,phone=?,address=? WHERE USER_ID=?";
+        String sql = "UPDATE perfume.user SET password=?,truename=?,phone=?,address=? WHERE USER_ID=?";
         DBHelper.update(sql, user.getPassword(), user.getTruename(),
                 user.getPhone(), user.getAddress(), user.getId());
     }
@@ -101,5 +101,94 @@ public class UserMapper implements IMapper{
     @Override
     public void delete(DomainObject obj) {
 
+    }
+
+    public static String getUserName(int userId) {
+        String sql = "select  USERNAME" +
+                " from perfume.user " +
+                " WHERE USER_ID = ?";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        String data = "";
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setInt(1, userId);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                data = rs.getString(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return data;
+    }
+
+    public static String getTrueName(int userId) {
+        String sql = "select  TRUENAME" +
+                " from perfume.user " +
+                " WHERE USER_ID = ?";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        String data = "";
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setInt(1, userId);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                data = rs.getString(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return data;
+    }
+
+
+    public static String getPhone(int userId) {
+        String sql = "select  PHONE" +
+                " from perfume.user " +
+                " WHERE USER_ID = ?";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        String data = "";
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setInt(1, userId);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                data = rs.getString(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return data;
+    }
+
+    public static String getAddress(int userId) {
+        String sql = "select  ADDRESS" +
+                " from perfume.user " +
+                " WHERE USER_ID = ?";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        String data = "";
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setInt(1, userId);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                data = rs.getString(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return data;
     }
 }

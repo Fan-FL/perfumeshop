@@ -56,10 +56,10 @@
 			<div class="section group">
 				<div class="cont span_2_of_3" style="width: 100%" >
 					<h2 class="head">All products...</h2>
-					<c:forEach items="${pager.pageDataList}" var="out" varStatus="outvs">
+					<c:forEach items="${products}" var="out" varStatus="outvs">
 						<c:if test="${(outvs.count-1)%4==0 }">
 							<div class="top-box"> 
-							<c:forEach items="${pager.pageDataList}" var="a" varStatus="vs" begin="${outvs.count - 1}" end="${outvs.count + 2}" >
+							<c:forEach items="${products}" var="a" varStatus="vs" begin="${outvs.count - 1}" end="${outvs.count + 2}" >
 							<div class="col_1_of_3 span_1_of_3" style="width: 23%">
 									<a href="viewproductdetail?productid=${a.id}" >
 										<div class="inner_content clearfix">
@@ -89,31 +89,6 @@
 						</c:if>
 				</c:forEach>
 				<br/><br/><br/>
-					<div id="div1">
-					<c:if test="${pager.currPage==1}">
-   						First &nbsp;&nbsp;Pre
-   					</c:if>
-					<c:if test="${pager.currPage>1 }">
-					<a class="pageturn" href="viewallproduct?currPage=1">First
-                    </a>&nbsp;&nbsp;
-					<a class="pageturn"
-                       href="viewallproduct?currPage=${pager.currPage-1}">Pre
-                    </a>&nbsp;&nbsp;
-					</c:if>
-					<c:if test="${pager.currPage==pager.pageCount}">
-   					          Next&nbsp;&nbsp;Last
-   					</c:if>
-					<c:if test="${pager.currPage<pager.pageCount}">
-					<a class="pageturn"
-                       href="viewallproduct?currPage=${pager.currPage+1}">Next
-                    </a>&nbsp;&nbsp;
-					<a class="pageturn"
-                       href="viewallproduct?currPage=${pager.pageCount}">Last
-                    </a>&nbsp;&nbsp;
-					</c:if>
-						${requestScope.pager.dataCount}Records ${requestScope.pager.currPage}/
-						${requestScope.pager.pageCount} pages
-					</div>
 				</div>
 				<div class="clear"></div>
 			</div>

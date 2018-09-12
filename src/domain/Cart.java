@@ -29,6 +29,14 @@ public class Cart extends DomainObject{
 		this.saleCount = saleCount;
 		this.userId = userId;
 	}
+
+	public Cart(int id, int productId, int saleCount, int userId) {
+		this.id = id;
+		this.productId = productId;
+		this.saleCount = saleCount;
+		this.userId = userId;
+	}
+
 	public Cart() {
 		super();
 	}
