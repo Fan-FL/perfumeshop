@@ -42,6 +42,6 @@ public class UserLogout extends HttpServlet {
      */
     public void responseHeaderInfo(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         userService.userLogout(request, response);
-        request.getServletContext().getRequestDispatcher("/header.jsp").include(request, response);
+        request.getRequestDispatcher("/header.jsp").include(request, response);
     }
 }
