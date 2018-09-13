@@ -116,7 +116,7 @@
 }
 #cart-wrapper table tr td .cart_list_img{float:left;margin:0px 0px 0px 30px;display:block;}
 #cart-wrapper table tr td img{width:50px;height:50px;}
-#cart-wrapper table tr td p{width:540px;overlfow:height:50px;float:left;text-algin:left;}
+#cart-wrapper table tr td p{width:540px;height:50px;float:left;text-algin:left;}
 #cart-wrapper table tr td p a{
 	display: block;
 	   color: #333;
