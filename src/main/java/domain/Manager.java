@@ -14,6 +14,16 @@ public class Manager extends Account {
         this.type = "manager";
     }
 
+    public Manager(int id, String username, String password) {
+        super();
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.title = title;
+        this.salary = salary;
+        this.type = "manager";
+    }
+
     public Manager() {
         super();
         this.type = "manager";

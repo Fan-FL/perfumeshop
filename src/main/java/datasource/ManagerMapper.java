@@ -31,6 +31,37 @@ public class ManagerMapper implements IMapper{
                 Money salary = new Money(amount, currency);
 
                 manager = new Manager(id, username, pwd, title, salary);
+                manager.setType("manager");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.release(ps, null, rs);
+        }
+        return manager;
+    }
+
+    public static Manager findByName(String name) {
+        Manager manager = null;
+        String sql = "select MANAGER_ID, USERNAME, PASSWORD, TITLE, AMOUNT, CURRENCY" +
+                " from perfume.manager " +
+                " WHERE USERNAME = ?";
+        PreparedStatement ps = null;
+        ResultSet rs  = null;
+        try {
+            ps = DBConnection.prepare(sql);
+            ps.setString(1, name);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                int id = rs.getInt(1);
+                String username = rs.getString(2);
+                String pwd = rs.getString(3);
+                String title = rs.getString(4);
+                float amount = rs.getFloat(5);
+                String currency = rs.getString(6);
+
+                Money salary = new Money(amount, currency);
+
                 manager = new Manager(id, username, pwd, title, salary);
                 manager.setType("manager");
             }

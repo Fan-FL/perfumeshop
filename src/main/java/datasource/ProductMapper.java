@@ -90,7 +90,16 @@ public class ProductMapper implements IMapper{
 
     @Override
     public int insert(DomainObject obj) {
-        return 0;
+        Product product = (Product)obj;
+        String sql = "insert into perfume.product (PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DESC,"
+                + "PRODUCT_IMAGE_PATH,STORE_NUM,PRODUCT_STATUS) values (?,?,?,?,?,?)";
+        int productId = DBHelper.updateGetGeneratedKeys(sql, product.getProductName(), product
+                        .getProductPrice(), product.getProductDesc(),product.getProductImagePath
+                (),product.getStoreNum(),product.getProductStatus()
+        );
+        product.setId(productId);
+        IdentityMap.productMap.put(productId, product);
+        return productId;
     }
 
     @Override
@@ -112,6 +121,9 @@ public class ProductMapper implements IMapper{
 
     @Override
     public void delete(DomainObject obj) {
-
+        Product product = (Product)obj;
+        String sql = "DELETE FROM perfume.product WHERE PRODUCT_ID=?";
+        DBHelper.update(sql, product.getId());
+        IdentityMap.productMap.remove(product.getId());
     }
 }
