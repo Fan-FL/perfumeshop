@@ -7,90 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c92f68-6d1e-46d4-9da9-30608fb0edde" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerHeader.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/bootstrap-responsive.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/bui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/dpl.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/jquery-ui-1.10.0.custom.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/login.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/Css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/css/bui-min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/css/dpl-min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/css/main-min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/css/page-min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/css/page.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/css/prettify.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/LOGO_LEOSHOP_cr.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1BHtLFbFdXXaHNz_X-16-16.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1GgTxXm4qXXaGyjny-500-188.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1J_T4XjRfXXaZ8J6X-2-340.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1SLHBXaXmXXXF.Nbe-140-120.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1SMojXedaXXXCL3TD-469-300.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1YTNJFadfXXX6DYsb-100-100.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1k1v5XhNdXXb0_tkB-191-450.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1kBv5XbRbXXb.nqL4-200-300.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1rPjKXXJrXXXVYvLb-15-188.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1rbpNFaJXXXbylH7R-80-100.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/hide_list.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/icon1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/icon2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/left-slib.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/logo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/main-nav-bg.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/main-nav-bg1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/main-nav-bg2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/menu.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/nav.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/nav_selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/pic2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/resource.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/img/top.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/bui-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/bui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/build.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/main-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/page-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/page.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/search-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/search.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/config-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/editor-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/jquery-1.8.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/jquery-ui-1.10.0.custom.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/module/build.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/prettify.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/toolbar-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/assets/js/tree-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/commons/common.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/DBConnection.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/DBConnection.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ManagerMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ManagerMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ProductMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ProductMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/domain/Manager.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/domain/Manager.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ProductService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ProductService.class" />
-      <change beforePath="$PROJECT_DIR$/perfumestore.iml" afterPath="$PROJECT_DIR$/perfumestore.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Manager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,7 +19,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1554">
+              <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="107" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -221,7 +159,6 @@
         <option value="$PROJECT_DIR$/src/main/java/domain/Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/script/seller/ManagerLogin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/Css/bui.css" />
@@ -245,6 +182,7 @@
         <option value="$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
       </list>
     </option>
   </component>
@@ -744,12 +682,12 @@
       <workItem from="1536759935156" duration="9390000" />
       <workItem from="1536809027456" duration="104000" />
       <workItem from="1536809137010" duration="1293000" />
-      <workItem from="1537153471293" duration="24382000" />
+      <workItem from="1537153471293" duration="24551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192616000" />
+    <option name="totallyTimeSpent" value="192785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -762,6 +700,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -784,7 +723,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3797753" sideWeight="0.4935553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23820224" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27604726" sideWeight="0.7373188" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27604726" sideWeight="0.7373188" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27604726" sideWeight="0.26268116" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31573033" sideWeight="0.49570355" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -893,14 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1029,14 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-248">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1250,6 +1173,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1296">
           <caret line="57" column="61" lean-forward="true" selection-start-line="57" selection-start-column="61" selection-end-line="57" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="107" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="107" />
           <folding />
         </state>
       </provider>

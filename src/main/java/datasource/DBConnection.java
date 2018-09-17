@@ -4,15 +4,15 @@ import java.sql.*;
 
 public class DBConnection {
 
-//	private static final String DB_CONNECTION =
-//			"jdbc:postgresql://ec2-75-101-153-56.compute-1.amazonaws" +
-//					".com:5432/daitg26u2scsub?sslmode=require";
-//	private static final String DB_USER = "zxowbenqtkiqor";
-//	private static final String DB_PASSWORD = "ea708f31bd5c0db6655bfcee724c5e40bbcd6d709d3e13075056be3ecbc8d987";
+	private static final String DB_CONNECTION =
+			"jdbc:postgresql://ec2-75-101-153-56.compute-1.amazonaws" +
+					".com:5432/daitg26u2scsub?sslmode=require";
+	private static final String DB_USER = "zxowbenqtkiqor";
+	private static final String DB_PASSWORD = "ea708f31bd5c0db6655bfcee724c5e40bbcd6d709d3e13075056be3ecbc8d987";
 
-	private static final String DB_CONNECTION = "jdbc:postgresql://localhost:5432/perfume";
-	private static final String DB_USER = "postgres";
-	private static final String DB_PASSWORD = "root";
+//	private static final String DB_CONNECTION = "jdbc:postgresql://localhost:5432/perfume";
+//	private static final String DB_USER = "postgres";
+//	private static final String DB_PASSWORD = "root";
 	
 	public static PreparedStatement prepare(String stm) throws SQLException {
 		PreparedStatement preparedStatement = null;
