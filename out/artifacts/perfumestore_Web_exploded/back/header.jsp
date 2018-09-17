@@ -12,8 +12,8 @@
 <link href="${pageContext.request.contextPath}/back/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/back/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/back/assets/css/main-min.css" rel="stylesheet" type="text/css" />
-    <link href="http://g.alicdn.com/bui/bui/1.1.21/css/bs3/dpl.css" rel="stylesheet">
-    <link href="http://g.alicdn.com/bui/bui/1.1.21/css/bs3/bui.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/back/Css/dpl.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/back/Css/bui.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -34,6 +34,11 @@
         <div id="tab"></div>
 
 
+        <%--<script src="${pageContext.request.contextPath}/back/Js/jquery-1.8.1.min.js"></script>--%>
+        <%--<script src="${pageContext.request.contextPath}/back/Js/bui/seajs/2.3.0/sea.js"></script>--%>
+        <%--<script src="${pageContext.request.contextPath}/back/Js/bui/bui/1.1.21/config.js"></script>--%>
+
+        <%--<script src="${pageContext.request.contextPath}/back/Js/config.js"></script>--%>
         <script src="http://g.tbcdn.cn/fi/bui/jquery-1.8.1.min.js"></script>
         <script src="http://g.alicdn.com/bui/seajs/2.3.0/sea.js"></script>
         <script src="http://g.alicdn.com/bui/bui/1.1.21/config.js"></script>

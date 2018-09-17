@@ -133,11 +133,9 @@
 													target="_blank"
 													href="payorder?orderNum=${order.orderNum}"><font
 													color="red">Pay</font></a></c:if>
-											<c:if test="${order.orderStatus==1}">Wait for
-												delivery</c:if>
-											<c:if test="${order.orderStatus==2}"><a
+											<c:if test="${order.orderStatus==1}"><a
 													href="receiveproduct?orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
-											<c:if test="${order.orderStatus==3}">
+											<c:if test="${order.orderStatus==2}">
 												Done<br/>
 											</c:if>
 										</td>
@@ -173,9 +171,9 @@
 												<c:if test="${order.orderStatus==0}"><a
 														target="_blank"
 														href="payorder?orderNum=${order.orderNum}"><font color="red">Pay</font></a></c:if>
-												<c:if test="${order.orderStatus==1}">Wait for delivery</c:if>
-												<c:if test="${order.orderStatus==2}"><a href="receiveproduct?orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
-												<c:if test="${order.orderStatus==3}">
+												<c:if test="${order.orderStatus==1}"><a
+														href="receiveproduct?orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
+												<c:if test="${order.orderStatus==2}">
 													Done<br/>
 												</c:if>
 											</td>

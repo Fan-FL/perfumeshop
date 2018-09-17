@@ -131,31 +131,6 @@
 		</c:forEach>
 	</c:if>
         </table>
-
- <div class="inline pull-right page" >
-			${requestScope.pager.dataCount}条记录${requestScope.pager.currPage}/
-			${requestScope.pager.pageCount} 页 
-				<c:if test="${requestScope.pager.currPage == 1 }">
-					<a class="nohref">首页</a><a class="nohref">上一页</a>
-				</c:if>
-				<c:if test="${requestScope.pager.currPage > 1 }">
-					<a href="${pageContext.request.contextPath}/back/Order/queryOrders.bg?
-					currPage=1">首页</a>
-					<a href="${pageContext.request.contextPath}/back/Order/queryOrders.bg?
-					currPage=${requestScope.pager.currPage - 1 }">上一页</a>
-				</c:if>
-				<c:if test="${requestScope.pager.currPage == requestScope.pager.pageCount }">
-					<a class="nohref">下一页</a>
-					<a class="nohref">尾页</a>
-				</c:if>
-				<c:if test="${requestScope.pager.currPage < requestScope.pager.pageCount }">
-					<a href="${pageContext.request.contextPath}/back/Order/queryOrders.bg?
-					currPage=${requestScope.pager.currPage + 1 }">下一页</a>
-					<a href="${pageContext.request.contextPath}/back/Order/queryOrders.bg?
-					currPage=${requestScope.pager.pageCount }">尾页</a>
-				</c:if>
-		</div>
-
 </body>
 </html>
 <script>

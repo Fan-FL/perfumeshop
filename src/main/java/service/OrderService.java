@@ -35,7 +35,7 @@ public class OrderService {
     }
 
     public void receiveProduct(String orderNum){
-        OrderMapper.changeOrderStatus(orderNum,3);
+        OrderMapper.changeOrderStatus(orderNum,2);
     }
 
     public String submitOrder(int userId, int addressId, String note, HttpSession session){

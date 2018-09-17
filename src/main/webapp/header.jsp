@@ -59,6 +59,7 @@ ul.subCartList li {
 					<c:if test="${sessionScope.userId eq null}">
 						<li><a href="login.jsp">Login</a></li>
 						<li><a href="register.jsp">Register</a></li>
+						<li><a id="manager" href="/back/login.jsp">manager</a></li>
 					</c:if>
 					<c:if test="${not(sessionScope.userId eq null)}">
 						<li><a href="account.jsp">
