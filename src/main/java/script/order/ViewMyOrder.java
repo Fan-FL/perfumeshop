@@ -1,21 +1,17 @@
 package script.order;
 
+import controller.FrontCommand;
 import domain.OrderMsg;
 import service.OrderService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
 
-@WebServlet("/viewmyorder")
-public class ViewMyOrder extends HttpServlet {
+public class ViewMyOrder extends FrontCommand {
 	private static final long serialVersionUID = 1L;
-	OrderService orderService = null;
+	private OrderService orderService = null;
 
     public ViewMyOrder() {
         super();
@@ -24,30 +20,22 @@ public class ViewMyOrder extends HttpServlet {
 
 
 	/**
-	 * view my order history
-	 * @param request
-	 * @param response
+	 * view my Order history
 	 * @throws ServletException
 	 * @throws IOException
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	public void process() throws ServletException, IOException {
 		int userId = -1;
 		try {
 			userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
 		} catch (Exception e) {}
 		if(userId == -1){
-			response.sendRedirect("blank.jsp");
+			redirect("blank.jsp");
 			return;
 		}
 		List<OrderMsg> ordermsg = orderService.viewMyOrder(userId);
 		request.setAttribute("ordermsg", ordermsg);
-		request.getRequestDispatcher("accountorder.jsp").forward(request, response);
+		forward("/accountorder.jsp");
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
-
 }

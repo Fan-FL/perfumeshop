@@ -1,17 +1,13 @@
 package script.Address;
 
+import controller.FrontCommand;
 import service.AddressService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/updateaddress")
-public class UpdateAddress extends HttpServlet {
+public class UpdateAddress extends FrontCommand {
 	private static final long serialVersionUID = 1L;
 	private AddressService addressService = null;
 
@@ -21,14 +17,14 @@ public class UpdateAddress extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	public void process() throws ServletException, IOException {
 		int userId = -1;
 		try {
 			userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
 		} catch (Exception e) {}
 		if(userId == -1){
-			response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
+			redirect("login.jsp?responseMsg=userIsNotLogin");
 			return;
 		}
 		try {
@@ -37,16 +33,9 @@ public class UpdateAddress extends HttpServlet {
 			String sendman = request.getParameter("sendman");
 			String sendphone = request.getParameter("sendphone");
 			addressService.updateAddress(addId, sendplace, sendman, sendphone, userId);
-			request.getRequestDispatcher("viewalladdress").forward(request, response);
+			forward("/FrontServlet?module=Address&command=ViewAllAddress");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
-
 }

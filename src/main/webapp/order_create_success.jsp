@@ -29,7 +29,7 @@
 <script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<jsp:include page='login?method=header' flush="true"></jsp:include>
+<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 	<div class="encircle">
 		<img src="images/jstj.jpg" alt="success pic">
 		<div class="checkout_order_right">
@@ -50,7 +50,7 @@
 				</div>
 
 				<div class="checkout_order_tools ">
-					<a class="go_pay" href="payorder?orderNum=${sessionScope.orderNum}" target="_self">
+					<a class="go_pay" href="/FrontServlet?module=order&command=PayOrder&orderNum=${sessionScope.orderNum}" target="_self">
 						Pay</a>
 					<a href="blank.jsp" class="go_continue">Continue shopping</a>
 				</div>

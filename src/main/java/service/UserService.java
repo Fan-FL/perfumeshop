@@ -32,96 +32,19 @@ public class UserService {
         new UserMapper().update(user);
     }
 
-    public void userLogin(HttpServletRequest request, HttpServletResponse response){
-        PrintWriter out = null;
-        try {
-            response.setContentType("text/html;charset=UTF-8");
-            out = response.getWriter();
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            User user = UserMapper.findByName(username);
-            boolean logStatus = false;
-            if(user != null){
-                logStatus = password.equals(user.getPassword());
-            }
-            if(logStatus){
-                request.getSession().setAttribute("userId", user.getId());
-                request.getSession().setAttribute("userName", user.getUsername());
-            }
-            String jsonStr = "[{'logStatus':'" + logStatus + "'}]";
-            JSONArray json = JSONArray.fromObject(jsonStr);
-            out.write(json.toString());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally{
-            if(out != null){
-                out.flush();
-                out.close();
-            }
-        }
+    public User findUserByName(String username){
+        return UserMapper.findByName(username);
     }
 
-    public void userLogout(HttpServletRequest request, HttpServletResponse response){
-        HttpSession session = request.getSession();
+    public void userLogout(HttpSession session){
         session.invalidate();
     }
 
-    public void userRegister(HttpServletRequest request, HttpServletResponse response){
-        PrintWriter out = null;
-        try {
-            response.setContentType("text/html;charset=UTF-8");
-            out = response.getWriter();
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            String jsonStr = null;
-            if ( UserMapper.findByName(username) != null) {
-                String regStatus = "hasThisUser";
-                jsonStr =  "[{'regStatus':'" + regStatus + "'}]";
-                JSONArray json = JSONArray.fromObject(jsonStr);
-                out.write(json.toString());
-                return;
-            }
-            if(username!=null&&!username.equals("")&&password!=null&&!password.equals("")){
-                User user = new User();
-                user.setUsername(username);
-                user.setPassword(password);
-                int userId = new UserMapper().insert(user);
-                if (userId > 0) {
-                    String regStatus = "regSuccess";
-                    jsonStr =  "[{'regStatus':'" + regStatus + "'}]";
-                    JSONArray json = JSONArray.fromObject(jsonStr);
-                    out.write(json.toString());
-                    request.getSession().setAttribute("userId", userId);
-                    request.getSession().setAttribute("userName", user.getUsername());
-                    return;
-                }
-            }
-            String regStatus = "regFail";
-            jsonStr =  "[{'regStatus':'" + regStatus + "'}]";
-            JSONArray json = JSONArray.fromObject(jsonStr);
-            out.write(json.toString());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally{
-            if(out != null){
-                out.flush();
-                out.close();
-            }
-        }
+    public int insert(User user) {
+        return new UserMapper().insert(user);
     }
 
-    public void viewUser(HttpServletRequest request, HttpServletResponse response) throws
-            IOException, ServletException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
-            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
-        }
-        User user = UserMapper.findByID(userId);
-        request.setAttribute("user", user);
-        request.getRequestDispatcher("accountMsg.jsp").forward(request, response);
+    public User findUserById(int userId) {
+        return UserMapper.findByID(userId);
     }
 }

@@ -174,7 +174,7 @@ $(function(){
 
 </head>
 <body>
-	<jsp:include page='login?method=header' flush="true"></jsp:include>
+	<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 
 <script type="text/javascript">
 	$(function(){
@@ -218,11 +218,11 @@ $(function(){
 			}
 			if(hasThisProduct){
 				if(confirm("This product has already been in the cart, click Confirm to the cart")){
-					window.open("${pageContext.request.contextPath}/viewcart");
+					window.open("${pageContext.request.contextPath}/FrontServlet?module=Cart&command=ViewCart");
 				}
 				return;
 			}
-			var url="addtocart";
+			var url="/FrontServlet?module=Cart&command=AddToCart";
 			var productId = $("#productId").val();
 			var saleCount = $("#text1").val();
 			if(parseInt(saleCount) > storeNum){

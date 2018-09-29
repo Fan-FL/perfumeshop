@@ -40,13 +40,13 @@ a {
 <script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<jsp:include page='login?method=header' flush="true"></jsp:include>
+<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 	<br /><br /><br />
 	<div class="encircle">
 		<img src="images/jstjsb.jpg">
 		<div class="checkout_order_right">
 			<h1>
-				Sorry, the product is off the shelf, please go to <a href="viewcart">cart</a> to
+				Sorry, the product is off the shelf, please go to <a href="/FrontServlet?module=Cart&command=ViewCart">cart</a> to
 				modify.
 			</h1>
 		</div>

@@ -149,7 +149,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 	<div id="form">
-		<form id="subform" action="updateuser" method="post">
+		<form id="subform" action="FrontServlet?module=User&command=UpdateUser" method="post">
    			<table id="table">
    				<tr height="40px">
 					<td width="15%">Username</td>

@@ -1,16 +1,15 @@
 package script.manager;
 
+import controller.FrontCommand;
+import domain.Manager;
+import net.sf.json.JSONArray;
 import service.ManagerService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet("/back/manager_login")
-public class ManagerLogin extends HttpServlet {
+public class ManagerLogin extends FrontCommand {
 	private static final long serialVersionUID = 1L;
 
     ManagerService managerService = null;
@@ -20,12 +19,28 @@ public class ManagerLogin extends HttpServlet {
         managerService = ManagerService.getInstance();
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        managerService.managerLogin(request, response);
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
+    @Override
+    public void process() throws ServletException, IOException {
+        String managerName = request.getParameter("managerName");
+        String managerPassword = request.getParameter("managerPassword");
+        Manager manager = managerService.findByName(managerName);
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = null;
+        try {
+            out = response.getWriter();
+            String jsonStr = null;
+            if (manager == null || !managerPassword.equals(manager.getPassword())) {
+                jsonStr = "[{'check':'checkout'}]";
+            } else {
+                jsonStr = "[{'check':'checkin'}]";
+                request.getSession().setAttribute("manager", manager);
+            }
+            JSONArray json = JSONArray.fromObject(jsonStr);
+            out.write(json.toString());
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

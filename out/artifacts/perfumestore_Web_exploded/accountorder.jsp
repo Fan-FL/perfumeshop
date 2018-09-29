@@ -105,9 +105,9 @@
 										<c:forEach items="${order.product}" var="product">
 											<td align="left">
 												<a target="_blank" 
-												   href="viewproductdetail?productid=${product.productId }">
+												   href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${product.productId }">
 													<img src="${product.productImagePath }"></a>
-												<div class="pname"><a target="_blank" href="viewproductdetail?productid=${product.productId }">${product.productName}</a></div>
+												<div class="pname"><a target="_blank" href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${product.productId }">${product.productName}</a></div>
 											</td>
 											<td align="center">
 												$<fmt:formatNumber
@@ -126,15 +126,15 @@
 											<c:if test="${empty order.note}">None</c:if>
 										</td>
 										<td align="center"><a
-												href="deleteorder?orderNum=${order.orderNum}"
+												href="/FrontServlet?module=order&command=DeleteOrder&orderNum=${order.orderNum}"
 												onclick="return confirm('Are you sure to delte?');">
 											Delete</a><br/>
 											<c:if test="${order.orderStatus==0}"><a
 													target="_blank"
-													href="payorder?orderNum=${order.orderNum}"><font
+													href="/FrontServlet?module=order&command=PayOrder&orderNum=${order.orderNum}"><font
 													color="red">Pay</font></a></c:if>
 											<c:if test="${order.orderStatus==1}"><a
-													href="receiveproduct?orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
+													href="/FrontServlet?module=order&command=ReceiveProduct&orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
 											<c:if test="${order.orderStatus==2}">
 												Done<br/>
 											</c:if>
@@ -148,9 +148,9 @@
 										</td>
 										<c:forEach items="${order.product}" var="product" begin="0" end="0">
 											<td align="left">
-												<a target="_blank" href="viewproductdetail?productid=${product.productId }">
+												<a target="_blank" href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${product.productId }">
 													<img src="${product.productImagePath }"></a>
-												<div class="pname"><a target="_blank" href="viewproductdetail?productid=${product.productId }">${product.productName}</a></div>
+												<div class="pname"><a target="_blank" href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${product.productId }">${product.productName}</a></div>
 											</td>
 											<td align="center">
 												$<fmt:formatNumber
@@ -167,12 +167,13 @@
 												<c:if test="${!(empty order.note)}">${order.note}</c:if>
 												<c:if test="${empty order.note}">None</c:if>
 											</td>
-											<td align="center" rowspan="${fn:length(order.product)}"><a href="deleteorder?orderNum=${order.orderNum}" onclick="return confirm('Are you sure to delete?');">Delete</a><br/>
+											<td align="center"
+												rowspan="${fn:length(order.product)}"><a href="/FrontServlet?module=order&command=DeleteOrder&orderNum=${order.orderNum}" onclick="return confirm('Are you sure to delete?');">Delete</a><br/>
 												<c:if test="${order.orderStatus==0}"><a
 														target="_blank"
-														href="payorder?orderNum=${order.orderNum}"><font color="red">Pay</font></a></c:if>
+														href="/FrontServlet?module=order&command=PayOrder&orderNum=${order.orderNum}"><font color="red">Pay</font></a></c:if>
 												<c:if test="${order.orderStatus==1}"><a
-														href="receiveproduct?orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
+														href="/FrontServlet?module=order&command=ReceiveProduct&orderNum=${order.orderNum}"><font color="red">Confirm receipt</font></a></c:if>
 												<c:if test="${order.orderStatus==2}">
 													Done<br/>
 												</c:if>
@@ -182,9 +183,9 @@
 									<c:forEach items="${order.product}" var="product" begin="1" end="${fn:length(order.product)-1}">
 										<tr>
 											<td align="left">
-												<a target="_blank" href="viewproductdetail?productid=${product.productId }">
+												<a target="_blank" href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${product.productId }">
 													<img src="${product.productImagePath }"></a>
-												<div class="pname"><a target="_blank" href="viewproductdetail?productid=${product.productId }">${product.productName}</a></div>
+												<div class="pname"><a target="_blank" href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${product.productId }">${product.productName}</a></div>
 											</td>
 											<td align="center">
 												$<fmt:formatNumber

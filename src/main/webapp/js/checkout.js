@@ -203,7 +203,7 @@ function cleanCart(){
 	toggleBlankCart();
 }
 function updateCartCount(json) {
-	$.post("updatecartcount", json);
+	$.post("FrontServlet?module=Cart&command=UpdateCartCount", json);
 };
 function setTotalPrice() {
 	var total = 0;
@@ -217,7 +217,7 @@ function setTotalPrice() {
 	$("#total").html(mark + formatCurrency(total));
 }
 function deleteCart(json) {
-	$.post("deletecart", json);
+	$.post("FrontServlet?module=Cart&command=DeleteCart", json);
 }
 function deleteCartTr(cartId, obj) {
 	var json = {

@@ -20,12 +20,11 @@
 	<div class="header">
 
 		<div class="dl-title">
-			<img width="100px" height="20px" src="assets/img/logo.png">
 		</div>
 
 		<div class="dl-log">
 			欢迎您，<span class="dl-log-user">${sessionScope.manager.username }</span><a
-				href="logout.bg" title="退出系统"
+				href="/FrontServlet?module=manager&command=ManagerLogout" title="退出系统"
 				class="dl-log-quit" onclick="return confirm('您确定退出吗？');">[退出]</a>
 		</div>
 	</div>
@@ -53,7 +52,7 @@
                     elCls : 'link-tabs',
                     autoRender: true,
                     children:[
-                        {text:'All product',value:'1',href:'/manager_viewallproduct'},
+                        {text:'All product',value:'1',href:'/FrontServlet?module=Product&command=ManagerViewAllProduct'},
                         {text:'标签二',value:'2',href:'#'},
                         {text:'标签三',value:'3',href:'#'}
                     ],

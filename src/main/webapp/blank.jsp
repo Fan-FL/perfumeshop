@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <%
-    	request.getRequestDispatcher("viewallproduct").forward(request, response);
+    	request.getRequestDispatcher("FrontServlet?module=Product&command=ViewAllProduct").forward(request, response);
     %>
   </body>
 </html>

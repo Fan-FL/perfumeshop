@@ -29,7 +29,7 @@
 <script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<jsp:include page='login?method=header' flush="true"></jsp:include>
+<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 	<br /><br /><br />
 	<div class="encircle">
 		<div class="checkout_order_right">

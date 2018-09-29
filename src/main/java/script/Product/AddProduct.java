@@ -1,19 +1,14 @@
 package script.Product;
 
-import datasource.ProductMapper;
+import controller.FrontCommand;
 import domain.Product;
 import service.ProductService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/addproduct")
-public class AddProduct extends HttpServlet {
+public class AddProduct extends FrontCommand {
 	private static final long serialVersionUID = 1L;
 
 
@@ -26,23 +21,29 @@ public class AddProduct extends HttpServlet {
 
     /**
      * get a product's detail
-     * @param request
-     * @param response
      * @throws ServletException
      * @throws IOException
      */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+    public void process() throws ServletException, IOException {
         if(request.getSession().getAttribute("manager") == null){
-            response.sendRedirect("/back/login.jsp");
+            redirect("/back/login.jsp");
             return;
         }
-        productService.addProduct(request, response);
-	}
 
+        try {
+            String productName = request.getParameter("productName");
+            double productPrice = Double.parseDouble(request.getParameter("productPrice"));
+            int storeNum = Integer.parseInt(request.getParameter("storeNum"));
+            String productDesc = request.getParameter("productDesc");
+            Product product = new Product(productName, productPrice, productDesc,
+                    "upload/64a34e68-d96f-412b-b82c-40a232c85d7d.jpg", storeNum,
+                    1);
+            productService.addProduct(product);
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
-
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        forward("/FrontServlet?module=Product&command=ManagerViewAllProduct");
+    }
 }

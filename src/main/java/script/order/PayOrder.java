@@ -1,39 +1,33 @@
 package script.order;
 
+import controller.FrontCommand;
 import service.OrderService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/payorder")
-public class PayOrder extends HttpServlet {
+public class PayOrder extends FrontCommand {
 	private static final long serialVersionUID = 1L;
-	OrderService orderService = null;
+	private OrderService orderService = null;
 
     public PayOrder() {
         super();
 		orderService = OrderService.getInstance();
     }
 
-
 	/**
-	 * pay order
-	 * @param request
-	 * @param response
+	 * pay Order
 	 * @throws ServletException
 	 * @throws IOException
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	public void process() throws ServletException, IOException {
 		String orderNum = request.getParameter("orderNum");
 		int orderStatus = orderService.getOrderStatus(orderNum);
 		System.out.println(orderNum);
 		if (orderStatus != 0) {
-			response.sendRedirect("blank.jsp");
+			redirect("blank.jsp");
 			return;
 		}
 		orderService.submitPayment(orderNum);
@@ -41,13 +35,6 @@ public class PayOrder extends HttpServlet {
 		request.getSession().removeAttribute("cartProductMap");
 		request.getSession().removeAttribute("address");
 		request.getSession().removeAttribute("orderNum");
-		response.sendRedirect("payment_success.jsp");
+		redirect("payment_success.jsp");
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
-
 }

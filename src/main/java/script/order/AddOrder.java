@@ -1,45 +1,37 @@
 package script.order;
 
-import datasource.CartMapper;
-import datasource.UserMapper;
+import controller.FrontCommand;
 import domain.Address;
 import domain.Cart;
 import domain.Product;
 import domain.User;
-import service.AddressService;
-import service.CartService;
 import service.OrderService;
+import service.UserService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-@WebServlet("/addorder")
-public class AddOrder extends HttpServlet {
+public class AddOrder extends FrontCommand {
 	private static final long serialVersionUID = 1L;
-	OrderService orderService = null;
+	private OrderService orderService = null;
+	private UserService userService = null;
 
     public AddOrder() {
         super();
 		orderService = OrderService.getInstance();
+		userService = UserService.getInstance();
     }
-
 
 	/**
 	 * Get cart info and prepare data for createOrder page
-	 * @param request
-	 * @param response
 	 * @throws ServletException
 	 * @throws IOException
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	public void process() throws ServletException, IOException {
 		int userId = -1;
 		try {
 			userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
@@ -48,13 +40,21 @@ public class AddOrder extends HttpServlet {
 			response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
 			return;
 		}
-		orderService.addOrder(userId, request, response);
+
+		User user = userService.findUserById(userId);
+		List<Address> addresses = user.getDeliveryAddresses();
+		request.setAttribute("addresses", addresses);
+		if(user.getCartItems().isEmpty()){
+			forward("/FrontServlet?module=Cart&command=ViewCart");
+		}else{
+			Map<Cart, Product> cartProductMap = new HashMap<Cart, Product>();
+			if (!user.getCartItems().isEmpty()){
+				for (Cart cart: user.getCartItems()){
+					cartProductMap.put(cart, cart.getProduct());
+				}
+			}
+			request.getSession().setAttribute("cartProductMap", cartProductMap);
+			forward("/createOrder.jsp");
+		}
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
-
 }

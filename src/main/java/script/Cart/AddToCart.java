@@ -1,19 +1,15 @@
 package script.Cart;
 
+import controller.FrontCommand;
 import net.sf.json.JSONArray;
 import service.CartService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 
-@WebServlet("/addtocart")
-public class AddToCart extends HttpServlet {
+public class AddToCart extends FrontCommand {
 	private static final long serialVersionUID = 1L;
     private CartService cartService = null;
 
@@ -22,14 +18,14 @@ public class AddToCart extends HttpServlet {
         cartService = CartService.getInstance();
     }
 
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+    public void process() throws ServletException, IOException {
         int userId = -1;
         try {
             userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
         } catch (Exception e) {}
         if(userId == -1){
-            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
+            redirect("login.jsp?responseMsg=userIsNotLogin");
             return;
         }
         PrintWriter out = null;
@@ -50,13 +46,5 @@ public class AddToCart extends HttpServlet {
             out.flush();
             out.close();
         }
-
-	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
-
+    }
 }

@@ -50,7 +50,7 @@
 </head>
 <body>
 <!-- include header -->
-	<jsp:include page='login?method=header' flush="true"></jsp:include>
+	<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 	<div class="main" style="margin: 0">
 		<div class="wrap">
 			<div class="section group">
@@ -61,7 +61,7 @@
 							<div class="top-box"> 
 							<c:forEach items="${products}" var="a" varStatus="vs" begin="${outvs.count - 1}" end="${outvs.count + 2}" >
 							<div class="col_1_of_3 span_1_of_3" style="width: 23%">
-									<a href="viewproductdetail?productid=${a.id}" >
+									<a href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${a.id}" >
 										<div class="inner_content clearfix">
 											<div class="product_image">
 												<img src="${a.productImagePath}"/>

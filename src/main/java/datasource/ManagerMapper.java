@@ -13,7 +13,7 @@ public class ManagerMapper implements IMapper{
     public static Manager findByID(int id) {
         Manager manager = null;
         String sql = "select MANAGER_ID, USERNAME, PASSWORD, TITLE, AMOUNT, CURRENCY" +
-                " from perfume.manager " +
+                " from perfume.Manager " +
                 " WHERE MANAGER_ID = ?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
@@ -31,7 +31,7 @@ public class ManagerMapper implements IMapper{
                 Money salary = new Money(amount, currency);
 
                 manager = new Manager(id, username, pwd, title, salary);
-                manager.setType("manager");
+                manager.setType("Manager");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -44,7 +44,7 @@ public class ManagerMapper implements IMapper{
     public static Manager findByName(String name) {
         Manager manager = null;
         String sql = "select MANAGER_ID, USERNAME, PASSWORD, TITLE, AMOUNT, CURRENCY" +
-                " from perfume.manager " +
+                " from perfume.Manager " +
                 " WHERE USERNAME = ?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
@@ -63,7 +63,7 @@ public class ManagerMapper implements IMapper{
                 Money salary = new Money(amount, currency);
 
                 manager = new Manager(id, username, pwd, title, salary);
-                manager.setType("manager");
+                manager.setType("Manager");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -85,7 +85,7 @@ public class ManagerMapper implements IMapper{
     @Override
     public void update(DomainObject obj) {
         Manager manager = (Manager)obj;
-        String sql = "UPDATE perfume.manager SET USERNAME =?, PASSWORD =?, TITLE = ?, " +
+        String sql = "UPDATE perfume.Manager SET USERNAME =?, PASSWORD =?, TITLE = ?, " +
                 "AMOUNT = ?, CURRENCY = ?" +
                 " WHERE MANAGER_ID = ?";
         DBHelper.update(sql, manager.getUsername(), manager.getPassword(),
@@ -95,7 +95,7 @@ public class ManagerMapper implements IMapper{
     @Override
     public void delete(DomainObject obj) {
         Manager manager = (Manager)obj;
-        String sql = "Delete FROM perfume.manager WHERE MANAGER_ID = ?";
+        String sql = "Delete FROM perfume.Manager WHERE MANAGER_ID = ?";
         DBHelper.update(sql, manager.getId());
     }
 }

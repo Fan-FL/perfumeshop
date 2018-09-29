@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<c:choose>
   		<c:when test="${empty address}">
 	  		<div class="form">
-				<form id="addform" action="addaddress" method="post">
+				<form id="addform" action="/FrontServlet?module=Address&command=AddAddress" method="post">
 		   			<table class="table">
 						<tr>
 							<td width="15%">Shipping address</td>
@@ -101,7 +101,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		</c:when>
   		<c:otherwise>
 	  		<div class="form">
-				<form id="updateform" action="updateaddress?addId=${address.id}" method="post">
+				<form id="updateform"
+					  action="FrontServlet?module=Address&command=UpdateAddress&addId=${address.id}" method="post">
 		   			<table class="table">
 		   				<tr>
 							<td width="15%">Shipping address</td>

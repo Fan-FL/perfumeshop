@@ -73,7 +73,7 @@ body {
 </style>
 </head>
 <body>
-<jsp:include page='/back/manager_header' flush="true"></jsp:include>
+<jsp:include page='/FrontServlet?module=manager&command=ManagerHeader' flush="true"></jsp:include>
 	<form class="form-inline definewidth m20" action="${pageContext.request.contextPath}/back/Product/
 	queryProducts.bg" method="post">
 		<button type="button" class="btn btn-success" id="addproducts">添加商品</button>
@@ -110,10 +110,11 @@ body {
 					${product.productName}</td>
 					<td>${product.productPrice}</td>
 					<td>${product.storeNum}</td>
-					<td><a href="${pageContext.request.contextPath}/editproduct?productId=${product.id}
+					<td><a
+							href="${pageContext.request.contextPath}/FrontServlet?module=Product&command=EditProduct&productId=${product.id}
 					">编辑</a>&nbsp;/&nbsp;
 					<a class="deleteOneProduct nohref" 
-					href="${pageContext.request.contextPath}/deleteproduct?
+					href="${pageContext.request.contextPath}/FrontServlet?module=Product&command=DeleteProduct&
 					productId=${product.id}">删除</a></td>
 				</tr>
 			</c:forEach>

@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		   var $username_msg = $("#username_msg");
 		   var $password_msg = $("#password_msg");
 		   var $confirmpass_msg = $("#confirmpass_msg");
-		   var url = "userregister";
+		   var url = "FrontServlet?module=User&command=UserRegister";
 		   
 		   $username.focus(function(){
 			   this.style.imeMode = 'disabled';// disable input method
@@ -165,7 +165,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </script>
 </head>
 <body> 
-	<jsp:include page='login?method=header' flush="true"></jsp:include>
+	<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
           <div class="register_account">
           	<div class="wrap">
     	      <h4 class="title">Create an account</h4>

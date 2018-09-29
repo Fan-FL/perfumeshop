@@ -89,10 +89,10 @@
 									<tr>
 										<td>${add.sendPlace}&nbsp;&nbsp;(&nbsp;${add.sendMan}&nbsp;&nbsp;&nbsp;collect&nbsp;)&nbsp;&nbsp;${add.sendPhone}</td>
 										<td align="center"><a
-												href="deleteaddress?addId=${add.id}"
+												href="/FrontServlet?module=Address&command=DeleteAddress&addId=${add.id}"
 												onclick="return confirm('Are you sure to delete?');">Delete</a>
 											&nbsp;&nbsp;&nbsp;&nbsp;<a
-													href="viewsingleaddress?addId=${add.id}">
+													href="FrontServlet?module=Address&command=ViewSingleAddress&addId=${add.id}">
 												Modify</a></td>
 									</tr>
 								</c:forEach>

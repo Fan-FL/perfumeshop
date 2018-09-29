@@ -170,34 +170,13 @@ color: #333;
 </script>
 <%--layer--%>
 <script type="text/javascript" src="js/layer/layer.js"></script>
-<script>
-;!function(){
-	
-	//load css, module completely
-	layer.ready(function(){ 
-		$('#createAddress').on('click', function(){
-			layer.open({
-		        type: 2,
-		        offset: '180px',
-		        //skin: 'layui-layer-lan',
-		        title: 'Add address',
-		        fix: true,
-		        shadeClose: false,
-		        maxmin: false,
-		        area: ['600px', '400px'],
-		        content: 'createAddressFromOrderPage.jsp',
-		    });
-		});
-	});
-
-}();
-</script>
 </head>
 <body>
-<jsp:include page='login?method=header' flush="true"></jsp:include>
+<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 	<div class="clear"></div>
 	<div class="register_account">
-		<form action="submitorder" method="post" id="multiFormSubmit">
+		<form action="/FrontServlet?module=order&command=SubmitOrder" method="post"
+			  id="multiFormSubmit">
 			<c:set scope="page" var="tokenValue" value="<%=UUID.randomUUID().toString()%>"></c:set>
 			<c:set scope="session" var="token" value="${pageScope.tokenValue }"></c:set>
 			<input type="hidden" name="token" value="${pageScope.tokenValue }">
@@ -208,12 +187,6 @@ color: #333;
 					<label> ${address.sendPlace }&nbsp;(to ${address.sendMan
 						}&nbsp;)&nbsp;${address.sendPhone }</label><br/>
 				</c:forEach>
-				<div id="createAddressDiv" class="button-wrapper">
-					<span class="btn">
-						<button id="createAddress" type="button" class="grey"><font
-								size="2px">Add shipping address</font></button>
-					</span>
-				</div>
 				<br/>
 			</div>
 			<div class="wrap">
@@ -222,7 +195,7 @@ color: #333;
 			</div>
 			<br/>
 			<div class="wrap">
-				<h4 class="title">Product list<a href="viewcart">[Return to cart]</a></h4>
+				<h4 class="title">Product list<a href="/FrontServlet?module=Cart&command=ViewCart">[Return to cart]</a></h4>
 			</div>
 			<div class="mycar-index">
 			<!-- Product info -->
@@ -242,7 +215,7 @@ color: #333;
 						<tr>
 							<td style="width:100px;">
 								<a target="_blank"
-								   href="viewproductdetail?productid=${cartProduct.value.id }">
+								   href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${cartProduct.value.id }">
 									<span class="cart-product-img">
 										<img src="${cartProduct.value.productImagePath }" height="50" style="cursor: pointer;">
 									</span>
@@ -251,7 +224,7 @@ color: #333;
 							<td >
 								<div class="cart_name" ><p>
 								<i><a target="_blank"
-									  href="viewproductdetail?productid=${cartProduct.value.id }">
+									  href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${cartProduct.value.id }">
 								${cartProduct.value.productName }</a></i></p></div>							
 							</td>
 							<!-- <td>0</td> -->

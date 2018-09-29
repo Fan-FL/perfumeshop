@@ -35,8 +35,8 @@
     </style>
 </head>
 <body>
-<jsp:include page='/back/manager_header' flush="true"></jsp:include>
-<form action="${pageContext.request.contextPath}/updateproduct" method="post"
+<jsp:include page='/FrontServlet?module=manager&command=ManagerHeader' flush="true"></jsp:include>
+<form action="${pageContext.request.contextPath}/FrontServlet?module=Product&command=UpdateProduct" method="post"
       class="definewidth m20">
 <!-- <input type="hidden" name="id" value="{$menu.id}" /> -->
 <input type="hidden" name="productId" value="${requestScope.product.id}" />
@@ -75,7 +75,7 @@
 <script>
     $(function () {       
 		$('#backid').click(function(){
-				window.location.href="${pageContext.request.contextPath}/manager_viewallproduct";
+				window.location.href="${pageContext.request.contextPath}/FrontServlet?module=Product&command=ManagerViewAllProduct";
 		 });
 		//验证输入的价格格式
 		$("body").on({

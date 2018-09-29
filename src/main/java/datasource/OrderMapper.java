@@ -32,7 +32,7 @@ public class OrderMapper implements IMapper{
     }
 
     /**
-     * //modify order status to 1 which means already paid
+     * //modify Order status to 1 which means already paid
      * @param orderNum
      */
     public static void submitPayment(String orderNum) {
@@ -45,7 +45,7 @@ public class OrderMapper implements IMapper{
     }
 
     public static List<OrderMsg> getOrderMsgs(int userId) {
-        // get all undeleted order number
+        // get all undeleted Order number
         Set<String> orderNums = getOrderNum(userId);
         Iterator<String> it = orderNums.iterator();
         List<OrderMsg> ordermsgs = new ArrayList<OrderMsg>();
@@ -53,7 +53,7 @@ public class OrderMapper implements IMapper{
             String orderNum = it.next();
             //get all OrderProducts by orderNum
             List<OrderProduct> product = getOrderProducts(orderNum);
-            //get order message
+            //get Order message
             OrderMsg order = getOrderMsg(orderNum,product);
             ordermsgs.add(order);
         }
@@ -61,7 +61,7 @@ public class OrderMapper implements IMapper{
     }
 
     /**
-     * get all undeleted order number by userID in order of date (The most recent one appears on
+     * get all undeleted Order number by userID in Order of date (The most recent one appears on
      * the top)
      *
      * @param userId
@@ -128,7 +128,7 @@ public class OrderMapper implements IMapper{
     }
 
     /**
-     * get order message by order num and OrderProducts
+     * get Order message by Order num and OrderProducts
      * @param orderNum
      * @param product
      * @return

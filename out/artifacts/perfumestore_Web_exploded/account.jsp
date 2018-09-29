@@ -65,15 +65,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </style>
 </head>
 <body>
-<jsp:include page='login?method=header' flush="true"></jsp:include>
+<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 	<div class="register_account">
 		<div class="wrap" align="center" id="main">
 			<h4 class="title" align="left">My account</h4>
 			<div id="account_msg" align="left">
 				<ul id="account_msg_menu">
-	    			<li id="msg"><a id="default" href="viewuser" target="main">Details</a></li>
-	   				<li id="dir"><a href="viewalladdress" target="main">Address</a></li>
-	   				<li id="ord"><a href="viewmyorder" target="main">Orders</a></li>
+	    			<li id="msg"><a id="default" href="FrontServlet?module=User&command=ViewUser"
+									target="main">Details</a></li>
+	   				<li id="dir"><a href="FrontServlet?module=Address&command=ViewAllAddress" target="main">Address</a></li>
+	   				<li id="ord"><a href="/FrontServlet?module=order&command=ViewMyOrder" target="main">Orders</a></li>
 	    		</ul>
 			</div>
 			<iframe id="iframeMain" align="middle" frameborder="0" width="100%" name="main" onload="Javascript:iframeAutoFit(this)" scrolling="no"></iframe>

@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				$("#errorMsg").text("");
 			}
 			var json = {"username":username,"password":password};
-			var url = "login?method=login";
+			var url = "FrontServlet?module=User&command=UserLogin";
 			$.post(url,json,function(data){
 				var logStatus = (data[0].logStatus=="true");
 				$("#errorMsg").text("");
@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 </head>
 <body>
-	<jsp:include page='login?method=header' flush="true"></jsp:include>
+	<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
         <div class="login">
           	<div class="wrap">
 				<div class="col_1_of_login span_1_of_login">
@@ -75,7 +75,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="login-title">
 	           		<h4 class="title">login</h4>
 					<div id="loginbox" class="loginbox">
-						<form action="login?method=login" method="post" name="login"
+						<form action="FrontServlet?module=User&command=UserLogin" method="post" name="login"
 							  id="login-form">
 						  <fieldset class="input">
 						    <p id="login-form-username">

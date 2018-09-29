@@ -59,14 +59,15 @@ ul.subCartList li {
 					<c:if test="${sessionScope.userId eq null}">
 						<li><a href="login.jsp">Login</a></li>
 						<li><a href="register.jsp">Register</a></li>
-						<li><a id="manager" href="/back/login.jsp">manager</a></li>
+						<li><a id="manager" href="/back/login.jsp">manager page</a></li>
 					</c:if>
 					<c:if test="${not(sessionScope.userId eq null)}">
 						<li><a href="account.jsp">
 						<dir id="test1">${sessionScope.userName}</dir>
 						</a></li>
-						<li><a class="goCart" href="viewcart">Cart</a></li>
-						<li><a id="logout" href="logout">Logout</a></li>
+						<li><a class="goCart" href="/FrontServlet?module=Cart&command=ViewCart">Cart</a></li>
+						<li><a id="logout" href="FrontServlet?module=User&command=UserLogout">Logout
+						</a></li>
 					</c:if>
 				</ul>
 			</div>
@@ -81,18 +82,20 @@ ul.subCartList li {
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-						<li class="active grid"><a href="viewallproduct">All products</a></li>
+						<li class="active grid"><a
+								href="FrontServlet?module=Product&command=ViewAllProduct">All
+							products</a></li>
 					</ul>
 				</div>
 			</div>
 	 		<div class="header-bottom-right">
 				<div class="tag-list">
 					<ul class="icon1 sub-icon1 profile_img">
-						<li><a class="active-icon c2" href="viewcart"> </a>
+						<li><a class="active-icon c2" href="/FrontServlet?module=Cart&command=ViewCart"> </a>
 						</li>
 					</ul>
 					<ul id="xiaocart" class="last">
-						<li><a class="goCart" href="viewcart">Cart(${requestScope.cartCount})</a>
+						<li><a class="goCart" href="/FrontServlet?module=Cart&command=ViewCart">Cart(${requestScope.cartCount})</a>
 						</li>
 					</ul>
 				</div>

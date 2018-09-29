@@ -99,8 +99,8 @@
 </script>
 </head>
 <body>
-<jsp:include page='/back/manager_header' flush="true"></jsp:include>
-<form id="addProductsForm" action="/addproduct"
+<jsp:include page='/FrontServlet?module=manager&command=ManagerHeader' flush="true"></jsp:include>
+<form id="addProductsForm" action="/FrontServlet?module=Product&command=AddProduct"
  method="post" class="definewidth m20">
 <table class="table table-bordered table-hover m10">
     <tr>

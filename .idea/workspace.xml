@@ -7,330 +7,144 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c92f68-6d1e-46d4-9da9-30608fb0edde" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/FrontCommand.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/FrontServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserHeader.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogout.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AccountMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AccountMapper.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AddressMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AddressMapper.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ManagerMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ManagerMapper.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/domain/Manager.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/domain/Manager.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/AddAddress.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/AddAddress.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/DeleteAddress.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/DeleteAddress.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/UpdateAddress.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/UpdateAddress.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/ViewAllAddress.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/ViewAllAddress.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/ViewSingleAddress.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Address/ViewSingleAddress.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/AddToCart.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/AddToCart.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/DeleteCart.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/DeleteCart.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/UpdateCartCount.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/UpdateCartCount.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/ViewCart.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Cart/ViewCart.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/AddProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/AddProduct.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/DeleteProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/DeleteProduct.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/EditProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/EditProduct.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ManagerViewAllProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ManagerViewAllProduct.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/UpdateProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/UpdateProduct.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ViewAllProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ViewAllProduct.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ViewProductDetail.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ViewProductDetail.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UpdateUser.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UpdateUser.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UserLogin.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UserLogin.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UserLogout.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UserLogout.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UserRegister.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/UserRegister.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/ViewUser.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/User/ViewUser.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerHeader.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerHeader.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerLogin.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerLogin.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/AddOrder.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/AddOrder.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/DeleteOrder.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/DeleteOrder.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/PayOrder.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/PayOrder.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/ReceiveProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/ReceiveProduct.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/SubmitOrder.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/SubmitOrder.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/ViewMyOrder.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/order/ViewMyOrder.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ManagerService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ManagerService.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/OrderService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/OrderService.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ProductService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ProductService.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/UserService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/UserService.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/account.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/account.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountMsg.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountMsg.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountorder.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountorder.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/artDialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/artDialog.source.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/jquery.artDialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/jquery.artDialog.source.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/license.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/plugins/iframeTools.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/plugins/iframeTools.source.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/aero_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/aero_s2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_title_icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/aero/ie6/aui_w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/bg_css3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/bg_css3_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/black/ie6/w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/bg_css3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/bg_css3_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/blue/ie6/w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/chrome.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/chrome/border.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/chrome/chrome_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/default.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/bg_css3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/bg_css3_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/color_bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/green/ie6/w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/icons/error.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/icons/face-sad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/icons/face-smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/icons/loading.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/icons/question.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/icons/succeed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/icons/warning.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/idialog_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/idialog_s2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/idialog/ie6/aui_w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/ie6/aui_w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/s1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/opera/s2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/simple.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/artDialog/skins/twitter.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/ckform.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/sea.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Order/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Order/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/addSuccess.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/editSuccess.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/css/page-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/css/page.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/LOGO_LEOSHOP_cr.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1BHtLFbFdXXaHNz_X-16-16.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1GgTxXm4qXXaGyjny-500-188.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1J_T4XjRfXXaZ8J6X-2-340.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1SLHBXaXmXXXF.Nbe-140-120.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1SMojXedaXXXCL3TD-469-300.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1YTNJFadfXXX6DYsb-100-100.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1k1v5XhNdXXb0_tkB-191-450.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1kBv5XbRbXXb.nqL4-200-300.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1rPjKXXJrXXXVYvLb-15-188.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/T1rbpNFaJXXXbylH7R-80-100.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/hide_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/icon1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/icon2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/left-slib.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/main-nav-bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/main-nav-bg1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/main-nav-bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/menu.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/nav.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/nav_selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/pic2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/resource.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/img/top.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/bui-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/bui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/common/build.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/common/main-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/common/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/common/page-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/common/page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/common/search-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/common/search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/config-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/editor-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/jquery-1.8.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/jquery-ui-1.10.0.custom.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/module/build.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/prettify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/toolbar-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/js/tree-min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/addressManage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/addressManage.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/allProduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/allProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.file-input.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.file-input.js" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Order/index.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/addproducts.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/addproducts.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/edit.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/edit.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/index.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/header.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/blank.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/blank.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/cart.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/cart.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/createAddressFromOrderPage.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/createOrder.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/createOrder.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/checkout.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/checkout.js" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_fail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_fail.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_success.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_success.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/outOfStockNum.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/outOfStockNum.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/payment_success.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/payment_success.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/productOffShelf.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/productOffShelf.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/register.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/repeatCreateOrder.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/repeatCreateOrder.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleAddress.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleAddress.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleProduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/perfumeStore.sql" afterPath="$PROJECT_DIR$/perfumeStore.sql" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/AccountMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/AccountMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/AddressMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/AddressMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Manager.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/AddAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/AddAddress.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/DeleteAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/DeleteAddress.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/UpdateAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/UpdateAddress.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/ViewAllAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/ViewAllAddress.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/ViewSingleAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/ViewSingleAddress.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/AddToCart.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/AddToCart.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/DeleteCart.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/DeleteCart.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/UpdateCartCount.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/UpdateCartCount.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/ViewCart.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/ViewCart.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ViewAllProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ViewAllProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UpdateUser.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UpdateUser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UserLogin.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserLogin.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UserLogout.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserLogout.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UserRegister.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserRegister.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/ViewUser.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/ViewUser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/manager/ManagerHeader.java" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerHeader.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/AddOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/AddOrder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/DeleteOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/DeleteOrder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/PayOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/PayOrder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/ViewMyOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/ViewMyOrder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ManagerService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ManagerService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/service/OrderService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/account.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/account.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/accountMsg.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/accountMsg.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/accountorder.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/accountorder.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/artDialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/artDialog.source.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/jquery.artDialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/jquery.artDialog.source.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/license.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/plugins/iframeTools.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/plugins/iframeTools.source.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/aero_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/aero_s2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_title_icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/aero/ie6/aui_w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/bg_css3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/bg_css3_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/black/ie6/w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/bg_css3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/bg_css3_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/blue/ie6/w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/chrome.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/chrome/border.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/chrome/chrome_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/default.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/bg_css3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/bg_css3_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/color_bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/green/ie6/w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/icons/error.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/icons/face-sad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/icons/face-smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/icons/loading.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/icons/question.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/icons/succeed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/icons/warning.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/idialog_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/idialog_s2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/idialog/ie6/aui_w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_close.hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_n.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_ne.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_nw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_se.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_sw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/ie6/aui_w.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/s1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/opera/s2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/simple.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/artDialog/skins/twitter.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/ckform.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/config.js" afterPath="$PROJECT_DIR$/src/main/webapp/back/Js/bui/bui/1.1.21/config.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/sea.js" afterPath="$PROJECT_DIR$/src/main/webapp/back/Js/bui/seajs/2.3.0/sea.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Order/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/css/page-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/css/page.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/LOGO_LEOSHOP_cr.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1BHtLFbFdXXaHNz_X-16-16.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1GgTxXm4qXXaGyjny-500-188.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1J_T4XjRfXXaZ8J6X-2-340.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1SLHBXaXmXXXF.Nbe-140-120.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1SMojXedaXXXCL3TD-469-300.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1YTNJFadfXXX6DYsb-100-100.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1k1v5XhNdXXb0_tkB-191-450.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1kBv5XbRbXXb.nqL4-200-300.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1rPjKXXJrXXXVYvLb-15-188.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/T1rbpNFaJXXXbylH7R-80-100.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/hide_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/icon1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/icon2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/left-slib.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/main-nav-bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/main-nav-bg1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/main-nav-bg2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/menu.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/nav.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/nav_selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/pic2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/resource.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/img/top.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/bui-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/bui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/build.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/main-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/page-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/page.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/search-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/common/search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/config-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/editor-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/jquery-1.8.1.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/back/Js/jquery-1.8.1.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/jquery-ui-1.10.0.custom.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/module/build.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/prettify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/toolbar-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/assets/js/tree-min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addressManage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/addressManage.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/allProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/allProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Js/bootstrap.file-input.js" afterPath="$PROJECT_DIR$/src/main/webapp/back/Js/bootstrap.file-input.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Product/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/Product/index.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/back/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/blank.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/blank.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/createAddressFromOrderPage.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/createOrder.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createOrder.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order_create_fail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/order_create_fail.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order_create_success.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/order_create_success.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/outOfStockNum.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/outOfStockNum.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/payment_success.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/payment_success.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/productOffShelf.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/productOffShelf.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/repeatCreateOrder.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/repeatCreateOrder.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/singleAddress.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/singleAddress.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/singleProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/singleProduct.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -343,11 +157,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="addproducts.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp">
+      <file leaf-file-name="EditProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-912">
-              <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+            <state relative-caret-position="47">
+              <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="38" column="75" lean-forward="false" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="44" column="32" lean-forward="true" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="46" column="75" lean-forward="false" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -356,18 +206,28 @@
       <file leaf-file-name="edit.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="268">
+              <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/index.jsp">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="80">
+              <caret line="64" column="47" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -376,73 +236,30 @@
       <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/back/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="-211">
+              <caret line="26" column="72" lean-forward="false" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Js/bui/bui/1.1.21/config.js">
+      <file leaf-file-name="ManagerLogout.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/script/manager/ManagerLogout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accountorder.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/accountorder.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="136" column="72" lean-forward="false" selection-start-line="136" selection-start-column="58" selection-end-line="136" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReceiveProduct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+            <state relative-caret-position="311">
+              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding>
-                <element signature="e#902#903#0" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java">
+      <file leaf-file-name="addproducts.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-              <folding>
-                <marker date="1536765515306" expanded="true" signature="2540:2606" ph="SELECT ORDER... orders" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="222" column="23" lean-forward="false" selection-start-line="222" selection-start-column="23" selection-end-line="222" selection-end-column="23" />
+            <state relative-caret-position="245">
+              <caret line="127" column="66" lean-forward="false" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -462,53 +279,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addproducts</find>
-      <find>criteriaProductName</find>
-      <find>Tab</find>
-      <find>alert</find>
-      <find>确认删除该商品</find>
-      <find>1111111111</find>
-      <find>$('#addproducts').click(function()</find>
-      <find>tab</find>
-      <find>addProduct</find>
-      <find>addProducts</find>
-      <find>isMultipart</find>
-      <find>add</find>
-      <find>addProductsForm</find>
-      <find>total.file.max.size</find>
       <find>addproduct</find>
-      <find>index</find>
+      <find>deleteproduct</find>
+      <find>viewproductdetail</find>
+      <find>href=&quot;viewproductdetail?</find>
+      <find>/back/manager_header</find>
+      <find>page='/back/manager_header'</find>
+      <find>/back/manager_login</find>
+      <find>manager_login</find>
+      <find>FrontServlet?module=Manager&amp;command=ManagerHeader</find>
+      <find>FrontServlet?module=manager&amp;command=ManagerHeader</find>
+      <find>ckform</find>
+      <find>ckform.js</find>
+      <find>logo</find>
+      <find>logo.pn</find>
+      <find>main-nav-bg.png</find>
       <find>manager_viewallproduct</find>
-      <find>productName</find>
-      <find>..</find>
-      <find>删除</find>
+      <find>AddProduct</find>
+      <find>DeleteProduct</find>
+      <find>EditProduct</find>
+      <find>ManagerViewAllProduct</find>
+      <find>UpdateProduct</find>
+      <find>Addproduct</find>
+      <find>view</find>
+      <find>backidbackid</find>
       <find>backid</find>
-      <find>editProductSubmit</find>
-      <find>storeNum</find>
-      <find>myTab</find>
-      <find>&amp;</find>
-      <find>nav</find>
-      <find>Wait for delivery</find>
-      <find>confirm r</find>
-      <find>receiveproduct</find>
-      <find>assets/js</find>
+      <find>viewallproduct</find>
+      <find>LeoShop</find>
+      <find>login</find>
+      <find>manager</find>
+      <find>&lt;a</find>
     </findStrings>
     <replaceStrings>
-      <replace>Total price</replace>
-      <replace>Continue shopping</replace>
-      <replace>Added successfully!</replace>
-      <replace>Consignee</replace>
-      <replace>Mobile</replace>
-      <replace>Reset</replace>
-      <replace>Confirm</replace>
-      <replace>off the shelf</replace>
-      <replace>Receiver</replace>
-      <replace>receiverPhone</replace>
-      <replace>deliveryMan</replace>
-      <replace>DeliveryMan</replace>
-      <replace>DeliveryPlace</replace>
-      <replace>ReceiverPhone</replace>
-      <replace>RECEIVER</replace>
       <replace>DELIVERY_PLACE</replace>
       <replace>RECEIVER_PHONE</replace>
       <replace>public</replace>
@@ -524,6 +326,21 @@
       <replace>key.id</replace>
       <replace>id</replace>
       <replace>/back</replace>
+      <replace>ervelet?module=User&amp;command=UserHeader</replace>
+      <replace>servelet?module=User&amp;command=UserHeader</replace>
+      <replace>FrontServelet?module=User&amp;command=UserHeader</replace>
+      <replace>FrontServelet?module=User&amp;command=UserLogin</replace>
+      <replace>FrontServlet</replace>
+      <replace>href=&quot;/FrontServlet?module=Cart&amp;command=ViewCart&quot;</replace>
+      <replace>href=&quot;/FrontServlet?module=Order&amp;command=PayOrder&amp;</replace>
+      <replace>href=&quot;/FrontServlet?module=Order&amp;command=ReceiveProduct&amp;</replace>
+      <replace>module=order</replace>
+      <replace>href=&quot;/FrontServlet?module=Product&amp;command=ViewProductDetail&amp;</replace>
+      <replace>page='FrontServlet?module=Manager&amp;command=ManagerHeader'</replace>
+      <replace>page='FrontServlet?module=manager&amp;command=ManagerHeader'</replace>
+      <replace>FrontServlet?module=manager&amp;command=ManagerHeader</replace>
+      <replace>/FrontServlet?module=manager&amp;command=ManagerHeader</replace>
+      <replace>FrontServlet?module=Product&amp;command=ViewAllProduct</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop</dir>
@@ -541,57 +358,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/script/User/UserLogin.java" />
-        <option value="$PROJECT_DIR$/src/script/User/UserLogout.java" />
-        <option value="$PROJECT_DIR$/src/script/User/ViewUser.java" />
-        <option value="$PROJECT_DIR$/src/script/order/SubmitOrder.java" />
-        <option value="$PROJECT_DIR$/src/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/domain/DomainObject.java" />
-        <option value="$PROJECT_DIR$/src/src/script/Address/AddAddress.java" />
-        <option value="$PROJECT_DIR$/WebContent/accountMsg.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/service/CartService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/IdentityMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/CartMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/AddressMapper.java" />
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/script/User/UserLogout.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/cart.css" />
-        <option value="$PROJECT_DIR$/src/main/java/script/seller/UserLogin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/SellerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/script/seller/ManagerLogin.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Css/bui.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Css/dpl.css" />
-        <option value="$PROJECT_DIR$/src/main/java/script/manager/ManagerHeader.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ManagerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Address/DeleteAddress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Address/UpdateAddress.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/singleProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/outOfStockNum.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Cart/ViewCart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Cart/DeleteCart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Cart/AddToCart.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/checkout.js" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Cart/UpdateCartCount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/order/DeleteOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/order/PayOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/order/ViewMyOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/script/User/UpdateUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Product/editSuccess.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/User/UserHeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/User/UserLogout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/User/ViewUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/createOrder.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/account.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Order/ViewMyOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Order/SubmitOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Order/ReceiveProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Order/PayOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Order/DeleteOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/cart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Order/AddOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/order/AddOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Product/ViewAllProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/blank.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/accountorder.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ManagerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Manager/ManagerHeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Manager/ManagerLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/back/Product/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Product/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" />
         <option value="$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Js/jquery-1.8.1.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Js/config.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Js/bui/seajs/2.3.0/sea.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Js/bui/bui/1.1.21/config.js" />
-        <option value="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogout.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/Order/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/accountorder.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
       </list>
     </option>
   </component>
@@ -631,7 +448,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="83" />
     <option name="y" value="97" />
     <option name="width" value="1400" />
@@ -652,7 +469,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -689,15 +506,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
@@ -714,7 +523,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="script" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
@@ -731,7 +540,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
@@ -754,99 +564,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Js" type="462c0819:PsiDirectoryNode" />
-              <item name="bui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Js" type="462c0819:PsiDirectoryNode" />
-              <item name="bui" type="462c0819:PsiDirectoryNode" />
-              <item name="bui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Js" type="462c0819:PsiDirectoryNode" />
-              <item name="bui" type="462c0819:PsiDirectoryNode" />
-              <item name="bui" type="462c0819:PsiDirectoryNode" />
-              <item name="1.1.21" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Js" type="462c0819:PsiDirectoryNode" />
-              <item name="bui" type="462c0819:PsiDirectoryNode" />
-              <item name="seajs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Js" type="462c0819:PsiDirectoryNode" />
-              <item name="bui" type="462c0819:PsiDirectoryNode" />
-              <item name="seajs" type="462c0819:PsiDirectoryNode" />
-              <item name="2.3.0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -870,20 +596,21 @@
       <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\assignment\perfumestore\WebContent\WEB-INF" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop\src\main\webapp\back\assets\img" />
       <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop\src\main\webapp\back\Js" />
+      <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop\src\main\java" />
       <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop\src\main\webapp\back\Css" />
       <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop\src\main\webapp\back" />
-      <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop\src\main\java\back" />
-      <recent name="D:\unimelb\Software Design and Architecture SWEN90007_2018_SM2\perfumeshop\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="script.Product" />
       <recent name="script.manager" />
+      <recent name="script.User" />
+      <recent name="controller" />
+      <recent name="script.Product" />
       <recent name="datasource" />
-      <recent name="service" />
-      <recent name="script.seller" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="controller" />
       <recent name="datasource" />
     </key>
   </component>
@@ -1149,12 +876,14 @@
       <workItem from="1536759935156" duration="9390000" />
       <workItem from="1536809027456" duration="104000" />
       <workItem from="1536809137010" duration="1293000" />
-      <workItem from="1537153471293" duration="30616000" />
+      <workItem from="1537153471293" duration="31214000" />
+      <workItem from="1537441432666" duration="12246000" />
+      <workItem from="1538196276505" duration="7053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198850000" />
+    <option name="totallyTimeSpent" value="218747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1166,7 +895,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1179,18 +908,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26292136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38651684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3775281" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18426967" sideWeight="0.4935553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34269664" sideWeight="0.4935553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23820224" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27604726" sideWeight="0.73966944" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27604726" sideWeight="0.2603306" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31417832" sideWeight="0.71965814" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31417832" sideWeight="0.2803419" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31573033" sideWeight="0.49570355" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1212,25 +941,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/service/ProductService.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/main/java/script/Address/DeleteAddress.java</url>
+          <line>21</line>
           <properties />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java</url>
-          <line>41</line>
+          <line>28</line>
           <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="33" />
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/checkout.js</url>
+          <line>62</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1239,420 +967,463 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/PrintStream.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/User/UserLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="800" column="16" lean-forward="false" selection-start-line="800" selection-start-column="16" selection-end-line="800" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/User/UpdateUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/User/UserRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="89" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/addSuccess.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1502">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/allProduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-          <folding>
-            <element signature="e#2391#2392#0" expanded="false" />
-            <element signature="e#2405#2406#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/ViewAllProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/DeleteOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/Cart/DeleteCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="213" column="28" lean-forward="false" selection-start-line="213" selection-start-column="28" selection-end-line="213" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/CartMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="136" column="8" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="139" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="301" column="6" lean-forward="false" selection-start-line="301" selection-start-column="6" selection-end-line="301" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="122" column="16" lean-forward="false" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="87" column="70" lean-forward="true" selection-start-line="87" selection-start-column="70" selection-end-line="87" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/editSuccess.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="57" column="61" lean-forward="true" selection-start-line="57" selection-start-column="61" selection-end-line="57" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="61" column="83" lean-forward="false" selection-start-line="61" selection-start-column="83" selection-end-line="61" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_g.tbcdn.cn_fi_bui_jquery-1.8.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="1" column="617" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="92735" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="36" column="71" lean-forward="false" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_g.alicdn.com_bui_bui_1.1.21_config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/js/bui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="1426" column="6" lean-forward="false" selection-start-line="1426" selection-start-column="6" selection-end-line="1426" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/js/config-min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-370">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Js/bui/seajs/2.3.0/sea.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="6020" lean-forward="false" selection-start-line="1" selection-start-column="6020" selection-end-line="1" selection-end-column="6020" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Js/jquery-1.8.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="1" column="92735" lean-forward="false" selection-start-line="1" selection-start-column="92735" selection-end-line="1" selection-end-column="92735" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/css/main-min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9610">
-          <caret line="148" column="1" lean-forward="false" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="310" column="41" lean-forward="false" selection-start-line="310" selection-start-column="40" selection-end-line="310" selection-end-column="41" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/PayOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="96">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/User/UserLogout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state relative-caret-position="168">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Order/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/User/ViewUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="118" column="34" lean-forward="false" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/accountorder.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="136" column="72" lean-forward="false" selection-start-line="136" selection-start-column="58" selection-end-line="136" selection-end-column="72" />
+        <state relative-caret-position="168">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="222" column="23" lean-forward="false" selection-start-line="222" selection-start-column="23" selection-end-line="222" selection-end-column="23" />
+        <state relative-caret-position="-33">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/createOrder.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        <state relative-caret-position="149">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/singleAddress.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="77" column="30" lean-forward="true" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Address/ViewSingleAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="139" column="30" lean-forward="false" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5832">
+          <caret line="258" column="103" lean-forward="false" selection-start-line="258" selection-start-column="103" selection-end-line="258" selection-end-column="103" />
           <folding>
-            <marker date="1536765515306" expanded="true" signature="2540:2606" ph="SELECT ORDER... orders" />
+            <marker date="1534399336485" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1534399336485" expanded="false" signature="142:512" ph="..." />
+            <marker date="1534399336485" expanded="true" signature="1336:1343" ph="{}" />
+            <marker date="1534399336485" expanded="true" signature="1457:1727" ph="{...}" />
+            <marker date="1534399336485" expanded="false" signature="1787:1798" ph=" { " />
+            <marker date="1534399336485" expanded="false" signature="1809:1815" ph=" }" />
+            <marker date="1534399336485" expanded="true" signature="1930:2069" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="2184:2455" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="2569:2839" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="2956:3229" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="3283:3972" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="4090:6184" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="6300:7021" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="7137:8622" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="8707:8897" ph="{...}" />
+            <marker date="1534399336485" expanded="true" signature="9001:9360" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="45" column="73" lean-forward="false" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/DeleteOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/PayOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Address/AddAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/User/UpdateUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Cart/AddToCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/AddOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/ViewMyOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/account.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="76" column="88" lean-forward="false" selection-start-line="76" selection-start-column="88" selection-end-line="76" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/allProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/blank.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/accountorder.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="109" column="147" lean-forward="false" selection-start-line="109" selection-start-column="86" selection-end-line="109" selection-end-column="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/User/UserHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FrontCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/manager/ManagerHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FrontServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Js/ckform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/img/left-slib.gif">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="109" lean-forward="false" selection-start-line="4" selection-start-column="109" selection-end-line="4" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/img/main-nav-bg.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/img/hide_list.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/js/config.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/assets/css/main-min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="185">
+          <caret line="93" column="28" lean-forward="false" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/header.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/ViewAllProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Js/bui/bui/1.1.21/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="34" />
+        <state relative-caret-position="555">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="403">
+          <caret line="116" column="110" lean-forward="false" selection-start-line="116" selection-start-column="110" selection-end-line="116" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="38" column="75" lean-forward="false" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="46" column="75" lean-forward="false" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="44" column="32" lean-forward="true" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="127" column="66" lean-forward="false" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/manager/ManagerLogout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-211">
+          <caret line="26" column="72" lean-forward="false" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="64" column="47" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
           <folding />
         </state>
       </provider>

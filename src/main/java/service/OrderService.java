@@ -50,9 +50,9 @@ public class OrderService {
             System.out.println(ran);
             orderNum = System.currentTimeMillis() + ran + user.getId();
             System.out.println(orderNum);
-            // total price of order
+            // total price of Order
             double totalPrice = 0;
-            // 0 represent order created
+            // 0 represent Order created
             int orderStatus = 0;
             List<Order> orders = new ArrayList<Order>();
             for(Cart cart :user.getCartItems()){
@@ -106,24 +106,5 @@ public class OrderService {
         User user = UserMapper.findByID(userId);
         List<OrderMsg> userOrderMsgs = user.getOrderMsgs();
         return userOrderMsgs;
-    }
-
-    public void addOrder(int userId, HttpServletRequest request, HttpServletResponse
-            response)  throws ServletException, IOException {
-        User user = UserMapper.findByID(userId);
-        List<Address> addresses = user.getDeliveryAddresses();
-        request.setAttribute("addresses", addresses);
-        if(user.getCartItems().isEmpty()){
-            request.getRequestDispatcher("viewcart").forward(request, response);
-        }else{
-            Map<Cart, Product> cartProductMap = new HashMap<Cart, Product>();
-            if (!user.getCartItems().isEmpty()){
-                for (Cart cart: user.getCartItems()){
-                    cartProductMap.put(cart, cart.getProduct());
-                }
-            }
-            request.getSession().setAttribute("cartProductMap", cartProductMap);
-            request.getRequestDispatcher("createOrder.jsp").forward(request, response);
-        }
     }
 }

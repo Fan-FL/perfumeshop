@@ -1,19 +1,15 @@
 package script.order;
 
+import controller.FrontCommand;
 import service.OrderService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/receiveproduct")
-public class ReceiveProduct extends HttpServlet {
+public class ReceiveProduct extends FrontCommand {
 	private static final long serialVersionUID = 1L;
-	OrderService orderService = null;
+	private OrderService orderService = null;
 
     public ReceiveProduct() {
         super();
@@ -21,23 +17,10 @@ public class ReceiveProduct extends HttpServlet {
     }
 
 
-	/**
-	 * receive product (product delivered)
-	 * @param request
-	 * @param response
-	 * @throws ServletException
-	 * @throws IOException
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	public void process() throws ServletException, IOException {
 		String orderNum = request.getParameter("orderNum").toString();
 		orderService.receiveProduct(orderNum);
-		request.getRequestDispatcher("viewmyorder").forward(request, response);
+		forward("/FrontServlet?module=order&command=ViewMyOrder");
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        this.doGet(request, response);
-	}
-
 }

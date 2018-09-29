@@ -72,7 +72,6 @@ public class AddressMapper implements IMapper{
     public void delete(DomainObject obj) {
         Address address = (Address)obj;
         String sql = "DELETE FROM perfume.address WHERE ADDRESS_ID=?";
-        System.out.println(address.getId());
         DBHelper.update(sql, address.getId());
         IdentityMap.addressMap.remove(address.getId());
     }

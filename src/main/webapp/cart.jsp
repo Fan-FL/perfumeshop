@@ -28,7 +28,7 @@
 <script src="js/jquery.easydropdown.js"></script>
 </head>
 <body>
-<jsp:include page='login?method=header' flush="true"></jsp:include>
+<jsp:include page='FrontServlet?module=User&command=UserHeader' flush="true"></jsp:include>
 	<div class="clear"></div>
 	<div class="mycar-index">
 		<h1>Cart</h1>
@@ -43,7 +43,8 @@
 				</div>
 			</c:if>
 			<c:if test="${not (empty requestScope.cartProductMap)}">
-				<form action="addorder" method="get" id="cartFormSubmit">
+				<form action="/FrontServlet?module=order&command=AddOrder" method="post"
+					  id="cartFormSubmit">
 					<table>
 						<thead>
 							<tr>
@@ -62,13 +63,13 @@
 											<input checked="checked" name="cartId" value="${cartProduct.key.id}" class="checkbox" type="checkbox" >
 									</td>
 									<td style="width: 600px;"><a target="_blank"
-										href="viewproductdetail?productid=${cartProduct.value.id }"
+										href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${cartProduct.value.id }"
 										class="cart_list_img"><img
 											src="${cartProduct.value.productImagePath }"
 											style="cursor: pointer;" height="50" width="36"></a>
 										<p>
 											<a target="_blank"
-												href="viewproductdetail?productid=${cartProduct.value.id }">${cartProduct.value.productName }</a>
+												href="/FrontServlet?module=Product&command=ViewProductDetail&productid=${cartProduct.value.id }">${cartProduct.value.productName }</a>
 										</p></td>
 									<td class="mktprice1" style="font-weight: bold; font-size: 14px;">
 										<b>${cartProduct.value.productPrice }</b>

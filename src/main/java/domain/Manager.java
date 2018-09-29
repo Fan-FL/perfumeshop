@@ -11,7 +11,7 @@ public class Manager extends Account {
         this.password = password;
         this.title = title;
         this.salary = salary;
-        this.type = "manager";
+        this.type = "Manager";
     }
 
     public Manager(int id, String username, String password) {
@@ -21,12 +21,12 @@ public class Manager extends Account {
         this.password = password;
         this.title = title;
         this.salary = salary;
-        this.type = "manager";
+        this.type = "Manager";
     }
 
     public Manager() {
         super();
-        this.type = "manager";
+        this.type = "Manager";
     }
 
     @Override

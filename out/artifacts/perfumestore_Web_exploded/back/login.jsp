@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Manager</title>
 <link rel="stylesheet" type="text/css" href="Css/login.css" />
-<script type="text/javascript" src="assets/js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="/back/Js/jquery-1.8.1.min.js"></script>
 <script language="JavaScript">
 	if(window != top){
 		top.location.href=location.href;
@@ -30,11 +30,11 @@
 				return;
 			}
 			var json = {"managerName":managerName,"managerPassword":managerPassword};
-			$.post("manager_login",json,function(data){
+			$.post("/FrontServlet?module=manager&command=ManagerLogin",json,function(data){
 				var check = data[0].check;
 				if(check == "checkin"){
 					if(confirm("登录成功,点击确定跳转到系统管理页面")){
-						window.location.href = "/manager_viewallproduct";
+						window.location.href = "/FrontServlet?module=Product&command=ManagerViewAllProduct";
 					}
 				}else {
 					alert("用户名或密码错误！");
@@ -48,7 +48,7 @@
 	<div id="loginpanelwrap">
 		<div class="loginheader">
 			<div class="logintitle">
-				<a>LeoShop欢迎您！</a>
+				<a>PerfumeStore</a>
 			</div>
 		</div>
 		<div class="loginform">
@@ -62,6 +62,7 @@
 					/>
 			</div>
 			<div class="loginform_row">
+				<a id="user" href="/blank.jsp">Buyer page</a>
 				<input id="loginSubmit" type="submit" class="loginform_submit" value="登录" />
 			</div>
 			<div class="clear"></div>
