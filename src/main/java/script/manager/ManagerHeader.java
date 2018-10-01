@@ -18,6 +18,6 @@ public class ManagerHeader extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        include("/back/header.jsp");
+        include("/managerHeader.jsp");
     }
 }

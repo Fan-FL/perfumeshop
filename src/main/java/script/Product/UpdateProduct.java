@@ -28,7 +28,7 @@ public class UpdateProduct extends FrontCommand {
     @Override
     public void process() throws ServletException, IOException {
         if(request.getSession().getAttribute("manager") == null){
-            redirect("/back/login.jsp");
+            redirect("/managerLogin.jsp");
             return;
         }
         try {
