@@ -7,266 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c92f68-6d1e-46d4-9da9-30608fb0edde" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/perfumestore_Web_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/perfumestore_Web_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/fun_l.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/fun_l.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_2_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jcl_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jcl_1_7_25.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change beforePath="$PROJECT_DIR$/.settings/.jsdtscope" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/1.puml" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/1.puml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/AddProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/AddProduct.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/DeleteProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/DeleteProduct.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/EditProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/EditProduct.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ManagerViewAllProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ManagerViewAllProduct.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/UpdateProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/UpdateProduct.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerHeader.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerHeader.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerLoginPage.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerLogout.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/manager/ManagerLogout.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/account.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/account.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountMsg.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountMsg.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountorder.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/accountorder.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/addressManage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/addressManage.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/allProduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/allProduct.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/assets/css/bui-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/assets/css/dpl-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/assets/css/main-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/assets/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/assets/css/prettify.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/assets/img/main-nav-bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/blank.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/blank.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/cart.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/cart.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/createOrder.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/createOrder.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/bootstrap-responsive.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/bui.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/buyleo.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/buyleo.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/buyleo2.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/buyleo2.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/cart.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/cart.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/cart2.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/cart2.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/common.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/common.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/default.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/default.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/dpl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/form.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/form.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/fwslider.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/fwslider.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/goods.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/goods.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/jquery-ui-1.10.0.custom.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/login.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/magnific-popup.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/magnific-popup.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/megamenu.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/megamenu.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/mystyle.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/mystyle.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/nivo-slider.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/nivo-slider.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/style.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/zoome-min.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/css/zoome-min.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/checkout.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/checkout.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/ckform.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/common.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/css3-mediaqueries.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/css3-mediaqueries.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery-1.8.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery-ui.min.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery.easydropdown.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery.easydropdown.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery.jscrollpane.min.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery.jscrollpane.min.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery1.min.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/jquery1.min.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/layer/layer.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/layer/layer.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/layer/skin/layer.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/layer/skin/layer.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/login.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/login.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/slides.min.jquery.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/slides.min.jquery.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/verifyown.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/verifyown.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/zoome-e.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/js/zoome-e.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/login.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/managerAddproducts.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/managerAllProduct.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/managerEdit.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/managerHeader.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/managerLogin.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_fail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_fail.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_success.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/order_create_success.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/outOfStockNum.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/outOfStockNum.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/payment_success.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/payment_success.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/productOffShelf.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/productOffShelf.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/register.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/repeatCreateOrder.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/repeatCreateOrder.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleAddress.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleAddress.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleProduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/singleProduct.jsp" />
-      <change beforePath="$PROJECT_DIR$/perfumeStore.sql" afterPath="$PROJECT_DIR$/perfumeStore.sql" />
-      <change beforePath="$PROJECT_DIR$/perfumestore.iml" afterPath="$PROJECT_DIR$/perfumestore.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/AddressDTO.java" afterPath="$PROJECT_DIR$/src/main/java/DTO/AddressDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/CartDTO.java" afterPath="$PROJECT_DIR$/src/main/java/DTO/CartDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/OrderDTO.java" afterPath="$PROJECT_DIR$/src/main/java/DTO/OrderDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/UserAssembler.java" afterPath="$PROJECT_DIR$/src/main/java/DTO/UserAssembler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/UserDTO.java" afterPath="$PROJECT_DIR$/src/main/java/DTO/UserDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/concurrency/LockManager.java" afterPath="$PROJECT_DIR$/src/main/java/concurrency/LockManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/concurrency/ReadWriteLock.java" afterPath="$PROJECT_DIR$/src/main/java/concurrency/ReadWriteLock.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FrontCommand.java" afterPath="$PROJECT_DIR$/src/main/java/controller/FrontCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FrontServlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/FrontServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/AccountMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/AccountMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/AddressMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/AddressMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/CartMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/CartMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/DBHelper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/DBHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/DataMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/DataMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/IMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IdentityMap.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/IdentityMap.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/LockingMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/LockingMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/PagerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/PagerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/UserMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Account.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Account.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Address.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Address.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Cart.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Cart.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/ConfigProperties.java" afterPath="$PROJECT_DIR$/src/main/java/domain/ConfigProperties.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/DomainObject.java" afterPath="$PROJECT_DIR$/src/main/java/domain/DomainObject.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Manager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Money.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Money.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Order.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Order.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/OrderMsg.java" afterPath="$PROJECT_DIR$/src/main/java/domain/OrderMsg.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/OrderProduct.java" afterPath="$PROJECT_DIR$/src/main/java/domain/OrderProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Pager.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Pager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Product.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Product.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/AddAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/AddAddress.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/DeleteAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/DeleteAddress.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/UpdateAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/UpdateAddress.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/ViewAllAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/ViewAllAddress.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Address/ViewSingleAddress.java" afterPath="$PROJECT_DIR$/src/main/java/script/Address/ViewSingleAddress.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/AddToCart.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/AddToCart.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/DeleteCart.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/DeleteCart.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/UpdateCartCount.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/UpdateCartCount.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Cart/ViewCart.java" afterPath="$PROJECT_DIR$/src/main/java/script/Cart/ViewCart.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/DeleteProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ViewAllProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ViewAllProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UpdateUser.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UpdateUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UserHeader.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserHeader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UserLogin.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserLogin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UserLogout.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserLogout.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/UserRegister.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/UserRegister.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/User/ViewUser.java" afterPath="$PROJECT_DIR$/src/main/java/script/User/ViewUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/manager/ManagerHeader.java" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerHeader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLoginPage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogout.java" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogout.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/AddOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/AddOrder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/DeleteOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/DeleteOrder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/PayOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/PayOrder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/ReceiveProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/order/ViewMyOrder.java" afterPath="$PROJECT_DIR$/src/main/java/script/order/ViewMyOrder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AddressService.java" afterPath="$PROJECT_DIR$/src/main/java/service/AddressService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CartService.java" afterPath="$PROJECT_DIR$/src/main/java/service/CartService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ManagerService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ManagerService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/service/OrderService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UnitOfWork.java" afterPath="$PROJECT_DIR$/src/main/java/service/UnitOfWork.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceBean.java" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceBean.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/session/SessionManager.java" afterPath="$PROJECT_DIR$/src/main/java/session/SessionManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ReflectionUtils.java" afterPath="$PROJECT_DIR$/src/main/java/util/ReflectionUtils.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/account.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/account.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/accountMsg.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/accountMsg.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/accountorder.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/accountorder.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addressManage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/addressManage.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/allProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/allProduct.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/bui-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/dpl-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/main-min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/prettify.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/main-nav-bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/blank.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/blank.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/createOrder.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createOrder.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-responsive.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bui.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/buyleo.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/buyleo.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/buyleo2.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/buyleo2.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/cart.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/cart.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/cart2.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/cart2.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/common.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/common.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/default.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/default.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/dpl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/form.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/form.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/fwslider.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/fwslider.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/goods.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/goods.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/jquery-ui-1.10.0.custom.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/magnific-popup.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/magnific-popup.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/megamenu.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/megamenu.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/mystyle.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/mystyle.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/nivo-slider.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/nivo-slider.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/zoome-min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/zoome-min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/ckform.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/common.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/css3-mediaqueries.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/css3-mediaqueries.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery-1.8.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ui.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.easydropdown.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.easydropdown.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.jscrollpane.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.jscrollpane.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery1.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery1.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/layer/layer.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/layer.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/layer/skin/layer.css" afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/skin/layer.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/login.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/slides.min.jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/slides.min.jquery.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/verifyown.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/verifyown.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/zoome-e.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/zoome-e.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/managerAddproducts.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/managerAllProduct.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/managerEdit.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/managerHeader.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/managerLogin.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/order_create_fail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/order_create_fail.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/order_create_success.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/order_create_success.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/outOfStockNum.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/outOfStockNum.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/payment_success.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/payment_success.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/productOffShelf.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/productOffShelf.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/repeatCreateOrder.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/repeatCreateOrder.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/singleAddress.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/singleAddress.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/singleProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/singleProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -279,41 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserAssembler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DTO/UserAssembler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/UserServiceBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -323,144 +31,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DTO/UserDTO.java">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3648">
-              <caret line="152" column="8" lean-forward="false" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#605#606#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#937#938#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#1022#1023#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
-                <element signature="e#1118#1119#0" expanded="true" />
-                <element signature="e#1149#1150#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1237#1238#0" expanded="true" />
-                <element signature="e#1269#1270#0" expanded="true" />
-                <element signature="e#1297#1298#0" expanded="true" />
-                <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1373#1374#0" expanded="true" />
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1437#1438#0" expanded="true" />
-                <element signature="e#1483#1484#0" expanded="true" />
-                <element signature="e#1521#1522#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1087">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAXReader.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2952">
-              <caret line="151" column="20" lean-forward="false" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="20" />
-              <folding>
-                <marker date="1536800157950" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1536800157950" expanded="false" signature="136:769" ph="..." />
-                <marker date="1536800157950" expanded="true" signature="2033:2040" ph="{}" />
-                <marker date="1536800157950" expanded="false" signature="2082:2093" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="2122:2128" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="2175:2186" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="2209:2215" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="2283:2360" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="2403:2414" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="2441:2447" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="2511:2592" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="2662:2805" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="2895:3076" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="3153:3214" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="3291:3351" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="3414:4183" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="4244:4484" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="4553:4745" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="4813:4999" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="5066:5256" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="5341:5565" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="5649:5877" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="5945:7956" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="7991:8002" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="8025:8031" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="8082:8093" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="8122:8128" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="8184:8243" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="8312:8374" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="8430:8489" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="8558:8620" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="8664:8675" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="8707:8713" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="8783:8846" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="8888:8899" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="8929:8935" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="9001:9060" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="9104:9115" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="9147:9153" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="9223:9286" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="9325:9336" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="9363:9369" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="9428:9439" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="9476:9482" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="9532:9673" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="9743:9790" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="9833:9844" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="9869:9875" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="9935:9946" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="9979:9985" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="10032:10043" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="10070:10076" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="10143:10196" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="10254:10394" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="10442:10453" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="10477:10483" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="10516:10527" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="10548:10554" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="10600:10611" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="10636:10642" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="10729:10817" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="10883:10951" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="10995:11006" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="11052:11058" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="11118:11187" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="11220:11231" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="11273:11279" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="11316:11327" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="11349:11355" ph=" }" />
-                <marker date="1536800157950" expanded="false" signature="11403:11414" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="11438:11444" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="11505:11969" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="12022:12179" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="12252:12307" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="12371:12441" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="12545:13876" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="13949:14043" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="14119:14426" ph="{...}" />
-                <marker date="1536800157950" expanded="true" signature="14513:14979" ph="{...}" />
-                <marker date="1536800157950" expanded="false" signature="14602:14617" ph=" { " />
-                <marker date="1536800157950" expanded="false" signature="14644:14654" ph=" }" />
-                <marker date="1536800157950" expanded="true" signature="14731:14973" ph="{...}" />
-              </folding>
+            <state relative-caret-position="96">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
+      <file leaf-file-name="edit.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="192">
+              <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allProduct.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/allProduct.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addproducts.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/back/addproducts.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addressManage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/addressManage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="outOfStockNum.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/outOfStockNum.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productOffShelf.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/productOffShelf.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -480,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>manager_login</find>
       <find>FrontServlet?module=Manager&amp;command=ManagerHeader</find>
       <find>FrontServlet?module=manager&amp;command=ManagerHeader</find>
       <find>ckform</find>
@@ -510,6 +164,7 @@
       <find>Product/a</find>
       <find>back/Product/</find>
       <find>back/index</find>
+      <find>base</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
@@ -566,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/main/java/script/Product/UpdateProduct.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogout.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/session/Session.java" />
         <option value="$PROJECT_DIR$/src/main/java/concurrency/LockManager.java" />
@@ -601,7 +255,6 @@
         <option value="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" />
         <option value="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/allProduct.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/script/User/UserLogin.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -610,6 +263,8 @@
         <option value="$PROJECT_DIR$/src/main/java/service/UserServiceBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/DTO/UserDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
       </list>
     </option>
   </component>
@@ -678,6 +333,39 @@
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="back" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1000,12 +688,12 @@
       <workItem from="1538382548625" duration="3125000" />
       <workItem from="1538385901508" duration="5875000" />
       <workItem from="1538392231569" duration="925000" />
-      <workItem from="1538398780644" duration="70000" />
+      <workItem from="1538398780644" duration="437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257746000" />
+    <option name="totallyTimeSpent" value="258113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1038,11 +726,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48202246" sideWeight="0.3780881" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14044943" sideWeight="0.3780881" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23820224" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2556391" sideWeight="0.637744" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2556391" sideWeight="0.36225596" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2556391" sideWeight="0.6431373" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2556391" sideWeight="0.35686275" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1102,21 +790,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UnitOfWork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="57" column="67" lean-forward="false" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/security/ShiroService.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.xml.bind/javax/xml/bind/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1267,8 +940,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/shiro.ini" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/edit.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
     <entry file="file://$PROJECT_DIR$/perfumeStore.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1297,14 +968,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="44" column="15" lean-forward="false" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1525,9 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/addproducts.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/allProduct.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1541,6 +1201,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="14" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addressManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/outOfStockNum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/productOffShelf.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/addproducts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/allProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1087">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/back/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="15" />
           <folding />
         </state>
       </provider>
