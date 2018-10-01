@@ -42,21 +42,21 @@
 <input type="hidden" name="productId" value="${requestScope.product.id}" />
 <table class="table table-bordered table-hover m10">
     <tr>
-        <td class="tableleft">名称</td>
+        <td class="tableleft">Name</td>
         <td><input type="text" name="productName" value="${requestScope.product.productName}" /></td>
     </tr>
     <tr>
-        <td class="tableleft">商品单价</td>
+        <td class="tableleft">Product Price</td>
         <td><input class="productPrice" type="text" name="productPrice"
         value="${requestScope.product.productPrice}" /></td>
     </tr>
     <tr>
-        <td class="tableleft">库存</td>
+        <td class="tableleft">Storage</td>
         <td><input class="storeNum" type="text" name="storeNum"
         value="${requestScope.product.storeNum}" /></td>
     </tr>
      <tr>
-        <td class="tableleft">描述</td>
+        <td class="tableleft">Description</td>
         <td >
             <textarea rows="5" name="productDesc">${requestScope.product.productDesc}</textarea>
         </td>
@@ -64,8 +64,8 @@
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" id="editProductSubmit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;
-            <button type="button" class="btn btn-success" name="backid" id="backid">返回</button>
+            <button type="submit" id="editProductSubmit" class="btn btn-primary" type="button">Save</button> &nbsp;&nbsp;
+            <button type="button" class="btn btn-success" name="backid" id="backid">Return</button>
         </td>
     </tr>
 </table>
@@ -77,11 +77,11 @@
 		$('#backid').click(function(){
 				window.location.href="${pageContext.request.contextPath}/FrontServlet?module=Product&command=ManagerViewAllProduct";
 		 });
-		//验证输入的价格格式
+		//Validate the input price format
 		$("body").on({
 			keydown:function(event) {
 				var kCode = event.which;
-				// 判断键值
+				//Determine key values
 				if (((kCode > 47) && (kCode < 58))
 						|| ((kCode > 95) && (kCode < 106)) || (kCode == 8)
 						|| (kCode == 39) || (kCode == 37) ||(kCode == 190)) {
@@ -96,15 +96,15 @@
 				$(this).parent("td").children("font").remove();
 				if(!bool){
 					$(this).parent("td").append(
-							"<font color='red'></br><i>请输入正确的商品价格,小数点后最多两位</i><font>")
+							"<font color='red'></br><i>Please enter the correct price of product, and at least two bits after the decimal point.</i><font>")
 				}
 			}
 		},".productPrice");
-		//验证输入的库存数量格式
+		//Validate the input quantity format
 		$("body").on({
 			keydown:function(event) {
 				var kCode = event.which;
-				// 判断键值
+				//Determine key values
 				if (((kCode > 47) && (kCode < 58))
 						|| ((kCode > 95) && (kCode < 106)) || (kCode == 8)
 						|| (kCode == 39) || (kCode == 37)) {
@@ -118,7 +118,7 @@
 				var bool = reg.test($(this).val());
 				$(this).parent("td").children("font").remove();
 				if(!bool){
-					$(this).parent("td").append("<font color='red'></br><i>商品库存只能为非负的整数</i><font>")
+					$(this).parent("td").append("<font color='red'></br><i>Product inventory can only be a non-negative integer</i><font>")
 				}
 			}
 		},".storeNum");

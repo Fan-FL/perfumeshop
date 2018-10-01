@@ -2,14 +2,8 @@ package service;
 
 import datasource.UserMapper;
 import domain.User;
-import net.sf.json.JSONArray;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 public class UserService {
     private static UserService instance;
@@ -24,7 +18,7 @@ public class UserService {
 
     public void updateUser(int userId, String password, String truename,
                                      String phone, String address){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         user.setPassword(password);
         user.setTruename(truename);
         user.setPhone(phone);
@@ -45,6 +39,6 @@ public class UserService {
     }
 
     public User findUserById(int userId) {
-        return UserMapper.findByID(userId);
+        return new UserMapper().findById(userId);
     }
 }

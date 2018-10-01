@@ -1,16 +1,9 @@
 package service;
 
+import datasource.LockingMapper;
 import datasource.ProductMapper;
 import domain.Product;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.apache.commons.io.FileUtils;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.*;
 import java.util.*;
 
 public class ProductService {
@@ -28,36 +21,25 @@ public class ProductService {
         return ProductMapper.getAllProducts();
     }
 
-    public Product viewProductDetail(int productId){
-        return ProductMapper.findById(productId);
-    }
-
     public void addProduct(Product product){
-        new ProductMapper().insert(product);
-    }
-
-    public void editProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            int id = Integer.parseInt(request.getParameter("productId"));
-            Product product = ProductMapper.findById(id);
-            request.setAttribute("product", product);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        request.getRequestDispatcher("/back/Product/edit.jsp").forward(request, response);
+        new LockingMapper(new ProductMapper()).insert(product);
+//        new ProductMapper().insert(product);
     }
 
     public void updateProduct(Product product){
-        new ProductMapper().update(product);
+        new LockingMapper(new ProductMapper()).update(product);
+//        new ProductMapper().update(product);
     }
 
     public void deleteProduct(int id){
         Product product = new Product();
         product.setId(id);
-        new ProductMapper().delete(product);
+        new LockingMapper(new ProductMapper()).delete(product);
+//        new ProductMapper().delete(product);
     }
 
     public Product findById(int id) {
-        return ProductMapper.findById(id);
+        return (Product) new LockingMapper(new ProductMapper()).findById(id);
+//        return new ProductMapper().findById(id);
     }
 }

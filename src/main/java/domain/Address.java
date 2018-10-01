@@ -64,5 +64,4 @@ public class Address extends DomainObject{
 				+ ", sendMan=" + sendMan + ", sendPhone=" + sendPhone
 				+ ", userId=" + userId + "]";
 	}
-	
 }

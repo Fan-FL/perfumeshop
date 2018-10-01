@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class ManagerMapper implements IMapper{
 
-    public static Manager findByID(int id) {
+    public Manager findById(int id) {
         Manager manager = null;
         String sql = "select MANAGER_ID, USERNAME, PASSWORD, TITLE, AMOUNT, CURRENCY" +
                 " from perfume.Manager " +

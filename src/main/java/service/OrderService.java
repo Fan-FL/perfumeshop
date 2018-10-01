@@ -3,11 +3,7 @@ package service;
 import datasource.*;
 import domain.*;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.*;
 
@@ -39,7 +35,7 @@ public class OrderService {
     }
 
     public String submitOrder(int userId, int addressId, String note, HttpSession session){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         String orderNum = null;
         UnitOfWork.newCurrent();
         try {
@@ -57,7 +53,7 @@ public class OrderService {
             List<Order> orders = new ArrayList<Order>();
             for(Cart cart :user.getCartItems()){
                 // Get product by product id for checking inventory and product status
-                Product product = ProductMapper.findById(cart.getProduct().getId());
+                Product product = new ProductMapper().findById(cart.getProduct().getId());
                 int saleCount = cart.getSaleCount();
                 int storeNum = product.getStoreNum();
                 int productStatus = product.getProductStatus();
@@ -103,7 +99,7 @@ public class OrderService {
     }
 
     public List<OrderMsg> viewMyOrder(int userId){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         List<OrderMsg> userOrderMsgs = user.getOrderMsgs();
         return userOrderMsgs;
     }

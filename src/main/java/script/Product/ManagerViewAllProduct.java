@@ -28,6 +28,6 @@ public class ManagerViewAllProduct extends FrontCommand {
     public void process() throws ServletException, IOException {
         List<Product> products = this.productService.viewAllProduct();
         request.setAttribute("products", products);
-        forward("/back/Product/index.jsp");
+        forward("/back/allProduct.jsp");
     }
 }

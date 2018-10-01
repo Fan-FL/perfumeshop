@@ -7,13 +7,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>后台管理系统</title>
+<title>Backstage Management System</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="${pageContext.request.contextPath}/back/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/back/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/back/assets/css/main-min.css" rel="stylesheet" type="text/css" />
-    <link href="${pageContext.request.contextPath}/back/Css/dpl.css" rel="stylesheet"/>
-    <link href="${pageContext.request.contextPath}/back/Css/bui.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/back/Css/dpl.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/back/Css/bui.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -23,47 +23,15 @@
 		</div>
 
 		<div class="dl-log">
-			欢迎您，<span class="dl-log-user">${sessionScope.manager.username }</span><a
-				href="/FrontServlet?module=manager&command=ManagerLogout" title="退出系统"
-				class="dl-log-quit" onclick="return confirm('您确定退出吗？');">[退出]</a>
+			Welcome You，<span class="dl-log-user">${sessionScope.manager.username }</span><a
+				href="/FrontServlet?module=manager&command=ManagerLogout" title="Quit System"
+				class="dl-log-quit" onclick="return confirm('Are you sure you want to quit?');">[Quit]</a>
 		</div>
 	</div>
 
-    <div class="demo-content">
-        <div id="tab"></div>
-
-
-        <%--<script src="${pageContext.request.contextPath}/back/Js/jquery-1.8.1.min.js"></script>--%>
-        <%--<script src="${pageContext.request.contextPath}/back/Js/bui/seajs/2.3.0/sea.js"></script>--%>
-        <%--<script src="${pageContext.request.contextPath}/back/Js/bui/bui/1.1.21/config.js"></script>--%>
-
-        <%--<script src="${pageContext.request.contextPath}/back/Js/config.js"></script>--%>
-        <script src="http://g.tbcdn.cn/fi/bui/jquery-1.8.1.min.js"></script>
-        <script src="http://g.alicdn.com/bui/seajs/2.3.0/sea.js"></script>
-        <script src="http://g.alicdn.com/bui/bui/1.1.21/config.js"></script>
-
-        <!-- script start -->
-        <script type="text/javascript">
-
-            BUI.use('bui/tab',function(Tab){
-
-                var tab = new Tab.Tab({
-                    render : '#tab',
-                    elCls : 'link-tabs',
-                    autoRender: true,
-                    children:[
-                        {text:'All product',value:'1',href:'/FrontServlet?module=Product&command=ManagerViewAllProduct'},
-                        {text:'标签二',value:'2',href:'#'},
-                        {text:'标签三',value:'3',href:'#'}
-                    ],
-                    itemTpl : '<a href="{href}">{text}</a>'
-                });
-                // tab.setSelected(tab.getItemAt(0));
-
-            });
-
-        </script>
-        <!-- script end -->
-    </div>
+    <ul class="nav nav-tabs" id="myTab">
+        <li><a href="/FrontServlet?module=Product&command=ManagerViewAllProduct"
+               >products</a></li>
+    </ul>
 </body>
 </html>

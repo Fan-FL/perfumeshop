@@ -1,6 +1,7 @@
 package service;
 
 import datasource.DataMapper;
+import datasource.LockingMapper;
 import domain.DomainObject;
 
 import java.util.ArrayList;
@@ -48,13 +49,13 @@ public class UnitOfWork {
 
     public void commit() {
         for (DomainObject obj : newObjects) {
-            DataMapper.getMapper(obj.getClass()).insert(obj);
+            new LockingMapper(DataMapper.getMapper(obj.getClass())).insert(obj);
         }
         for (DomainObject obj : dirtyObjects) {
-            DataMapper.getMapper(obj.getClass()).update(obj);
+            new LockingMapper(DataMapper.getMapper(obj.getClass())).update(obj);
         }
         for (DomainObject obj : deletedObjects) {
-            DataMapper.getMapper(obj.getClass()).delete(obj);
+            new LockingMapper(DataMapper.getMapper(obj.getClass())).delete(obj);
         }
     }
 

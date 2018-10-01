@@ -12,7 +12,8 @@ import java.util.List;
 
 public class AddressMapper implements IMapper{
 
-    public static Address findAddressById(int addressId) {
+    @Override
+    public Address findById(int addressId) {
         Address address = IdentityMap.addressMap.get(addressId);
         if (address != null){
             return address;

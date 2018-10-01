@@ -38,6 +38,6 @@ public class EditProduct extends FrontCommand {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        forward("/back/Product/edit.jsp");
+        forward("/back/edit.jsp");
     }
 }

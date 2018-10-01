@@ -1,13 +1,10 @@
 package service;
 
-import datasource.CartMapper;
 import datasource.UserMapper;
 import domain.Cart;
 import domain.Product;
 import domain.User;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,35 +24,35 @@ public class CartService {
         cart.setProductId(productId);
         cart.setUserId(userId);
         cart.setSaleCount(saleCount);
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         user.addCart(cart);
         return cart.getId();
     }
 
     public int getCartCount(int userId){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         return user.getCartItems().size();
     }
 
     public void deleteCartByUser(int userId){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         user.deleteAllCart();
     }
 
     public void deleteCartById(int userId, int cartId){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         Cart cart = new Cart();
         cart.setId(cartId);
         user.deleteCart(cart);
     }
 
     public void updateCartCount(int userId, int cartId, int saleCount){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         user.updateCartCount(cartId, saleCount);
     }
 
     public Map<Cart, Product> GetAllCartInfoByUserID(int userId){
-        User user = UserMapper.findByID(userId);
+        User user = new UserMapper().findById(userId);
         Map<Cart, Product> map = new HashMap<Cart, Product>();
         if (!user.getCartItems().isEmpty()){
             for (Cart cart: user.getCartItems()){

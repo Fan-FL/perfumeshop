@@ -10,7 +10,7 @@ public class Cart extends DomainObject{
 	private Product product;
 
 	public Product getProduct() {
-		this.product = ProductMapper.findById(this.productId);
+		this.product = new ProductMapper().findById(this.productId);
 		return product;
 	}
 

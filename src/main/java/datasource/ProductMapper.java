@@ -9,7 +9,8 @@ import java.util.List;
 
 public class ProductMapper implements IMapper{
 
-    public static Product findById(int productId) {
+    @Override
+    public Product findById(int productId) {
         Product product = IdentityMap.productMap.get(productId);
         if (product != null){
             System.out.println("Load from map.");

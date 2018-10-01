@@ -74,25 +74,22 @@ body {
 </head>
 <body>
 <jsp:include page='/FrontServlet?module=manager&command=ManagerHeader' flush="true"></jsp:include>
-	<form class="form-inline definewidth m20" action="${pageContext.request.contextPath}/back/Product/
-	queryProducts.bg" method="post">
-		<button type="button" class="btn btn-success" id="addproducts">添加商品</button>
-	</form>
+	<button type="button" class="btn btn-success" id="addproducts">Add Product </button>
 	<table class="table table-bordered table-hover definewidth m10">
 		<thead>
 			<tr>
 				<th></th>
-				<th>商品图片</th>
-				<th>商品名称</th>
-				<th>商品单价</th>
-				<th>库存</th>
-				<th style="min-width: 70px">编辑</th>
+				<th>Product Picture</th>
+				<th>Product Name</th>
+				<th>Product Price</th>
+				<th>Storage</th>
+				<th style="min-width: 70px">Edit</th>
 			</tr>
 		</thead>
 		<c:if test="${empty products}">
 		<tbody>
 			<tr>
-				<td colspan="7">没有数据</td>
+				<td colspan="7">No Data</td>
 			</tr>
 		</tbody>
 		</c:if>
@@ -112,10 +109,10 @@ body {
 					<td>${product.storeNum}</td>
 					<td><a
 							href="${pageContext.request.contextPath}/FrontServlet?module=Product&command=EditProduct&productId=${product.id}
-					">编辑</a>&nbsp;/&nbsp;
+					">Edit</a>&nbsp;/&nbsp;
 					<a class="deleteOneProduct nohref" 
 					href="${pageContext.request.contextPath}/FrontServlet?module=Product&command=DeleteProduct&
-					productId=${product.id}">删除</a></td>
+					productId=${product.id}">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
@@ -125,9 +122,9 @@ body {
 </html>
 <script>
 	$(function() {
-		//为checkbox添加事件
+		//Adding events to checkbox
 		$(".checkedProduct").click(function(){
-			var cbl = $(".checkedProduct").length;//.checkedProduct的长度
+			var cbl = $(".checkedProduct").length;//.checkedProduct's length
 			$("#checkedAllProduct").prop("checked",$(".checkedProduct:checked").length==cbl);
 		});
 		$("#checkedAllProduct").click(function(){
@@ -139,10 +136,10 @@ body {
 		$("#deleteCheckedProduct").click(function(){
 			var cbl = $(".checkedProduct:checked").length;
 			if(cbl <= 0){
-				alert("请选择要操作的商品！");
+				alert("Please choose the products you want to operate! ");
 				return false;
 			}
-			if(!confirm("确认删除选中的商品吗？")){
+			if(!confirm("Are you sure you want to delete the selected products?")){
 				return false;
 			}
 			var href = this.href;
@@ -154,21 +151,21 @@ body {
 			//alert(href);
 			return false;
 		});
-		//删除某一件商品
+		//Delete the product
 		$(".deleteOneProduct").click(function(){
 			var href = this.href;
 			var criteriaProduct = $("#criteriaProductName").serialize();
 			href = href + "&" +criteriaProduct;
-			if(confirm("确认删除该商品吗？")){
+			if(confirm("Are you sure you want to delete this product?")){
 				window.location.href = href;
 			}
 			return false;
 		});
 		$('#addproducts').click(function() {
 			var criteriaProduct = $("#criteriaProductName").serialize();
-			window.location.href = "/back/Product/addproducts.jsp";
+			window.location.href = "/back/addproducts.jsp";
 		});
-		//给a连接添加事件，将查询信息带上
+		//Add an event to the 'a' connection with the query information 
 		$("a").not(".nohref").click(function(){
 			var href = this.href;
 			var criteriaProduct = $("#criteriaProductName").serialize();

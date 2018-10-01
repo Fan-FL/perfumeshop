@@ -32,7 +32,7 @@ public class ViewProductDetail extends FrontCommand {
         } catch (Exception e) {
             System.out.println("failed to get product ID");
         }
-        Product productInfo = productService.viewProductDetail(productId);
+        Product productInfo = productService.findById(productId);
         request.setAttribute("product", productInfo);
         forward("/singleProduct.jsp");
     }

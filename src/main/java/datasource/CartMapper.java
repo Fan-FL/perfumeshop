@@ -10,7 +10,6 @@ import java.util.List;
 
 public class CartMapper implements IMapper{
 
-
     /**
      * Get a user's all cart info
      * @param
@@ -34,7 +33,7 @@ public class CartMapper implements IMapper{
                 Cart cart = IdentityMap.cartMap.get(id);
                 if(cart == null){
                     cart = new Cart(id, productId, saleCount, userid);
-                    Product product = ProductMapper.findById(cart.getProductId());
+                    Product product = new ProductMapper().findById(cart.getProductId());
                     cart.setProduct(product);
                     IdentityMap.cartMap.put(id, cart);
                 }
@@ -54,7 +53,8 @@ public class CartMapper implements IMapper{
         DBHelper.update(sql, user.getId());
     }
 
-    public static Cart getCart(int cartId) {
+    @Override
+    public Cart findById(int cartId) {
         String sql = "SELECT CART_ID id,PRODUCT_ID productId,SALE_COUNT saleCount,USER_ID userId " +
                 "FROM perfume.cart WHERE CART_ID=?";
         PreparedStatement ps = null;
@@ -75,7 +75,7 @@ public class CartMapper implements IMapper{
                 int saleCount = rs.getInt(3);
                 int userid = rs.getInt(4);
                 cart = new Cart(id, productId, saleCount, userid);
-                Product product = ProductMapper.findById(cart.getProductId());
+                Product product = new ProductMapper().findById(cart.getProductId());
                 cart.setProduct(product);
                 IdentityMap.cartMap.put(id, cart);
             }
@@ -111,7 +111,7 @@ public class CartMapper implements IMapper{
         } finally {
             DBConnection.release(ps, null, rs);
         }
-        Product product = ProductMapper.findById(cart.getProductId());
+        Product product = new ProductMapper().findById(cart.getProductId());
         cart.setProduct(product);
         cart.setId(generatedKey);
         IdentityMap.cartMap.put(generatedKey, cart);

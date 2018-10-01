@@ -6,11 +6,11 @@ import domain.DomainObject;
 
 public class AccountMapper implements IMapper{
 
-    public static Account findByID(Account obj) {
+    public static Account findById(Account obj) {
         if(obj.getType().equals("Manager")){
-            return ManagerMapper.findByID(obj.getId());
+            return new ManagerMapper().findById(obj.getId());
         }else{
-            return UserMapper.findByID(obj.getId());
+            return new UserMapper().findById(obj.getId());
         }
     }
 
@@ -42,5 +42,10 @@ public class AccountMapper implements IMapper{
         }else{
             new UserMapper().delete(obj);
         }
+    }
+
+    @Override
+    public DomainObject findById(int id) {
+        return null;
     }
 }

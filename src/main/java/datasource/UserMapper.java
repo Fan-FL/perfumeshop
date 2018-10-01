@@ -47,7 +47,8 @@ public class UserMapper implements IMapper{
         }
     }
 
-    public static User findByID(int id) {
+    @Override
+    public User findById(int id) {
         User user = IdentityMap.userMap.get(id);
         if (user != null){
             return user;

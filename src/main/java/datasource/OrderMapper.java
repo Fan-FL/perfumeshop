@@ -191,4 +191,9 @@ public class OrderMapper implements IMapper{
     public void delete(DomainObject obj) {
 
     }
+
+    @Override
+    public DomainObject findById(int id) {
+        return null;
+    }
 }
