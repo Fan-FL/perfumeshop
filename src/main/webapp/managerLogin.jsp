@@ -8,6 +8,7 @@ ${pageContext.request.serverPort }${pageContext.request.contextPath}/">
 <head>
 <%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />--%>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>Manager</title>
 <link rel="stylesheet" type="text/css" href="css/login.css" />
 <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
