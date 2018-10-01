@@ -4,7 +4,7 @@
 <html>
 <head>
     <title></title>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" type="text/css" href="/back/Css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/back/Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="/back/Css/style.css" />

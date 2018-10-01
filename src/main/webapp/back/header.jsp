@@ -8,7 +8,7 @@
 <html>
 <head>
 <title>Backstage Management System</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link href="${pageContext.request.contextPath}/back/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/back/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/back/assets/css/main-min.css" rel="stylesheet" type="text/css" />
