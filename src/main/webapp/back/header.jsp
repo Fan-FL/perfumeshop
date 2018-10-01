@@ -2,19 +2,18 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<base href="${pageContext.request.scheme }://${pageContext.request.serverName }:${pageContext.request.serverPort }${pageContext.request.contextPath}/">
+<base href="${pageContext.request.scheme }://${pageContext.request.serverName }:${pageContext.request.serverPort }${pageContext.request.contextPath}/back/">
 
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Backstage Management System</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<link href="${pageContext.request.contextPath}/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
-<link href="${pageContext.request.contextPath}/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
-<link href="${pageContext.request.contextPath}/assets/css/main-min.css" rel="stylesheet" type="text/css" />
-<link href="${pageContext.request.contextPath}css/dpl.css" rel="stylesheet"/>
-<link href="${pageContext.request.contextPath}css/bui.css" rel="stylesheet"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="${pageContext.request.contextPath}/back/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/back/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/back/assets/css/main-min.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/back/Css/dpl.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/back/Css/bui.css" rel="stylesheet"/>
 </head>
 <body>
 

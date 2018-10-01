@@ -5,16 +5,15 @@
 <html>
 <head>
 <title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/back/Css/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
-	href="css/bootstrap-responsive.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/ckform.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+	href="/back/Css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="/back/Css/style.css" />
+<script type="text/javascript" src="/back/Js/jquery.js"></script>
+<script type="text/javascript" src="/back/Js/bootstrap.js"></script>
+<script type="text/javascript" src="/back/Js/ckform.js"></script>
+<script type="text/javascript" src="/back/Js/common.js"></script>
 
 <style type="text/css">
 table{
@@ -164,7 +163,7 @@ body {
 		});
 		$('#addproducts').click(function() {
 			var criteriaProduct = $("#criteriaProductName").serialize();
-			window.location.href = "/managerAddproducts.jsp";
+			window.location.href = "/back/addproducts.jsp";
 		});
 		//Add an event to the 'a' connection with the query information 
 		$("a").not(".nohref").click(function(){

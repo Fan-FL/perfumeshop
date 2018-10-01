@@ -28,7 +28,7 @@ public class EditProduct extends FrontCommand {
     @Override
     public void process() throws ServletException, IOException {
         if(request.getSession().getAttribute("manager") == null){
-            redirect("/managerLogin.jsp");
+            redirect("/back/login.jsp");
             return;
         }
         try {
@@ -38,6 +38,6 @@ public class EditProduct extends FrontCommand {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        forward("/managerEdit.jsp");
+        forward("/back/edit.jsp");
     }
 }

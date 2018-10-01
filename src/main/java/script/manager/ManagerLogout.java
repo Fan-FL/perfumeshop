@@ -24,6 +24,6 @@ public class ManagerLogout extends FrontCommand {
     public void process() throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.invalidate();
-        redirect("/managerLogin.jsp");
+        redirect("/back/login.jsp");
     }
 }
