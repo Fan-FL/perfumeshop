@@ -7,91 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c92f68-6d1e-46d4-9da9-30608fb0edde" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jcl_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DTO/AddressDTO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DTO/CartDTO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DTO/OrderDTO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DTO/UserAssembler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DTO/UserDTO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/concurrency/LockManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/concurrency/ReadWriteLock.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/UserFacade.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceBean.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/perfumestore_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AccountMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AccountMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AddressMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/AddressMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/CartMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/CartMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/IMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/IMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ManagerMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ManagerMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/OrderMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/OrderMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ProductMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/ProductMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/UserMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/datasource/UserMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/domain/Cart.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/domain/Cart.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/EditProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/EditProduct.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ManagerViewAllProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ManagerViewAllProduct.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ViewProductDetail.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/script/Product/ViewProductDetail.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/AddressService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/AddressService.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/CartService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/CartService.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/OrderService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/OrderService.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ProductService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/ProductService.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/UnitOfWork.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/UnitOfWork.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/UserService.class" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/classes/service/UserService.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap-responsive.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap-responsive.min.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap.min.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bui.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/bui.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/dpl.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/dpl.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/jquery-ui-1.10.0.custom.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Css/jquery-ui-1.10.0.custom.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.file-input.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.file-input.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.min.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bui/bui/1.1.21/config.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bui/bui/1.1.21/config.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bui/seajs/2.3.0/sea.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/bui/seajs/2.3.0/sea.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/formValidator.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/formValidator.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/jquery-1.8.1.min.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/jquery-1.8.1.min.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/jquery.js" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Js/jquery.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/addproducts.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/edit.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/Product/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/css/main.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/css/prettify.css" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/assets/css/prettify.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/perfumestore_Web_exploded/back/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/perfumestore.iml" afterPath="$PROJECT_DIR$/perfumestore.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/AccountMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/AccountMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/AddressMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/AddressMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/CartMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/CartMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/IMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/ManagerMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/ProductMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/UserMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Address.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Address.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Cart.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Cart.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ManagerViewAllProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java" afterPath="$PROJECT_DIR$/src/main/java/script/Product/ViewProductDetail.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AddressService.java" afterPath="$PROJECT_DIR$/src/main/java/service/AddressService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CartService.java" afterPath="$PROJECT_DIR$/src/main/java/service/CartService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/service/OrderService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ProductService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UnitOfWork.java" afterPath="$PROJECT_DIR$/src/main/java/service/UnitOfWork.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Product/addproducts.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/addproducts.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/edit.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/Product/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/allProduct.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/header.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" afterPath="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserFacade.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,21 +25,11 @@
       <file leaf-file-name="UserAssembler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DTO/UserAssembler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
+            <state relative-caret-position="0">
               <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DTO/CartDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="81" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,11 +66,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="14" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -301,16 +229,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DTO/AddressDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="45" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -414,7 +332,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/script/Manager/ManagerHeader.java" />
         <option value="$PROJECT_DIR$/src/main/java/script/Manager/ManagerLogin.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/Product/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java" />
@@ -465,6 +382,7 @@
         <option value="$PROJECT_DIR$/src/main/java/DTO/UserAssembler.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/UserServiceBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/DTO/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
       </list>
     </option>
   </component>
@@ -504,7 +422,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="83" />
     <option name="y" value="97" />
     <option name="width" value="1400" />
@@ -559,7 +477,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DTO" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
@@ -575,14 +493,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfumeshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
@@ -911,12 +821,12 @@
       <workItem from="1538291379500" duration="3592000" />
       <workItem from="1538382548625" duration="3125000" />
       <workItem from="1538385901508" duration="5875000" />
-      <workItem from="1538392231569" duration="384000" />
+      <workItem from="1538392231569" duration="925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257135000" />
+    <option name="totallyTimeSpent" value="257676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -928,7 +838,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -950,10 +860,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3269663" sideWeight="0.3780881" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11235955" sideWeight="0.3780881" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23820224" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2518797" sideWeight="0.6460768" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2518797" sideWeight="0.3539232" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2518797" sideWeight="0.6493671" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2518797" sideWeight="0.3506329" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1013,7 +923,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/security/ShiroConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/service/UnitOfWork.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
@@ -1156,13 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/EditProduct.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -1230,14 +1132,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,7 +1216,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DTO/UserAssembler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
+        <state relative-caret-position="0">
           <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1488,7 +1382,31 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="14" selection-end-column="53" />
           <folding />
         </state>
       </provider>
