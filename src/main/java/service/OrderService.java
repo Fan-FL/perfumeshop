@@ -51,14 +51,14 @@ public class OrderService {
             // 0 represent Order created
             int orderStatus = 0;
             List<Order> orders = new ArrayList<Order>();
-            for(Cart cart :user.getCartItems()){
+            for(CartItem cartItem :user.getCartItems()){
                 // Get product by product id for checking inventory and product status
-                Product product = new ProductMapper().findById(cart.getProduct().getId());
-                int saleCount = cart.getSaleCount();
+                Product product = new ProductMapper().findById(cartItem.getProduct().getId());
+                UnitOfWork.getCurrent().registerDirty(product);
+                int saleCount = cartItem.getSaleCount();
                 int storeNum = product.getStoreNum();
                 int productStatus = product.getProductStatus();
                 product.setStoreNum(storeNum - saleCount);
-                UnitOfWork.getCurrent().registerDirty(product);
                 if(productStatus==0){
                     UnitOfWork.getCurrent().rollBack();
                     return "productOffShelf.jsp";
@@ -70,9 +70,9 @@ public class OrderService {
                 Order order = new Order(orderNum, orderTime, orderStatus, note, userId,
                         address.getSendPlace(),address.getSendMan(), address.getSendPhone(),
                         product.getId(), product.getProductName(),
-                        product.getProductPrice(), cart.getSaleCount());
+                        product.getProductPrice(), cartItem.getSaleCount());
                 orders.add(order);
-                totalPrice += product.getProductPrice()*cart.getSaleCount();
+                totalPrice += product.getProductPrice()* cartItem.getSaleCount();
             }
             //create orders
             int i = 1;
@@ -81,8 +81,8 @@ public class OrderService {
                 UnitOfWork.getCurrent().registerNew(order);
             }
             // delete products in cart
-            for (Cart cart: user.getCartItems()){
-                UnitOfWork.getCurrent().registerDeleted(cart);
+            for (CartItem cartItem : user.getCartItems()){
+                UnitOfWork.getCurrent().registerDeleted(cartItem);
             }
             UnitOfWork.getCurrent().commit();
             session.setAttribute("totalPrice", totalPrice);

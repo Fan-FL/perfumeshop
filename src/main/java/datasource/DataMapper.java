@@ -1,6 +1,6 @@
 package datasource;
 
-import domain.Cart;
+import domain.CartItem;
 import domain.Order;
 import domain.Product;
 
@@ -12,7 +12,7 @@ public class DataMapper {
             return new CartMapper();
         }if (obj == Product.class){
             return new ProductMapper();
-        }if (obj == Cart.class){
+        }if (obj == CartItem.class){
             return new CartMapper();
         }else{
             return null;

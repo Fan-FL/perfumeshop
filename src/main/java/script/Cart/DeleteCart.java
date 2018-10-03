@@ -39,7 +39,7 @@ public class DeleteCart extends FrontCommand {
             } else if (cartId == 0) {// cartId == 0 means empty cart
                 cartService.deleteCartByUser(userId);
             } else {// delete a record in cart if not 0 and -1
-                cartService.deleteCartById(userId, cartId);
+                cartService.deleteCartItemById(userId, cartId);
             }
         }
     }

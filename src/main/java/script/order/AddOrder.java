@@ -2,7 +2,7 @@ package script.order;
 
 import controller.FrontCommand;
 import domain.Address;
-import domain.Cart;
+import domain.CartItem;
 import domain.Product;
 import domain.User;
 import service.OrderService;
@@ -47,10 +47,10 @@ public class AddOrder extends FrontCommand {
 		if(user.getCartItems().isEmpty()){
 			forward("/FrontServlet?module=Cart&command=ViewCart");
 		}else{
-			Map<Cart, Product> cartProductMap = new HashMap<Cart, Product>();
+			Map<CartItem, Product> cartProductMap = new HashMap<CartItem, Product>();
 			if (!user.getCartItems().isEmpty()){
-				for (Cart cart: user.getCartItems()){
-					cartProductMap.put(cart, cart.getProduct());
+				for (CartItem cartItem : user.getCartItems()){
+					cartProductMap.put(cartItem, cartItem.getProduct());
 				}
 			}
 			request.getSession().setAttribute("cartProductMap", cartProductMap);

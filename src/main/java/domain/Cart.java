@@ -1,70 +1,44 @@
 package domain;
 
-import datasource.ProductMapper;
+import datasource.CartMapper;
+
+import java.util.List;
 
 public class Cart extends DomainObject{
-	private int id;
-	private int productId;
-	private int saleCount;
-	private int userId;
-	private Product product;
+    List<CartItem> cartItems;
 
-	public Product getProduct() {
-		this.product = new ProductMapper().findById(this.productId);
-		return product;
-	}
+    public List<CartItem> getCartItems() {
+        return cartItems;
+    }
 
-	public void setProduct(Product product) {
-		this.product = product;
-	}
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
+    }
 
-	@Override
-	public String toString() {
-		return "Cart [cardId=" + id + ", productId=" + productId
-				+ ", saleCount=" + saleCount + ", userId=" + userId + "]";
-	}
-	public Cart(int productId, int saleCount, int userId) {
-		super();
-		this.productId = productId;
-		this.saleCount = saleCount;
-		this.userId = userId;
-	}
 
-	public Cart(int id, int productId, int saleCount, int userId) {
-		this.id = id;
-		this.productId = productId;
-		this.saleCount = saleCount;
-		this.userId = userId;
-	}
+    public void addCart(CartItem cartItem) {
+        this.getCartItems().add(cartItem);
+        new CartMapper().insert(cartItem);
+    }
 
-	public Cart() {
-		super();
-	}
-	@Override
-	public int getId() {
-		return id;
-	}
-	@Override
-	public void setId(int cardId) {
-		this.id = cardId;
-	}
-	public int getProductId() {
-		return productId;
-	}
-	public void setProductId(int productId) {
-		this.productId = productId;
-	}
-	public int getSaleCount() {
-		return saleCount;
-	}
-	public void setSaleCount(int saleCount) {
-		this.saleCount = saleCount;
-	}
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-	
+    public void deleteCartItem(CartItem cartItem) {
+        new CartMapper().delete(cartItem);
+        this.getCartItems().remove(cartItem);
+    }
+
+    public void updateCartCount(int cartId, int saleCount) {
+        CartMapper cartMapper = new CartMapper();
+        for(CartItem cartItem : this.getCartItems()){
+            if(cartItem.getId() == cartId){
+                cartItem.setSaleCount(saleCount);
+                cartMapper.update(cartItem);
+                return;
+            }
+        }
+    }
+
+    public void clear(User user) {
+        this.cartItems.clear();
+        CartMapper.deleteCartByUser(user);
+    }
 }

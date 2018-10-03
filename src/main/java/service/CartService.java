@@ -1,7 +1,7 @@
 package service;
 
 import datasource.UserMapper;
-import domain.Cart;
+import domain.CartItem;
 import domain.Product;
 import domain.User;
 
@@ -20,13 +20,13 @@ public class CartService {
     private CartService(){}
 
     public int addToCart(int productId, int userId, int saleCount){
-        Cart cart = new Cart();
-        cart.setProductId(productId);
-        cart.setUserId(userId);
-        cart.setSaleCount(saleCount);
+        CartItem cartItem = new CartItem();
+        cartItem.setProductId(productId);
+        cartItem.setUserId(userId);
+        cartItem.setSaleCount(saleCount);
         User user = new UserMapper().findById(userId);
-        user.addCart(cart);
-        return cart.getId();
+        user.getCart().addCart(cartItem);
+        return cartItem.getId();
     }
 
     public int getCartCount(int userId){
@@ -36,27 +36,27 @@ public class CartService {
 
     public void deleteCartByUser(int userId){
         User user = new UserMapper().findById(userId);
-        user.deleteAllCart();
+        user.deleteCart();
     }
 
-    public void deleteCartById(int userId, int cartId){
+    public void deleteCartItemById(int userId, int cartId){
         User user = new UserMapper().findById(userId);
-        Cart cart = new Cart();
-        cart.setId(cartId);
-        user.deleteCart(cart);
+        CartItem cartItem = new CartItem();
+        cartItem.setId(cartId);
+        user.getCart().deleteCartItem(cartItem);
     }
 
     public void updateCartCount(int userId, int cartId, int saleCount){
         User user = new UserMapper().findById(userId);
-        user.updateCartCount(cartId, saleCount);
+        user.getCart().updateCartCount(cartId, saleCount);
     }
 
-    public Map<Cart, Product> GetAllCartInfoByUserID(int userId){
+    public Map<CartItem, Product> GetAllCartInfoByUserID(int userId){
         User user = new UserMapper().findById(userId);
-        Map<Cart, Product> map = new HashMap<Cart, Product>();
+        Map<CartItem, Product> map = new HashMap<CartItem, Product>();
         if (!user.getCartItems().isEmpty()){
-            for (Cart cart: user.getCartItems()){
-                map.put(cart, cart.getProduct());
+            for (CartItem cartItem : user.getCartItems()){
+                map.put(cartItem, cartItem.getProduct());
             }
         }
         return map;

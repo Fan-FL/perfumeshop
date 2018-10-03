@@ -1,7 +1,7 @@
 package datasource;
 
 import domain.Address;
-import domain.Cart;
+import domain.CartItem;
 import domain.Product;
 import domain.User;
 
@@ -12,5 +12,5 @@ public class IdentityMap {
     public static Map<Integer, Product> productMap = new HashMap<Integer, Product>();
     public static Map<Integer, User> userMap = new HashMap<Integer, User>();
     public static Map<Integer, Address> addressMap = new HashMap<Integer, Address>();
-    public static Map<Integer, Cart> cartMap = new HashMap<Integer, Cart>();
+    public static Map<Integer, CartItem> cartItemMap = new HashMap<Integer, CartItem>();
 }

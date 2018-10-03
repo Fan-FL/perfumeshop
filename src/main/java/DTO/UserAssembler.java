@@ -58,12 +58,12 @@ public class UserAssembler {
 
     private void writeCarts(UserDTO userDTO, User subject) {
         List<CartDTO> carts = new ArrayList<CartDTO>();
-        Iterator<Cart> it = subject.getCartItems().iterator();
+        Iterator<CartItem> it = subject.getCartItems().iterator();
         while (it.hasNext()) {
             CartDTO newDTO = new CartDTO();
-            Cart thisCart = it.next();
-            newDTO.setSaleCount(thisCart.getSaleCount());
-            newDTO.setProductId(thisCart.getProductId());
+            CartItem thisCartItem = it.next();
+            newDTO.setSaleCount(thisCartItem.getSaleCount());
+            newDTO.setProductId(thisCartItem.getProductId());
             carts.add(newDTO);
         }
         userDTO.setCarts(carts);

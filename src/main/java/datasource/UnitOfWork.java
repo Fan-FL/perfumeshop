@@ -1,5 +1,6 @@
 package datasource;
 
+import concurrency.LockManager;
 import domain.DomainObject;
 
 import java.util.ArrayList;
@@ -33,6 +34,11 @@ public class UnitOfWork {
     public void registerDirty(DomainObject obj) {
         if (!deletedObjects.contains(obj) && !dirtyObjects.contains(obj) && !newObjects.contains
                 (obj)) {
+            try {
+                LockManager.getInstance().acquireWriteLock(obj);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             dirtyObjects.add(obj);
         }
     }
@@ -50,7 +56,8 @@ public class UnitOfWork {
             new LockingMapper(DataMapper.getMapper(obj.getClass())).insert(obj);
         }
         for (DomainObject obj : dirtyObjects) {
-            new LockingMapper(DataMapper.getMapper(obj.getClass())).update(obj);
+            DataMapper.getMapper(obj.getClass()).update(obj);
+            LockManager.getInstance().releaseWriteLock(obj);
         }
         for (DomainObject obj : deletedObjects) {
             new LockingMapper(DataMapper.getMapper(obj.getClass())).delete(obj);

@@ -15,12 +15,12 @@ public class CartMapper implements IMapper{
      * @param
      * @return
      */
-    public static List<Cart> getAllCartByUser(User user) {
+    public static List<CartItem> getAllCartByUser(User user) {
         String sql = "SELECT CART_ID ,PRODUCT_ID ,SALE_COUNT, USER_ID  FROM perfume.cart " +
                 "WHERE USER_ID=?;";
         PreparedStatement ps = null;
         ResultSet rs  = null;
-        List<Cart> carts = new ArrayList<Cart>();
+        List<CartItem> cartItems = new ArrayList<CartItem>();
         try {
             ps = DBConnection.prepare(sql);
             ps.setInt(1, user.getId());
@@ -30,14 +30,14 @@ public class CartMapper implements IMapper{
                 int productId = rs.getInt(2);
                 int saleCount = rs.getInt(3);
                 int userid = rs.getInt(4);
-                Cart cart = IdentityMap.cartMap.get(id);
-                if(cart == null){
-                    cart = new Cart(id, productId, saleCount, userid);
-                    Product product = new ProductMapper().findById(cart.getProductId());
-                    cart.setProduct(product);
-                    IdentityMap.cartMap.put(id, cart);
+                CartItem cartItem = IdentityMap.cartItemMap.get(id);
+                if(cartItem == null){
+                    cartItem = new CartItem(id, productId, saleCount, userid);
+                    Product product = new ProductMapper().findById(cartItem.getProductId());
+                    cartItem.setProduct(product);
+                    IdentityMap.cartItemMap.put(id, cartItem);
                 }
-                carts.add(cart);
+                cartItems.add(cartItem);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -45,7 +45,7 @@ public class CartMapper implements IMapper{
             DBConnection.release(ps, null, rs);
         }
 
-        return carts;
+        return cartItems;
     }
 
     public static void deleteCartByUser(User user) {
@@ -54,15 +54,15 @@ public class CartMapper implements IMapper{
     }
 
     @Override
-    public Cart findById(int cartId) {
+    public CartItem findById(int cartId) {
         String sql = "SELECT CART_ID id,PRODUCT_ID productId,SALE_COUNT saleCount,USER_ID userId " +
                 "FROM perfume.cart WHERE CART_ID=?";
         PreparedStatement ps = null;
         ResultSet rs  = null;
-        Cart cart = IdentityMap.cartMap.get(cartId);
-        if(cart != null){
-            cart = IdentityMap.cartMap.get(cartId);
-            return cart;
+        CartItem cartItem = IdentityMap.cartItemMap.get(cartId);
+        if(cartItem != null){
+            cartItem = IdentityMap.cartItemMap.get(cartId);
+            return cartItem;
         }
 
         try {
@@ -74,22 +74,22 @@ public class CartMapper implements IMapper{
                 int productId = rs.getInt(2);
                 int saleCount = rs.getInt(3);
                 int userid = rs.getInt(4);
-                cart = new Cart(id, productId, saleCount, userid);
-                Product product = new ProductMapper().findById(cart.getProductId());
-                cart.setProduct(product);
-                IdentityMap.cartMap.put(id, cart);
+                cartItem = new CartItem(id, productId, saleCount, userid);
+                Product product = new ProductMapper().findById(cartItem.getProductId());
+                cartItem.setProduct(product);
+                IdentityMap.cartItemMap.put(id, cartItem);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             DBConnection.release(ps, null, rs);
         }
-        return cart;
+        return cartItem;
     }
 
     @Override
     public int insert(DomainObject obj) {
-        Cart cart = (Cart)obj;
+        CartItem cartItem = (CartItem)obj;
         String sql = "insert into perfume.cart(PRODUCT_ID,SALE_COUNT,USER_ID) values(?, ?, ?)";
         PreparedStatement ps = null;
         ResultSet rs  = null;
@@ -97,9 +97,9 @@ public class CartMapper implements IMapper{
 
         try {
             ps = DBConnection.prepareReturnKeys(sql);
-            ps.setInt(1, cart.getProductId());
-            ps.setInt(2, cart.getSaleCount());
-            ps.setInt(3, cart.getUserId());
+            ps.setInt(1, cartItem.getProductId());
+            ps.setInt(2, cartItem.getSaleCount());
+            ps.setInt(3, cartItem.getUserId());
             ps.executeUpdate();
             rs = ps.getGeneratedKeys();
             if (rs.next()) {
@@ -111,32 +111,32 @@ public class CartMapper implements IMapper{
         } finally {
             DBConnection.release(ps, null, rs);
         }
-        Product product = new ProductMapper().findById(cart.getProductId());
-        cart.setProduct(product);
-        cart.setId(generatedKey);
-        IdentityMap.cartMap.put(generatedKey, cart);
+        Product product = new ProductMapper().findById(cartItem.getProductId());
+        cartItem.setProduct(product);
+        cartItem.setId(generatedKey);
+        IdentityMap.cartItemMap.put(generatedKey, cartItem);
         return generatedKey;
 
     }
 
     @Override
     public void update(DomainObject obj) {
-        Cart cart = (Cart)obj;
+        CartItem cartItem = (CartItem)obj;
         String sql = "UPDATE perfume.cart SET USER_ID=?,PRODUCT_ID=?,SALE_COUNT=? WHERE CART_ID=?";
-        DBHelper.update(sql, cart.getUserId(), cart.getProductId(), cart.getSaleCount(),
-                cart.getId());
-        Cart inMap = IdentityMap.cartMap.get(cart.getId());
-        inMap.setSaleCount(cart.getSaleCount());
-        inMap.setProduct(cart.getProduct());
-        inMap.setProductId(cart.getProductId());
-        inMap.setUserId(cart.getUserId());
+        DBHelper.update(sql, cartItem.getUserId(), cartItem.getProductId(), cartItem.getSaleCount(),
+                cartItem.getId());
+        CartItem inMap = IdentityMap.cartItemMap.get(cartItem.getId());
+        inMap.setSaleCount(cartItem.getSaleCount());
+        inMap.setProduct(cartItem.getProduct());
+        inMap.setProductId(cartItem.getProductId());
+        inMap.setUserId(cartItem.getUserId());
     }
 
     @Override
     public void delete(DomainObject obj) {
-        Cart cart = (Cart)obj;
+        CartItem cartItem = (CartItem)obj;
         String sql = "DELETE FROM perfume.cart WHERE CART_ID=?";
-        DBHelper.update(sql, cart.getId());
-        IdentityMap.cartMap.remove(cart.getId());
+        DBHelper.update(sql, cartItem.getId());
+        IdentityMap.cartItemMap.remove(cartItem.getId());
     }
 }

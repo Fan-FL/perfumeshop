@@ -1,7 +1,7 @@
 package script.Cart;
 
 import controller.FrontCommand;
-import domain.Cart;
+import domain.CartItem;
 import domain.Product;
 import service.CartService;
 
@@ -28,7 +28,7 @@ public class ViewCart extends FrontCommand {
         if(userId == -1){
             redirect("login.jsp?responseMsg=userIsNotLogin");
         }else {
-            Map<Cart, Product> cartProductMap = cartService.GetAllCartInfoByUserID(userId);
+            Map<CartItem, Product> cartProductMap = cartService.GetAllCartInfoByUserID(userId);
             request.setAttribute("cartProductMap", cartProductMap);
             forward("/cart.jsp");
         }

@@ -16,7 +16,22 @@ public class User extends Account {
 	private int userStatus = -1;
 	private List<OrderMsg> orderMsgs;
 	private List<Address> deliveryAddresses;
-	private List<Cart> cartItems;
+	private Cart cart = new Cart();
+
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+
+	public List<CartItem> getCartItems() {
+		if(this.cart.getCartItems() == null){
+			this.cart.setCartItems(CartMapper.getAllCartByUser(this));
+		}
+		return this.cart.getCartItems();
+	}
 
 	public List<OrderMsg> getOrderMsgs() {
 		this.orderMsgs = OrderMapper.getOrderMsgs(this.id);
@@ -48,13 +63,6 @@ public class User extends Account {
 		new AddressMapper().delete(deliveryAddress);
 	}
 
-	public List<Cart> getCartItems() {
-		if(cartItems == null){
-			this.cartItems = CartMapper.getAllCartByUser(this);
-		}
-		return cartItems;
-	}
-
 	public User(int userId, String username, String password, String truename,
 				String phone, String address, int userStatus) {
 		super();
@@ -79,10 +87,6 @@ public class User extends Account {
 		this.username = username;
 		this.password = password;
 		this.type = "user";
-	}
-
-	public void setCartItems(List<Cart> cartItems) {
-		this.cartItems = cartItems;
 	}
 
 
@@ -200,29 +204,7 @@ public class User extends Account {
 		return null;
 	}
 
-	public void addCart(Cart cart) {
-		this.getCartItems().add(cart);
-		new CartMapper().insert(cart);
-	}
-
-	public void deleteAllCart() {
-		CartMapper.deleteCartByUser(this);
-		this.getCartItems().clear();
-	}
-
-	public void deleteCart(Cart cart) {
-		new CartMapper().delete(cart);
-		this.getCartItems().remove(cart);
-	}
-
-	public void updateCartCount(int cartId, int saleCount) {
-		CartMapper cartMapper = new CartMapper();
-		for(Cart cart: this.getCartItems()){
-			if(cart.getId() == cartId){
-				cart.setSaleCount(saleCount);
-				cartMapper.update(cart);
-				return;
-			}
-		}
+	public void deleteCart() {
+		this.getCart().clear(this);
 	}
 }
