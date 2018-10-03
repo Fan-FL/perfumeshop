@@ -1,6 +1,5 @@
 package DTO;
 
-import datasource.UserMapper;
 import domain.*;
 import service.UserService;
 
@@ -9,9 +8,6 @@ import java.util.Iterator;
 import java.util.List;
 
 public class UserAssembler {
-    public UserAssembler() {
-    }
-
     public UserDTO writeDTO(User subject) {
         UserDTO result = new UserDTO();
         result.setId(subject.getId());
@@ -73,7 +69,7 @@ public class UserAssembler {
         userDTO.setCarts(carts);
     }
 
-    public void updateAlbum(String name, UserDTO dto) {
+    public void updateUser(String name, UserDTO dto) {
         User user = UserService.getInstance().findUserByName(name);
         user.setAddress(dto.getAddress());
         user.setPhone(dto.getPhone());

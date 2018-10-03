@@ -17,7 +17,7 @@ public class UserServiceBean {
     }
 
     public void updateUser(String name, UserDTO dto) throws RemoteException {
-        new UserAssembler().updateAlbum(name, dto);
+        new UserAssembler().updateUser(name, dto);
     }
     public void updateUser(String name, String xml) throws RemoteException {
         UserDTO dto = UserDTO.readXmlString(xml);
