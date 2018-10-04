@@ -75,13 +75,14 @@ public class ManagerMapper implements IMapper{
 
     @Override
     public int insert(DomainObject obj) {
+        String sql2 = "Delete FROM perfume.user WHERE username = 'manager2'";
+        DBHelper.update(sql2);
+
         Manager manager = (Manager) obj;
         String sql = "insert into perfume.Manager (username,password) values (?,?);";
         int userId = DBHelper.updateGetGeneratedKeys(sql, manager.getUsername(), manager.getPassword());
         manager.setId(userId);
-
-        sql = "Delete FROM perfume.user WHERE username = 'manager2'";
-        DBHelper.update(sql);
+        return userId;
     }
 
     @Override
