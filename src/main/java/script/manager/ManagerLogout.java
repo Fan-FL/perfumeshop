@@ -3,6 +3,8 @@ package script.manager;
 import controller.FrontCommand;
 import domain.Manager;
 import net.sf.json.JSONArray;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import service.ManagerService;
 
 import javax.servlet.ServletException;
@@ -22,8 +24,11 @@ public class ManagerLogout extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        session.invalidate();
+        Subject currentUser = SecurityUtils.getSubject();
+        if (currentUser.isAuthenticated()) {
+            currentUser.logout();
+            request.getSession().invalidate();
+        }
         redirect("/back/login.jsp");
     }
 }

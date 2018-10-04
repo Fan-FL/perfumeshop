@@ -1,10 +1,13 @@
 package script.User;
 
 import controller.FrontCommand;
+import domain.OrderMsg;
+import security.AppSession;
 import service.UserService;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.util.List;
 
 public class UpdateUser extends FrontCommand {
 	private static final long serialVersionUID = 1L;
@@ -19,25 +22,21 @@ public class UpdateUser extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                String password = request.getParameter("password");
+                String truename = request.getParameter("truename");
+                System.out.println(truename);
+                System.out.println(password);
+                String phone = request.getParameter("phone");
+                String address = request.getParameter("address");
+                userService.updateUser(AppSession.getId(), password, truename, phone, address);
+                forward("/FrontServlet?module=User&command=ViewUser");
+            } else {
+                response.sendError(403);
+            }
+        } else {
             response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
-        }
-        try {
-            String password = request.getParameter("password");
-            String truename = request.getParameter("truename");
-            System.out.println(truename);
-            System.out.println(password);
-            String phone = request.getParameter("phone");
-            String address = request.getParameter("address");
-            userService.updateUser(userId, password, truename, phone, address);
-            forward("/FrontServlet?module=User&command=ViewUser");
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }

@@ -1,7 +1,9 @@
 package script.Cart;
 
 import controller.FrontCommand;
+import domain.Address;
 import net.sf.json.JSONArray;
+import security.AppSession;
 import service.CartService;
 
 import javax.servlet.ServletException;
@@ -20,31 +22,32 @@ public class AddToCart extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
-            redirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
-        }
-        PrintWriter out = null;
-        try {
-            response.setContentType("text/html;charset=UTF-8");
-            out = response.getWriter();
-            String productId = request.getParameter("productId");
-            String saleCount = request.getParameter("saleCount");
-            int cartId = cartService.addToCart(Integer.parseInt(productId), userId, Integer
-                    .parseInt(saleCount));
-            int cartCount= cartService.getCartCount(userId);
-            String jsonStr = "[{'cartId':'" + cartId + "','cartCount':'"+cartCount +"'}]";
-            JSONArray json = JSONArray.fromObject(jsonStr);
-            out.write(json.toString());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally{
-            out.flush();
-            out.close();
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                PrintWriter out = null;
+                try {
+                    response.setContentType("text/html;charset=UTF-8");
+                    out = response.getWriter();
+                    String productId = request.getParameter("productId");
+                    String saleCount = request.getParameter("saleCount");
+                    int cartId = cartService.addToCart(Integer.parseInt(productId), AppSession.getId(),
+                            Integer
+                            .parseInt(saleCount));
+                    int cartCount= cartService.getCartCount(AppSession.getId());
+                    String jsonStr = "[{'cartId':'" + cartId + "','cartCount':'"+cartCount +"'}]";
+                    JSONArray json = JSONArray.fromObject(jsonStr);
+                    out.write(json.toString());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }finally{
+                    out.flush();
+                    out.close();
+                }
+            } else {
+                response.sendError(403);
+            }
+        } else {
+            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
         }
     }
 }

@@ -2,6 +2,7 @@ package script.Address;
 
 import controller.FrontCommand;
 import domain.Address;
+import security.AppSession;
 import service.AddressService;
 
 import javax.servlet.ServletException;
@@ -21,16 +22,16 @@ public class ViewAllAddress extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
-            redirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                List<Address> addresses = addressService.viewAllAddress(AppSession.getId());
+                request.setAttribute("addresses", addresses);
+                forward("/addressManage.jsp");
+            } else {
+                response.sendError(403);
+            }
+        } else {
+            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
         }
-        List<Address> addresses = addressService.viewAllAddress(userId);
-        request.setAttribute("addresses", addresses);
-        forward("/addressManage.jsp");
     }
 }

@@ -25,7 +25,7 @@ public class CartService {
         cartItem.setUserId(userId);
         cartItem.setSaleCount(saleCount);
         User user = new UserMapper().findById(userId);
-        user.getCart().addCart(cartItem);
+        user.getCart().addCartItem(cartItem);
         return cartItem.getId();
     }
 

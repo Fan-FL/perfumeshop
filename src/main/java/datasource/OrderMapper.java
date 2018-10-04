@@ -172,14 +172,14 @@ public class OrderMapper implements IMapper{
 
     @Override
     public int insert(DomainObject obj) {
-        Order order = (Order)obj;
+        OrderItem orderItem = (OrderItem)obj;
         String sql = "INSERT INTO perfume.orders (ORDER_NUM,ORDER_STATUS,NOTE,USER_ID,SEND_PLACE,"
                 + "SEND_MAN,SEND_PHONE,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,SALE_COUNT,ORDER_TIME)"
                 + "values(?,?,?,?,?,?,?,?,?,?,?,?)";
-        return DBHelper.updateGetGeneratedKeys(sql, order.getOrderNum(),  order.getOrderStatus(),
-                order.getNote(), order.getUserId(), order.getSendPlace(), order.getSendMan(), order.getSendPhone(),
-                order.getProductId(), order.getProductName(), order.getProductPrice(), order
-                        .getSaleCount(), order.getOrderTime());
+        return DBHelper.updateGetGeneratedKeys(sql, orderItem.getOrderNum(),  orderItem.getOrderStatus(),
+                orderItem.getNote(), orderItem.getUserId(), orderItem.getSendPlace(), orderItem.getSendMan(), orderItem.getSendPhone(),
+                orderItem.getProductId(), orderItem.getProductName(), orderItem.getProductPrice(), orderItem
+                        .getSaleCount(), orderItem.getOrderTime());
     }
 
     @Override

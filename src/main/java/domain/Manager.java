@@ -1,5 +1,9 @@
 package domain;
 
+/*
+ * ClassName: Manager
+ * Description: This class contains all the details about the administrators of the system.
+ */
 public class Manager extends Account {
     private int id;
     private String title;
@@ -39,6 +43,11 @@ public class Manager extends Account {
         this.id = id;
     }
 
+    /*
+     * Parameters: none
+     * Return: salary
+     * Description: manager can get salary
+     * */
     public Money getSalary() {
         return salary;
     }

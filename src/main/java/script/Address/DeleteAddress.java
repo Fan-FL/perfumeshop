@@ -1,6 +1,7 @@
 package script.Address;
 
 import controller.FrontCommand;
+import security.AppSession;
 import service.AddressService;
 
 import javax.servlet.ServletException;
@@ -19,21 +20,16 @@ public class DeleteAddress extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
-            redirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
-        }
-
-        try {
-            int addId = Integer.parseInt(request.getParameter("addId").toString());
-            addressService.deleteAddress(addId, userId);
-            forward("/FrontServlet?module=Address&command=ViewAllAddress");
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                int addId = Integer.parseInt(request.getParameter("addId").toString());
+                addressService.deleteAddress(addId, AppSession.getId());
+                forward("/FrontServlet?module=Address&command=ViewAllAddress");
+            } else {
+                response.sendError(403);
+            }
+        } else {
+            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
         }
     }
 }

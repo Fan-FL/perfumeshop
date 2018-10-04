@@ -4,8 +4,13 @@ import datasource.AddressMapper;
 import datasource.CartMapper;
 import datasource.OrderMapper;
 import datasource.UserMapper;
-
 import java.util.List;
+
+/*
+ * ClassName:User
+ * Description:The User class contains all the details about the registered customers
+ * 			   and functions they can operate.
+ */
 
 public class User extends Account {
 
@@ -18,6 +23,11 @@ public class User extends Account {
 	private List<Address> deliveryAddresses;
 	private Cart cart = new Cart();
 
+	/*
+	 * Parameters: None
+	 * Return: cart
+	 * Description: User can get his or her cart
+	 * */
 	public Cart getCart() {
 		return cart;
 	}
@@ -26,6 +36,11 @@ public class User extends Account {
 		this.cart = cart;
 	}
 
+	/*
+	 * Parameters: None
+	 * Return: CartItem list
+	 * Description: User can get cart items through the CartMapper
+	 * */
 	public List<CartItem> getCartItems() {
 		if(this.cart.getCartItems() == null){
 			this.cart.setCartItems(CartMapper.getAllCartByUser(this));
@@ -33,6 +48,11 @@ public class User extends Account {
 		return this.cart.getCartItems();
 	}
 
+	/*
+	 * Parameters: None
+	 * Return: OrderMsg list
+	 * Description: User can get his or her order message through the OrderMapper
+	 * */
 	public List<OrderMsg> getOrderMsgs() {
 		this.orderMsgs = OrderMapper.getOrderMsgs(this.id);
 		return this.orderMsgs;
@@ -42,6 +62,12 @@ public class User extends Account {
 		this.orderMsgs = orderMsgs;
 	}
 
+	/*
+	 * Parameters: None
+	 * Return: the deliveryAddresses
+	 * Description:One user can have many delivery addresses.
+	 * 			   The address can be found by user id through the AddressMapper
+	 * */
 	public List<Address> getDeliveryAddresses() {
 		if(this.deliveryAddresses == null){
 			this.deliveryAddresses = AddressMapper.getAddressByUserId(this.id);
@@ -53,6 +79,11 @@ public class User extends Account {
 		this.deliveryAddresses = deliveryAddresses;
 	}
 
+	/*
+	 * Parameters: deliveryAddress
+	 * Return: none
+	 * Description: Remove the delivery address from the Address list.
+	 * */
 	public void deleteDeliveryAddress(Address deliveryAddress){
 		if(this.deliveryAddresses == null){
 			this.deliveryAddresses = AddressMapper.getAddressByUserId(this.id);
@@ -88,7 +119,6 @@ public class User extends Account {
 		this.password = password;
 		this.type = "user";
 	}
-
 
 	@Override
 	public void setId(int userId) {
@@ -142,6 +172,7 @@ public class User extends Account {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	public String getAddress() {
 		if (this.address == null){
 			load();
@@ -194,6 +225,13 @@ public class User extends Account {
 		this.getDeliveryAddresses().add(address);
 	}
 
+	/*
+	 * Parameters: addressId
+	 * Return: address // null
+	 * Description: use the addressID to get the delivery address.
+	 * 				If it can be found in the Address list,return address;
+	 * 				otherwise return null
+	 * */
 	public Address getDeliveryAddress(int addressId){
 		if(!this.getDeliveryAddresses().isEmpty())
 		for (Address address: this.getDeliveryAddresses()){

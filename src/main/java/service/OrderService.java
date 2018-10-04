@@ -50,7 +50,7 @@ public class OrderService {
             double totalPrice = 0;
             // 0 represent Order created
             int orderStatus = 0;
-            List<Order> orders = new ArrayList<Order>();
+            List<OrderItem> orderItems = new ArrayList<OrderItem>();
             for(CartItem cartItem :user.getCartItems()){
                 // Get product by product id for checking inventory and product status
                 Product product = new ProductMapper().findById(cartItem.getProduct().getId());
@@ -67,18 +67,18 @@ public class OrderService {
                     UnitOfWork.getCurrent().rollBack();
                     return "outOfStockNum.jsp";
                 }
-                Order order = new Order(orderNum, orderTime, orderStatus, note, userId,
+                OrderItem orderItem = new OrderItem(orderNum, orderTime, orderStatus, note, userId,
                         address.getSendPlace(),address.getSendMan(), address.getSendPhone(),
                         product.getId(), product.getProductName(),
                         product.getProductPrice(), cartItem.getSaleCount());
-                orders.add(order);
+                orderItems.add(orderItem);
                 totalPrice += product.getProductPrice()* cartItem.getSaleCount();
             }
             //create orders
             int i = 1;
-            for(Order order:orders){
-                order.setId(i++);
-                UnitOfWork.getCurrent().registerNew(order);
+            for(OrderItem orderItem : orderItems){
+                orderItem.setId(i++);
+                UnitOfWork.getCurrent().registerNew(orderItem);
             }
             // delete products in cart
             for (CartItem cartItem : user.getCartItems()){

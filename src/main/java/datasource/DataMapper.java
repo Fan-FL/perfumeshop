@@ -1,12 +1,12 @@
 package datasource;
 
 import domain.CartItem;
-import domain.Order;
+import domain.OrderItem;
 import domain.Product;
 
 public class DataMapper {
     public static IMapper getMapper(Class obj){
-        if (obj == Order.class){
+        if (obj == OrderItem.class){
             return new OrderMapper();
         }else if (obj == CartMapper.class){
             return new CartMapper();

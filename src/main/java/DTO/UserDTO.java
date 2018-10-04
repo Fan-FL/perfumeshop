@@ -1,4 +1,5 @@
 package DTO;
+import datasource.UserMapper;
 import org.dom4j.*;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
@@ -7,6 +8,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +20,10 @@ public class UserDTO {
     private List<OrderDTO> orders;
     private List<AddressDTO> addresses;
     private List<CartDTO> carts;
+
+    public static UserDTO getUser(String name){
+        return new UserAssembler().writeDTO(UserMapper.findByName(name));
+    }
 
     public List<OrderDTO> getOrders() {
         return orders;
@@ -97,6 +103,7 @@ public class UserDTO {
         return userElement;
     }
 
+    // Convert the DTO to the String
     public String toXmlString() {
         Document doc = DocumentHelper.createDocument();
         toXmlElement(doc);
@@ -111,6 +118,7 @@ public class UserDTO {
         return "";
     }
 
+    // Convert the String to the DTO
     static UserDTO readXml(Element source) {
         UserDTO result = new UserDTO();
 

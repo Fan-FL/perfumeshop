@@ -2,10 +2,12 @@ package script.Address;
 
 import controller.FrontCommand;
 import domain.Address;
+import security.AppSession;
 import service.AddressService;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.util.List;
 
 
 public class ViewSingleAddress extends FrontCommand {
@@ -20,17 +22,17 @@ public class ViewSingleAddress extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
-            redirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                int addId = Integer.parseInt(request.getParameter("addId").toString());
+                Address address = addressService.viewSingleAddress(AppSession.getId(), addId);
+                request.setAttribute("address", address);
+                forward("/singleAddress.jsp");
+            } else {
+                response.sendError(403);
+            }
+        } else {
+            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
         }
-        int addId = Integer.parseInt(request.getParameter("addId").toString());
-        Address address = addressService.viewSingleAddress(userId, addId);
-        request.setAttribute("address", address);
-        forward("/singleAddress.jsp");
     }
 }

@@ -2,6 +2,8 @@ package service;
 
 import datasource.UserMapper;
 import domain.User;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 
 import javax.servlet.http.HttpSession;
 
@@ -28,10 +30,6 @@ public class UserService {
 
     public User findUserByName(String username){
         return UserMapper.findByName(username);
-    }
-
-    public void userLogout(HttpSession session){
-        session.invalidate();
     }
 
     public int insert(User user) {

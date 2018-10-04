@@ -2,6 +2,7 @@ package script.order;
 
 import controller.FrontCommand;
 import domain.OrderMsg;
+import security.AppSession;
 import service.OrderService;
 
 import javax.servlet.ServletException;
@@ -26,16 +27,16 @@ public class ViewMyOrder extends FrontCommand {
 	 */
 	@Override
 	public void process() throws ServletException, IOException {
-		int userId = -1;
-		try {
-			userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-		} catch (Exception e) {}
-		if(userId == -1){
-			redirect("blank.jsp");
-			return;
+		if (AppSession.isAuthenticated()) {
+			if (AppSession.hasRole(AppSession.USER_ROLE)) {
+				List<OrderMsg> ordermsg = orderService.viewMyOrder(AppSession.getId());
+				request.setAttribute("ordermsg", ordermsg);
+				forward("/accountorder.jsp");
+			} else {
+				response.sendError(403);
+			}
+		} else {
+			response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
 		}
-		List<OrderMsg> ordermsg = orderService.viewMyOrder(userId);
-		request.setAttribute("ordermsg", ordermsg);
-		forward("/accountorder.jsp");
 	}
 }

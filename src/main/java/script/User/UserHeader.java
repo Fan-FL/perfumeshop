@@ -1,6 +1,7 @@
 package script.User;
 
 import controller.FrontCommand;
+import security.AppSession;
 import service.CartService;
 import service.UserService;
 
@@ -19,15 +20,13 @@ public class UserHeader extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = (Integer) request.getSession().getAttribute("userId");
-        } catch (Exception e) {
-            System.out.println("user hasn't logged in!");
-        }
-        if(userId != -1){
-            int cartCount = CartService.getInstance().getCartCount(userId);
-            request.setAttribute("cartCount", cartCount);
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                int cartCount = CartService.getInstance().getCartCount(AppSession.getId());
+                request.setAttribute("cartCount", cartCount);
+            } else {
+                response.sendError(403);
+            }
         }
         include("/header.jsp");
     }

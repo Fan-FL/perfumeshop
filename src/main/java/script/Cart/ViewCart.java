@@ -3,6 +3,7 @@ package script.Cart;
 import controller.FrontCommand;
 import domain.CartItem;
 import domain.Product;
+import security.AppSession;
 import service.CartService;
 
 import javax.servlet.ServletException;
@@ -21,16 +22,17 @@ public class ViewCart extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
-            redirect("login.jsp?responseMsg=userIsNotLogin");
-        }else {
-            Map<CartItem, Product> cartProductMap = cartService.GetAllCartInfoByUserID(userId);
-            request.setAttribute("cartProductMap", cartProductMap);
-            forward("/cart.jsp");
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                Map<CartItem, Product> cartProductMap = cartService.GetAllCartInfoByUserID
+                        (AppSession.getId());
+                request.setAttribute("cartProductMap", cartProductMap);
+                forward("/cart.jsp");
+            } else {
+                response.sendError(403);
+            }
+        } else {
+            response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
         }
     }
 }

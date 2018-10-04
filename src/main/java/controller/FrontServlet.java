@@ -40,6 +40,7 @@ public class FrontServlet extends HttpServlet {
 
 	private Class getCommandClass(HttpServletRequest request){
     	Class result;
+    	// assemable the required class name
     	final String commandClassName = "script." + (String)request.getParameter("module") + "."
 				+ (String)request.getParameter("command");
     	System.out.println(commandClassName);

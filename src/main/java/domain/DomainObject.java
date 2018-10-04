@@ -1,5 +1,9 @@
 package domain;
 
+/*
+ * ClassName: DomainObject
+ */
+
 public class DomainObject {
     private int id;
 

@@ -2,6 +2,7 @@ package script.User;
 
 import controller.FrontCommand;
 import domain.User;
+import security.AppSession;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -24,16 +25,16 @@ public class ViewUser extends FrontCommand {
      */
     @Override
     public void process() throws ServletException, IOException {
-        int userId = -1;
-        try {
-            userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        } catch (Exception e) {}
-        if(userId == -1){
+        if (AppSession.isAuthenticated()) {
+            if (AppSession.hasRole(AppSession.USER_ROLE)) {
+                User user = userService.findUserById(AppSession.getId());
+                request.setAttribute("user", user);
+                forward("/accountMsg.jsp");
+            } else {
+                response.sendError(403);
+            }
+        } else {
             response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
-            return;
         }
-        User user = userService.findUserById(userId);
-        request.setAttribute("user", user);
-        forward("/accountMsg.jsp");
     }
 }

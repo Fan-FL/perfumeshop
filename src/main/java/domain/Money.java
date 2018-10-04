@@ -1,5 +1,11 @@
 package domain;
 
+/*
+ * ClassName: Money
+ * Description: This class contains all the details about the
+ *              salary that managers can get
+ */
+
 public class Money {
     private float amount;
     private String currency;

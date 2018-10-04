@@ -1,6 +1,8 @@
 package script.User;
 
 import controller.FrontCommand;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -22,7 +24,11 @@ public class UserLogout extends FrontCommand {
      */
     @Override
     public void process() throws ServletException, IOException {
-        userService.userLogout(request.getSession());
+        Subject currentUser = SecurityUtils.getSubject();
+        if (currentUser.isAuthenticated()) {
+            currentUser.logout();
+            request.getSession().invalidate();
+        }
         redirect("blank.jsp");
     }
 }

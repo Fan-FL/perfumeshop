@@ -1,6 +1,8 @@
 package script.Address;
 
 import controller.FrontCommand;
+import domain.User;
+import security.AppSession;
 import service.AddressService;
 
 import javax.servlet.ServletException;
@@ -19,22 +21,18 @@ public class AddAddress extends FrontCommand {
 
 	@Override
 	public void process() throws ServletException, IOException {
-		int userId = -1;
-		try {
-			userId = Integer.parseInt(request.getSession().getAttribute("userId").toString());
-		} catch (Exception e) {}
-		if(userId == -1){
-			redirect("/login.jsp?responseMsg=userIsNotLogin");
-			return;
-		}
-		try {
-			String sendplace = request.getParameter("sendplace");
-			String sendman = request.getParameter("sendman");
-			String sendphone = request.getParameter("sendphone");
-			addressService.addAddress(sendplace, sendman, sendphone, userId);
-			forward("/FrontServlet?module=Address&command=ViewAllAddress");
-		} catch (Exception e) {
-			e.printStackTrace();
+		if (AppSession.isAuthenticated()) {
+			if (AppSession.hasRole(AppSession.USER_ROLE)) {
+				String sendplace = request.getParameter("sendplace");
+				String sendman = request.getParameter("sendman");
+				String sendphone = request.getParameter("sendphone");
+				addressService.addAddress(sendplace, sendman, sendphone, AppSession.getId());
+				forward("/FrontServlet?module=Address&command=ViewAllAddress");
+			} else {
+				response.sendError(403);
+			}
+		} else {
+			response.sendRedirect("login.jsp?responseMsg=userIsNotLogin");
 		}
 	}
 }
