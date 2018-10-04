@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c92f68-6d1e-46d4-9da9-30608fb0edde" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/back/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" afterPath="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,11 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1169">
+            <state relative-caret-position="-1025">
               <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerLogin.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -80,31 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
               <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Manager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -228,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/main/java/security/AuthenticationEnforcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/security/MyShiroRealm.java" />
         <option value="$PROJECT_DIR$/src/main/java/security/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" />
         <option value="$PROJECT_DIR$/src/main/java/security/ShiroService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/shiro.ini" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -264,6 +253,7 @@
         <option value="$PROJECT_DIR$/src/main/java/domain/OrderItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java" />
       </list>
     </option>
   </component>
@@ -359,7 +349,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
@@ -367,7 +357,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfumeshop" type="b2602c69:ProjectViewProjectNode" />
@@ -713,7 +704,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276103000" />
+    <option name="totallyTimeSpent" value="276761000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -809,7 +800,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java</url>
-          <line>36</line>
+          <line>37</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
@@ -852,20 +843,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/script/order/SubmitOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/AppSession.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/datasource/OrderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1227,8 +1204,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/back/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1169">
+        <state relative-caret-position="-1025">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/Product/AddProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/script/manager/ManagerLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
           <folding />
         </state>
       </provider>
