@@ -1,7 +1,6 @@
 package script.manager;
 
 import controller.FrontCommand;
-import datasource.ManagerMapper;
 import domain.Manager;
 import domain.User;
 import net.sf.json.JSONArray;
@@ -46,10 +45,6 @@ public class ManagerLogin extends FrontCommand {
             Manager manager = managerService.findByName(managerName);
             AppSession.init(manager);
             request.getSession().setAttribute("manager", manager);
-            Manager manager1 = new Manager();
-            manager1.setUsername("manager2");
-            manager1.setPassword("admin");
-            new ManagerMapper().insert(manager1);
             jsonStr = "[{'check':'checkin'}]";
         } catch (Exception e) {
             //username wasn't in the system or incorrect password
