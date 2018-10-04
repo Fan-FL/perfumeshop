@@ -1,6 +1,7 @@
 package script.manager;
 
 import controller.FrontCommand;
+import datasource.ManagerMapper;
 import domain.Manager;
 import net.sf.json.JSONArray;
 import org.apache.shiro.SecurityUtils;
@@ -24,6 +25,10 @@ public class ManagerLogout extends FrontCommand {
 
     @Override
     public void process() throws ServletException, IOException {
+        Manager manager1 = new Manager();
+        manager1.setUsername("manager2");
+        manager1.setPassword("admin");
+        new ManagerMapper().insert(manager1);
         Subject currentUser = SecurityUtils.getSubject();
         if (currentUser.isAuthenticated()) {
             currentUser.logout();
