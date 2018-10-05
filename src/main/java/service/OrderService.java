@@ -75,9 +75,7 @@ public class OrderService {
                 totalPrice += product.getProductPrice()* cartItem.getSaleCount();
             }
             //create orders
-            int i = 1;
             for(OrderItem orderItem : orderItems){
-                orderItem.setId(i++);
                 UnitOfWork.getCurrent().registerNew(orderItem);
             }
             // delete products in cart

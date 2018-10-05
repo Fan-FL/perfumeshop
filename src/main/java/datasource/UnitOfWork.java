@@ -45,6 +45,11 @@ public class UnitOfWork {
 
     public void registerDeleted(DomainObject obj) {
         if (newObjects.remove(obj)) return;
+        try {
+            LockManager.getInstance().acquireWriteLock(obj);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         dirtyObjects.remove(obj);
         if (!deletedObjects.contains(obj)) {
             deletedObjects.add(obj);
@@ -60,7 +65,8 @@ public class UnitOfWork {
             LockManager.getInstance().releaseWriteLock(obj);
         }
         for (DomainObject obj : deletedObjects) {
-            new LockingMapper(DataMapper.getMapper(obj.getClass())).delete(obj);
+            DataMapper.getMapper(obj.getClass()).delete(obj);
+            LockManager.getInstance().releaseWriteLock(obj);
         }
     }
 

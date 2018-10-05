@@ -13,7 +13,7 @@ public class UserAssembler {
         result.setId(subject.getId());
         result.setAddress(subject.getAddress());
         result.setPhone(subject.getPhone());
-        result.setTruename(subject.getTruename());
+        result.setUsername(subject.getUsername());
         writeAddresses(result, subject);
         writeOrders(result, subject);
         writeCarts(result, subject);
@@ -69,11 +69,11 @@ public class UserAssembler {
         userDTO.setCarts(carts);
     }
 
-    public void updateUser(String name, UserDTO dto) {
-        User user = UserService.getInstance().findUserByName(name);
+    public void updateUser(UserDTO dto) {
+        User user = UserService.getInstance().findUserByName(dto.getUsername());
         user.setAddress(dto.getAddress());
         user.setPhone(dto.getPhone());
-        user.setTruename(dto.getTruename());
+        user.setTruename(dto.getUsername());
         UserService.getInstance().updateUser(user.getId(),user.getPassword(),user.getTruename(),
                 user.getPhone(),user.getAddress());
     }

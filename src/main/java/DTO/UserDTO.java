@@ -14,7 +14,7 @@ import java.util.List;
 
 public class UserDTO {
     private int id;
-    private String truename;
+    private String username;
     private String phone;
     private String address;
     private List<OrderDTO> orders;
@@ -57,12 +57,12 @@ public class UserDTO {
         this.id = id;
     }
 
-    public String getTruename() {
-        return truename;
+    public String getUsername() {
+        return username;
     }
 
-    public void setTruename(String truename) {
-        this.truename = truename;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPhone() {
@@ -84,7 +84,7 @@ public class UserDTO {
     public Element toXmlElement(Branch root) {
         Element userElement = root.addElement("user");
         userElement.addAttribute("id", String.valueOf(id));
-        userElement.addAttribute("truename", phone);
+        userElement.addAttribute("username", phone);
         userElement.addAttribute("phone", address);
         Element ordersElement = userElement.addElement("orders");
         for (OrderDTO order : orders) {
@@ -124,7 +124,7 @@ public class UserDTO {
 
         Element userElement = source.element("user");
         result.setId(Integer.valueOf(userElement.attributeValue("id")));
-        result.setTruename(userElement.attributeValue("truename"));
+        result.setUsername(userElement.attributeValue("username"));
         result.setPhone(userElement.attributeValue("phone"));
 
         List<OrderDTO> ordersList = new ArrayList<OrderDTO>();
