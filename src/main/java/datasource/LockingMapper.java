@@ -1,19 +1,15 @@
 package datasource;
 
 import concurrency.LockManager;
-import domain.Account;
 import domain.DomainObject;
-import session.SessionManager;
 
 
 public class LockingMapper implements IMapper{
     private IMapper impl;
     private LockManager lm;
-//    private String sessionId;
     public LockingMapper(IMapper impl) {
         this.impl = impl;
         this.lm = LockManager.getInstance();
-//        this.sessionId = SessionManager.getSession().getId();
     }
 
     @Override
