@@ -71,6 +71,12 @@ public class UnitOfWork {
     }
 
     public void rollBack() {
+        for (DomainObject obj : dirtyObjects) {
+            LockManager.getInstance().releaseWriteLock(obj);
+        }
+        for (DomainObject obj : deletedObjects) {
+            LockManager.getInstance().releaseWriteLock(obj);
+        }
         newObjects.clear();
         dirtyObjects.clear();
         deletedObjects.clear();
